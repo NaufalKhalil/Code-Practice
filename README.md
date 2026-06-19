@@ -6,23 +6,33 @@ Saat ini, fokus utama pembelajaran saya ada pada bahasa **Python**. Seluruh doku
 
 ## 📌 Struktur Folder
 
-Untuk menjaga kerapian, repositori ini dibagi menjadi beberapa folder berdasarkan bahasa pemrograman:
+Berikut adalah daftar berkas latihan Python yang telah selesai dibuat:
 
 ```text
-Code-Practice/
+Code Practice/
 │
-├── python/               # Semua latihan dan proyek Python
-│   ├── 01_dasar/         # Variabel, tipe data, percabangan, perulangan
-│   ├── 02_fungsi/        # Function, argument, return value
-│   └── 03_mini_project/  # Proyek kecil berbasis Python
+├── Python/
+│   ├── L1-Halo Dunia.py
+│   ├── L2-Mesin Perkenalan Diri.py
+│   ├── L3-Mesin Umur.py
+│   ├── L4-Kalkulator Mini.py
+│   ├── L5-Mesin Input Pertama.py
+│   ├── L6-Cek Dewasa atau Belum.py
+│   ├── L7-Login Sederhana.py
+│   ├── L8-Tebak Angka.py
+│   ├── L9-Kalkulator Cerdas.py
+│   ├── L10-Upgrade Real Kalkulator.py
+│   └── L11-Upgrade ke Modular System.py
 │
-├── .gitignore            # File konfigurasi untuk mengabaikan file sampah
-└── README.md             # Dokumentasi utama repositori (file ini)
+└── README.md
 ```
 
-## 🚀 Teknologi & Bahasa yang Dipelajari
+## 🚀 Daftar Latihan Python
 
-*   **Python**: Fokus pada pemahaman logika dasar, struktur data, pemecahan masalah (*problem-solving*), hingga pembuatan skrip otomatisasi atau aplikasi mini.
+*   **L1 - L5**: Pengenalan dasar input, output, dan variabel.
+*   **L6 - L7**: Implementasi logika percabangan (*if-else*).
+*   **L8 - L10**: Pembuatan logika permainan (*game*) dan aplikasi kalkulator yang lebih kompleks.
+*   **L11**: Penerapan sistem modular (*functions/modules*) untuk merapikan struktur kode.
 
 ## ⚙️ Cara Menggunakan Repositori Ini
 
@@ -32,17 +42,14 @@ Jika Anda ingin mencoba menjalankan kode dari repositori ini di komputer lokal A
     ```bash
     git clone https://github.com
     ```
-2.  **Masuk ke folder bahasa yang diinginkan (misal: Python):**
+2.  **Masuk ke folder Python:**
     ```bash
-    cd Code-Practice/python
+    cd "Code Practice/Python"
     ```
-3.  **Jalankan file kode sesuai dengan panduan di dalam subfolder tersebut.**
-
-## 📈 Rencana Ke Depan
-
-*   [ ] Menyelesaikan modul latihan dasar Python.
-*   [ ] Membuat 3 proyek mini menggunakan Python.
-*   [ ] Mulai menambahkan bahasa pemrograman baru setelah menguasai dasar Python.
+3.  **Jalankan salah satu file (contoh: L1):**
+    ```bash
+    python "L1-Halo Dunia.py"
+    ```
 
 ---
 *Catatan: Repositori ini akan terus diperbarui seiring berjalannya proses belajar saya.*
