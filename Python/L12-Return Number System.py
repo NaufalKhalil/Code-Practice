@@ -2,28 +2,28 @@ import sys
 
 def mesin_operasi(operasi, angka_1, angka_2):
     if operasi == 1 :
-        return(f"hasil penjumlahan : {angka_1} + {angka_2} = {angka_1 + angka_2}")
+        return angka_1 + angka_2
     elif operasi == 2 :
-        return(f"hasil pengurangan : {angka_1} - {angka_2} = {angka_1 - angka_2}")
+        return angka_1 - angka_2
     elif operasi == 3 :
-        return(f"hasil perkalian : {angka_1} * {angka_2} = {angka_1 * angka_2}")
-    elif operasi == 4 :  
-        return(f"hasil pembagian : {angka_1} / {angka_2} = {angka_1 / angka_2}")
+        return angka_1 * angka_2
+    elif operasi == 4 :
+        return angka_1 / angka_2
     elif operasi == 5 :
-        return(f"hasil perpangkatan : {angka_1} ** {angka_2} = {angka_1 ** angka_2}")
+        return angka_1 ** angka_2
 
 while True :
 
     while True :
-        print("-----------------------")
+        print("-"*16)
         print("[1] Penjumlahan")
         print("[2] Pengurangan")
         print("[3] Perkalian")
         print("[4] Pembagian")
         print("[5] Perpangkatan")
-        print("-----------------------")
+        print("-"*16)
         print("[6] Keluar")
-        print("-----------------------")
+        print("-"*16)
 
         operasi = int(input("Anda mau melakukan apa? :"))
 
@@ -44,6 +44,15 @@ while True :
             print("Error!, Angka kedua dalam pembagian tidak boleh 0")
             angka_2 = int(input("Masukan angka kedua :"))
 
-    hasil_teks = mesin_operasi(operasi, angka_1, angka_2)
+    hasil_angka = mesin_operasi(operasi, angka_1, angka_2)
 
-    print(hasil_teks)
+    if operasi == 1:
+        print(f"hasil penjumlahan : {angka_1} + {angka_2} = {hasil_angka}")
+    elif operasi == 2:
+        print(f"hasil pengurangan : {angka_1} - {angka_2} = {hasil_angka}")
+    elif operasi == 3:
+        print(f"hasil perkalian : {angka_1} * {angka_2} = {hasil_angka}")
+    elif operasi == 4:
+        print(f"hasil pembagian : {angka_1} / {angka_2} = {hasil_angka}")
+    elif operasi == 5:
+        print(f"hasil perpangkatan : {angka_1} ** {angka_2} = {hasil_angka}")
