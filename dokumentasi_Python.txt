@@ -1,0 +1,495 @@
+======================================================================
+  DOKUMENTASI KODE PYTHON – PYTHON
+  Dibuat  : 2026-06-22 00:00:49
+  Folder  : d:\Project\Coding\Code Practice\Python
+  Total   : 40 file
+======================================================================
+
+======================================================================
+  KONTEKS & PERATURAN UNTUK AI – BACA INI DULU
+======================================================================
+
+Halo AI! Ini adalah sesi lanjutan belajar Python seorang pemula.
+Obrolan sebelumnya sudah mencapai batas token sehingga chat dibuka ulang.
+File ini berisi seluruh kode yang sudah pernah dibuat sebagai bukti progres belajar.
+
+Tugasmu adalah menjadi tutor/mentor Python interaktif dengan aturan berikut:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ATURAN PEMBERIAN SOAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ 1. JANGAN beri jawaban kode lengkap sebelum pengguna mengatakan
+    kata 'menyerah'. Sebelum itu, hanya boleh memberi clue/petunjuk.
+
+ 2. Jika pengguna mengatakan 'menyerah', barulah tampilkan kode
+    jawaban lengkap beserta penjelasannya.
+
+ 3. Jika kode yang dikirim pengguna SALAH atau belum lulus:
+    - Jangan langsung kasih jawaban.
+    - Berikan petunjuk/clue yang mengarahkan ke kesalahan.
+    - Tanyakan apakah mau coba lagi atau menyerah.
+
+ 4. Soal level berikutnya HANYA boleh diberikan setelah kode
+    pengguna dinyatakan BENAR / LULUS oleh kamu.
+
+ 5. Tingkat kesulitan soal harus disesuaikan dengan level:
+    - Level rendah  → soal sederhana, 1 konsep, cocok untuk pemula.
+    - Level tinggi  → soal lebih kompleks, bisa gabungan beberapa konsep.
+    - Naik level hanya jika sudah lulus soal sebelumnya.
+
+ 6. Soal harus selalu bisa dipahami pemula:
+    - Gunakan bahasa yang mudah dan jelas.
+    - Sertakan contoh input/output yang diharapkan.
+    - Jangan gunakan library eksternal kecuali sudah di level lanjut.
+
+ 7. Lihat daftar kode di bawah untuk mengetahui syntax dan topik
+    apa saja yang sudah pernah dipelajari. Gunakan ini sebagai
+    acuan level dan titik lanjut pembelajaran.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ CARA MEMULAI SESI INI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ Setelah membaca file ini, sambut pengguna dan tanyakan:
+ 'Mau lanjut dari mana? Minta soal baru, atau ada topik tertentu?'
+
+======================================================================
+
+DAFTAR ISI
+----------------------------------------
+    1. L1-Variable.py
+    2. L10-Perkalian.py
+    3. L11-Pembagian.py
+    4. L12-Pangkat.py
+    5. L13-Input dari User.py
+    6. L14-Pengkondisian (IF dasar).py
+    7. L15-If dengan dua kondisi (elif).py
+    8. L16-Boolean (True or False).py
+    9. L17-Operator Logika (and).py
+   10. L18-Operator OR.py
+   11. L19-NOT (kebalikan True or False).py
+   12. L2-Lebih dari satu variable.py
+   13. L2-Mengubah Isi Variable.py
+   14. L20-Mini Project Logika.py
+   15. L21-For Loop Dasar.py
+   16. L22-For Loop Kelipatan Dua.py
+   17. L23-For Loop Mundur.py
+   18. L24-Menghitung Total Dengan Loop.py
+   19. L25-Menghitung Jumlah Bilangan Genap.py
+   20. L26-Menghitung Banyak Perulangan.py
+   21. L27-For Loop dan IF.py
+   22. L28-Menampilkan Bilangan Genap.py
+   23. L29-Menampilkan Bilangan Ganjil.py
+   24. L30-Menghitung Jumlah Bilangan Ganjil.py
+   25. L31-While Loop Dasar.py
+   26. L32-While Loop Mundur.py
+   27. L33-Menjumlahkan Dengan While.py
+   28. L34-Input Sampai Benar.py
+   29. L35-Menu Keluar Dengan While.py
+   30. L36-Break.py
+   31. L37-Continue.py
+   32. L38-Tabel Perkalian Sederhana.py
+   33. L39-Tabel-Perkalian-Input.py
+   34. L4-String.py
+   35. L40-Validasi-Angka-Dengan-Loop.py
+   36. L5-Integer.py
+   37. L6-Float.py
+   38. L7-Operasi Penjumlahan pada Integer.py
+   39. L8-Menyimpan Hasil Perhitungan ke Variable.py
+   40. L9-Pengurangan.py
+
+======================================================================
+
+======================================================================
+  BAB 1 – L1-Variable.py
+======================================================================
+
+nama = "Naufal"
+print(nama)
+
+======================================================================
+  BAB 2 – L10-Perkalian.py
+======================================================================
+
+angka_1 = 6
+angka_2 = 4
+
+hasil = angka_1 * angka_2
+print(hasil)
+
+======================================================================
+  BAB 3 – L11-Pembagian.py
+======================================================================
+
+angka_1 = 20
+angka_2 = 5
+
+hasil = angka_1 / angka_2
+print(hasil)
+
+======================================================================
+  BAB 4 – L12-Pangkat.py
+======================================================================
+
+angka_1 = 3
+angka_2 = 2
+
+hasil = angka_1 ** angka_2
+print(hasil)
+
+======================================================================
+  BAB 5 – L13-Input dari User.py
+======================================================================
+
+angka_1 = int(input("Masukan angka pertama : "))
+angka_2 = int(input("Masukan angka kedua : "))
+
+hasil = angka_1 + angka_2
+print(hasil)
+
+======================================================================
+  BAB 6 – L14-Pengkondisian (IF dasar).py
+======================================================================
+
+angka = int(input("Masukan angka : "))
+
+if angka > 10 :
+    print("Besar")
+else :
+    print("Kecil atau sama dengan 10")
+
+======================================================================
+  BAB 7 – L15-If dengan dua kondisi (elif).py
+======================================================================
+
+angka = int(input("Masukan angka : "))
+
+if angka > 10 :
+    print("Besar")
+elif angka == 10 :
+    print("Pas")
+else :
+    print("Kecil")
+
+======================================================================
+  BAB 8 – L16-Boolean (True or False).py
+======================================================================
+
+angka = int(input("Masukan angka : "))
+
+hasil = angka > 10
+
+print(hasil)
+
+======================================================================
+  BAB 9 – L17-Operator Logika (and).py
+======================================================================
+
+angka = int(input("Masukan angka : "))
+
+hasil = 5 < angka < 15
+
+print(hasil)
+
+======================================================================
+  BAB 10 – L18-Operator OR.py
+======================================================================
+
+angka = int(input("Masukkan angka : "))
+
+hasil = angka < 5 or angka > 15
+
+print(hasil)
+
+======================================================================
+  BAB 11 – L19-NOT (kebalikan True or False).py
+======================================================================
+
+angka = int(input("Masukkan angka : "))
+
+hasil = not angka == 10
+
+print(hasil)
+
+======================================================================
+  BAB 12 – L2-Lebih dari satu variable.py
+======================================================================
+
+nama = "Naufal"
+umur = 18
+
+print(nama)
+print(umur)
+
+======================================================================
+  BAB 13 – L2-Mengubah Isi Variable.py
+======================================================================
+
+nama = "Naufal"
+nama = "Budi"
+
+print(nama)
+
+======================================================================
+  BAB 14 – L20-Mini Project Logika.py
+======================================================================
+
+angka = int(input("Masukkan angka : "))
+
+if angka > 10 and angka != 15 :
+    print("VALID")
+else :
+    print("TIDAK VALID")
+
+======================================================================
+  BAB 15 – L21-For Loop Dasar.py
+======================================================================
+
+for i in range(1, 5 + 1):
+    print(i)
+
+======================================================================
+  BAB 16 – L22-For Loop Kelipatan Dua.py
+======================================================================
+
+for i in range(2 ,10 + 1, 2):
+    print(i)
+
+======================================================================
+  BAB 17 – L23-For Loop Mundur.py
+======================================================================
+
+for i in range(5, 0, -1):
+    print(i)
+
+======================================================================
+  BAB 18 – L24-Menghitung Total Dengan Loop.py
+======================================================================
+
+total = 0
+
+for i in range (1, 5 + 1):
+    total = total + i
+
+print(total)
+
+======================================================================
+  BAB 19 – L25-Menghitung Jumlah Bilangan Genap.py
+======================================================================
+
+total = 0
+for i in range(2, 10 + 1, 2):
+    total = total + i
+print(total)
+
+======================================================================
+  BAB 20 – L26-Menghitung Banyak Perulangan.py
+======================================================================
+
+jumlah = 0
+for i in range(1, 5 + 1):
+    jumlah += 1
+print(jumlah)
+
+======================================================================
+  BAB 21 – L27-For Loop dan IF.py
+======================================================================
+
+for i in range(1, 10 + 1) :
+    if i > 5 :
+        print(i)
+
+======================================================================
+  BAB 22 – L28-Menampilkan Bilangan Genap.py
+======================================================================
+
+for i in range (1, 10 + 1) :
+    if i % 2 == 0 :
+        print(i)
+
+======================================================================
+  BAB 23 – L29-Menampilkan Bilangan Ganjil.py
+======================================================================
+
+for i in range (1, 10) :
+    if i % 2 != 0 :
+        print(i)
+
+======================================================================
+  BAB 24 – L30-Menghitung Jumlah Bilangan Ganjil.py
+======================================================================
+
+total = 0
+
+for i in range (1, 10 + 1):
+    if i % 2 != 0 :
+        total += i
+print(total)
+
+======================================================================
+  BAB 25 – L31-While Loop Dasar.py
+======================================================================
+
+angka = 1
+
+while angka <= 5 :
+    print(angka)
+    angka += 1
+
+======================================================================
+  BAB 26 – L32-While Loop Mundur.py
+======================================================================
+
+angka = 5
+
+while angka > 0 :
+    print(angka)
+    angka -= 1
+
+======================================================================
+  BAB 27 – L33-Menjumlahkan Dengan While.py
+======================================================================
+
+angka = 1
+total = 0
+
+while angka <= 5 :
+    total += angka
+    angka += 1
+print(total)
+
+======================================================================
+  BAB 28 – L34-Input Sampai Benar.py
+======================================================================
+
+angka = 0
+
+while angka != 7 :
+    angka = int(input("Masukkan angka : "))
+
+if angka == 7 :
+    print("Benar!")
+
+======================================================================
+  BAB 29 – L35-Menu Keluar Dengan While.py
+======================================================================
+
+perintah = ""
+
+while perintah != "keluar" :
+    perintah = input("Masukkan Perintah : ")
+
+print("Program Selesai")
+
+======================================================================
+  BAB 30 – L36-Break.py
+======================================================================
+
+angka = 0
+
+while True :
+    angka += 1
+    print(angka)
+    if angka == 3 :
+        break
+
+======================================================================
+  BAB 31 – L37-Continue.py
+======================================================================
+
+for i in range(1, 5 + 1) :
+    if i == 3 :
+        continue
+    print(i)
+
+======================================================================
+  BAB 32 – L38-Tabel Perkalian Sederhana.py
+======================================================================
+
+for i in range(1, 5 + 1) :
+    hasil = i * 2
+    print(f"{i} x 2 = {hasil}")
+
+======================================================================
+  BAB 33 – L39-Tabel-Perkalian-Input.py
+======================================================================
+
+angka = int(input("Masukan angka : "))
+
+for i in range(1, 10 + 1) :
+    hasil = angka * i
+    print(f"{angka} x {i} = {hasil}")
+
+======================================================================
+  BAB 34 – L4-String.py
+======================================================================
+
+kota = "Medan"
+print(kota)
+
+kota = "Jakarta"
+print(kota)
+
+======================================================================
+  BAB 35 – L40-Validasi-Angka-Dengan-Loop.py
+======================================================================
+
+angka = int(input("Masukkan batas angka : "))
+
+for i in range(1, angka + 1):
+    if i % 2 == 0:
+        print(i)
+
+======================================================================
+  BAB 36 – L5-Integer.py
+======================================================================
+
+umur = 18
+print(umur)
+
+umur = 19
+print(umur)
+
+======================================================================
+  BAB 37 – L6-Float.py
+======================================================================
+
+tinggi = 170.5
+print(tinggi)
+
+tinggi = 171.2
+print(tinggi)
+
+======================================================================
+  BAB 38 – L7-Operasi Penjumlahan pada Integer.py
+======================================================================
+
+angka_1 = 10
+angka_2 = 5
+
+print(angka_1 + angka_2)
+
+======================================================================
+  BAB 39 – L8-Menyimpan Hasil Perhitungan ke Variable.py
+======================================================================
+
+angka_1 = 20
+angka_2 = 10
+
+hasil = angka_1 + angka_2
+print(hasil)
+
+======================================================================
+  BAB 40 – L9-Pengurangan.py
+======================================================================
+
+angka_1 = 20
+angka_2 = 7
+
+hasil = angka_1 - angka_2
+print(hasil)
+
+======================================================================
+  AKHIR DOKUMENTASI
+======================================================================
