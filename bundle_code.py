@@ -123,7 +123,7 @@ def buat_dokumentasi(nama_folder, folder_path, output_path):
         for i, path in enumerate(file_list, 1):
             nama = os.path.basename(path)
             out.write("=" * 70 + "\n")
-            out.write(f"  BAB {i} – {nama}\n")
+            out.write(f"  FILE {i} – {nama}\n")
             out.write("=" * 70 + "\n\n")
 
             try:

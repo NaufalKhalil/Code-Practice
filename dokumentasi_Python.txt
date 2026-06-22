@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-22 00:00:49
+  Dibuat  : 2026-06-22 16:49:09
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 40 file
+  Total   : 76 file
 ======================================================================
 
 ======================================================================
@@ -93,23 +93,59 @@ DAFTAR ISI
    33. L39-Tabel-Perkalian-Input.py
    34. L4-String.py
    35. L40-Validasi-Angka-Dengan-Loop.py
-   36. L5-Integer.py
-   37. L6-Float.py
-   38. L7-Operasi Penjumlahan pada Integer.py
-   39. L8-Menyimpan Hasil Perhitungan ke Variable.py
-   40. L9-Pengurangan.py
+   36. L41-Membuat Kotak Bintang.py
+   37. L42-Segitiga Bintang.py
+   38. L43-Persegi Angka.py
+   39. L44-Segitiga Angka.py
+   40. L45-Segitiga Terbalik.py
+   41. L46-Segitiga Siku-Siku Terbalik Angka.py
+   42. L47-Segitiga Angka Berurutan.py
+   43. L48-Segitiga Angka Terbalik Berurutan.py
+   44. L49-Segitiga Siku Kanan.py
+   45. L5-Integer.py
+   46. L50-Piramida Bintang.py
+   47. L51-Piramida Terbalik.py
+   48. L52-Diamond (Belah Ketupat).py
+   49. L53-Hollow Square (Persegi Kosong).py
+   50. L54-Hollow Triangle (Segitiga Kosong).py
+   51. L55-X Pattern.py
+   52. L56-Checkerboard (Papan Catur).py
+   53. L57-Multiplication Table (Versi Nested Loop).py
+   54. L58-FizzBuzz.py
+   55. L59-LIST (Array).py
+   56. L6-Float.py
+   57. L60-Mengakses Index List.py
+   58. L61-Mengubah Isi List.py
+   59. L62-Menambah Item ke List (Append).py
+   60. L63-Menghapus Item (remove).py
+   61. L64-Panjang List (len).py
+   62. L65-Loop dengan Index.py
+   63. L66-Cari Data dalam List.py
+   64. L67-Hitung Jumlah Angka dalam List.py
+   65. L68-Mencari Nilai Terbesar.py
+   66. L69-Mencari Nilai Terkecil.py
+   67. L7-Operasi Penjumlahan pada Integer.py
+   68. L70-Menghitung Rata-rata (Average).py
+   69. L71-Hitung Jumlah Angka Genap.py
+   70. L72-Hitung Jumlah Angka Ganjil.py
+   71. L73-Input Banyak Data ke List.py
+   72. L74 -Total dari Data yang Diinput User.py
+   73. L75-Cari Nilai Terbesar dari Input User.py
+   74. L76-Nilai Terkecil dari Input User.py
+   75. L8-Menyimpan Hasil Perhitungan ke Variable.py
+   76. L9-Pengurangan.py
 
 ======================================================================
 
 ======================================================================
-  BAB 1 – L1-Variable.py
+  FILE 1 – L1-Variable.py
 ======================================================================
 
 nama = "Naufal"
 print(nama)
 
 ======================================================================
-  BAB 2 – L10-Perkalian.py
+  FILE 2 – L10-Perkalian.py
 ======================================================================
 
 angka_1 = 6
@@ -119,7 +155,7 @@ hasil = angka_1 * angka_2
 print(hasil)
 
 ======================================================================
-  BAB 3 – L11-Pembagian.py
+  FILE 3 – L11-Pembagian.py
 ======================================================================
 
 angka_1 = 20
@@ -129,7 +165,7 @@ hasil = angka_1 / angka_2
 print(hasil)
 
 ======================================================================
-  BAB 4 – L12-Pangkat.py
+  FILE 4 – L12-Pangkat.py
 ======================================================================
 
 angka_1 = 3
@@ -139,7 +175,7 @@ hasil = angka_1 ** angka_2
 print(hasil)
 
 ======================================================================
-  BAB 5 – L13-Input dari User.py
+  FILE 5 – L13-Input dari User.py
 ======================================================================
 
 angka_1 = int(input("Masukan angka pertama : "))
@@ -149,7 +185,7 @@ hasil = angka_1 + angka_2
 print(hasil)
 
 ======================================================================
-  BAB 6 – L14-Pengkondisian (IF dasar).py
+  FILE 6 – L14-Pengkondisian (IF dasar).py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -160,7 +196,7 @@ else :
     print("Kecil atau sama dengan 10")
 
 ======================================================================
-  BAB 7 – L15-If dengan dua kondisi (elif).py
+  FILE 7 – L15-If dengan dua kondisi (elif).py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -173,7 +209,7 @@ else :
     print("Kecil")
 
 ======================================================================
-  BAB 8 – L16-Boolean (True or False).py
+  FILE 8 – L16-Boolean (True or False).py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -183,7 +219,7 @@ hasil = angka > 10
 print(hasil)
 
 ======================================================================
-  BAB 9 – L17-Operator Logika (and).py
+  FILE 9 – L17-Operator Logika (and).py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -193,7 +229,7 @@ hasil = 5 < angka < 15
 print(hasil)
 
 ======================================================================
-  BAB 10 – L18-Operator OR.py
+  FILE 10 – L18-Operator OR.py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -203,7 +239,7 @@ hasil = angka < 5 or angka > 15
 print(hasil)
 
 ======================================================================
-  BAB 11 – L19-NOT (kebalikan True or False).py
+  FILE 11 – L19-NOT (kebalikan True or False).py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -213,7 +249,7 @@ hasil = not angka == 10
 print(hasil)
 
 ======================================================================
-  BAB 12 – L2-Lebih dari satu variable.py
+  FILE 12 – L2-Lebih dari satu variable.py
 ======================================================================
 
 nama = "Naufal"
@@ -223,7 +259,7 @@ print(nama)
 print(umur)
 
 ======================================================================
-  BAB 13 – L2-Mengubah Isi Variable.py
+  FILE 13 – L2-Mengubah Isi Variable.py
 ======================================================================
 
 nama = "Naufal"
@@ -232,7 +268,7 @@ nama = "Budi"
 print(nama)
 
 ======================================================================
-  BAB 14 – L20-Mini Project Logika.py
+  FILE 14 – L20-Mini Project Logika.py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -243,28 +279,28 @@ else :
     print("TIDAK VALID")
 
 ======================================================================
-  BAB 15 – L21-For Loop Dasar.py
+  FILE 15 – L21-For Loop Dasar.py
 ======================================================================
 
 for i in range(1, 5 + 1):
     print(i)
 
 ======================================================================
-  BAB 16 – L22-For Loop Kelipatan Dua.py
+  FILE 16 – L22-For Loop Kelipatan Dua.py
 ======================================================================
 
 for i in range(2 ,10 + 1, 2):
     print(i)
 
 ======================================================================
-  BAB 17 – L23-For Loop Mundur.py
+  FILE 17 – L23-For Loop Mundur.py
 ======================================================================
 
 for i in range(5, 0, -1):
     print(i)
 
 ======================================================================
-  BAB 18 – L24-Menghitung Total Dengan Loop.py
+  FILE 18 – L24-Menghitung Total Dengan Loop.py
 ======================================================================
 
 total = 0
@@ -275,7 +311,7 @@ for i in range (1, 5 + 1):
 print(total)
 
 ======================================================================
-  BAB 19 – L25-Menghitung Jumlah Bilangan Genap.py
+  FILE 19 – L25-Menghitung Jumlah Bilangan Genap.py
 ======================================================================
 
 total = 0
@@ -284,7 +320,7 @@ for i in range(2, 10 + 1, 2):
 print(total)
 
 ======================================================================
-  BAB 20 – L26-Menghitung Banyak Perulangan.py
+  FILE 20 – L26-Menghitung Banyak Perulangan.py
 ======================================================================
 
 jumlah = 0
@@ -293,7 +329,7 @@ for i in range(1, 5 + 1):
 print(jumlah)
 
 ======================================================================
-  BAB 21 – L27-For Loop dan IF.py
+  FILE 21 – L27-For Loop dan IF.py
 ======================================================================
 
 for i in range(1, 10 + 1) :
@@ -301,7 +337,7 @@ for i in range(1, 10 + 1) :
         print(i)
 
 ======================================================================
-  BAB 22 – L28-Menampilkan Bilangan Genap.py
+  FILE 22 – L28-Menampilkan Bilangan Genap.py
 ======================================================================
 
 for i in range (1, 10 + 1) :
@@ -309,7 +345,7 @@ for i in range (1, 10 + 1) :
         print(i)
 
 ======================================================================
-  BAB 23 – L29-Menampilkan Bilangan Ganjil.py
+  FILE 23 – L29-Menampilkan Bilangan Ganjil.py
 ======================================================================
 
 for i in range (1, 10) :
@@ -317,7 +353,7 @@ for i in range (1, 10) :
         print(i)
 
 ======================================================================
-  BAB 24 – L30-Menghitung Jumlah Bilangan Ganjil.py
+  FILE 24 – L30-Menghitung Jumlah Bilangan Ganjil.py
 ======================================================================
 
 total = 0
@@ -328,7 +364,7 @@ for i in range (1, 10 + 1):
 print(total)
 
 ======================================================================
-  BAB 25 – L31-While Loop Dasar.py
+  FILE 25 – L31-While Loop Dasar.py
 ======================================================================
 
 angka = 1
@@ -338,7 +374,7 @@ while angka <= 5 :
     angka += 1
 
 ======================================================================
-  BAB 26 – L32-While Loop Mundur.py
+  FILE 26 – L32-While Loop Mundur.py
 ======================================================================
 
 angka = 5
@@ -348,7 +384,7 @@ while angka > 0 :
     angka -= 1
 
 ======================================================================
-  BAB 27 – L33-Menjumlahkan Dengan While.py
+  FILE 27 – L33-Menjumlahkan Dengan While.py
 ======================================================================
 
 angka = 1
@@ -360,7 +396,7 @@ while angka <= 5 :
 print(total)
 
 ======================================================================
-  BAB 28 – L34-Input Sampai Benar.py
+  FILE 28 – L34-Input Sampai Benar.py
 ======================================================================
 
 angka = 0
@@ -372,7 +408,7 @@ if angka == 7 :
     print("Benar!")
 
 ======================================================================
-  BAB 29 – L35-Menu Keluar Dengan While.py
+  FILE 29 – L35-Menu Keluar Dengan While.py
 ======================================================================
 
 perintah = ""
@@ -383,7 +419,7 @@ while perintah != "keluar" :
 print("Program Selesai")
 
 ======================================================================
-  BAB 30 – L36-Break.py
+  FILE 30 – L36-Break.py
 ======================================================================
 
 angka = 0
@@ -395,7 +431,7 @@ while True :
         break
 
 ======================================================================
-  BAB 31 – L37-Continue.py
+  FILE 31 – L37-Continue.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -404,7 +440,7 @@ for i in range(1, 5 + 1) :
     print(i)
 
 ======================================================================
-  BAB 32 – L38-Tabel Perkalian Sederhana.py
+  FILE 32 – L38-Tabel Perkalian Sederhana.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -412,7 +448,7 @@ for i in range(1, 5 + 1) :
     print(f"{i} x 2 = {hasil}")
 
 ======================================================================
-  BAB 33 – L39-Tabel-Perkalian-Input.py
+  FILE 33 – L39-Tabel-Perkalian-Input.py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -422,7 +458,7 @@ for i in range(1, 10 + 1) :
     print(f"{angka} x {i} = {hasil}")
 
 ======================================================================
-  BAB 34 – L4-String.py
+  FILE 34 – L4-String.py
 ======================================================================
 
 kota = "Medan"
@@ -432,7 +468,7 @@ kota = "Jakarta"
 print(kota)
 
 ======================================================================
-  BAB 35 – L40-Validasi-Angka-Dengan-Loop.py
+  FILE 35 – L40-Validasi-Angka-Dengan-Loop.py
 ======================================================================
 
 angka = int(input("Masukkan batas angka : "))
@@ -442,7 +478,89 @@ for i in range(1, angka + 1):
         print(i)
 
 ======================================================================
-  BAB 36 – L5-Integer.py
+  FILE 36 – L41-Membuat Kotak Bintang.py
+======================================================================
+
+for i in range(1, 3 + 1) :
+    print()
+    for j in range(1, 3 + 1) :
+        print("*", end="")
+
+======================================================================
+  FILE 37 – L42-Segitiga Bintang.py
+======================================================================
+
+for i in range(1, 5 + 1) :
+    print("*" * i)
+
+======================================================================
+  FILE 38 – L43-Persegi Angka.py
+======================================================================
+
+for i in range(1, 5 + 1) :
+    for j in range(1, 5 + 1) :
+        print(f"{i}", end="")
+    print()
+
+======================================================================
+  FILE 39 – L44-Segitiga Angka.py
+======================================================================
+
+for i in range(1, 5 + 1) :
+    print()
+    for j in range(0, i) :
+        print(i, end="")
+
+======================================================================
+  FILE 40 – L45-Segitiga Terbalik.py
+======================================================================
+
+for i in range(5, 1 - 1, -1) :
+    print()
+    for j in range(1, i + 1) :
+        print("*", end="")
+
+======================================================================
+  FILE 41 – L46-Segitiga Siku-Siku Terbalik Angka.py
+======================================================================
+
+for i in range(5, 1 - 1, -1) :
+    print()
+    for j in range(1, i + 1) :
+        print(i, end="")
+
+======================================================================
+  FILE 42 – L47-Segitiga Angka Berurutan.py
+======================================================================
+
+for i in range(1, 5 + 1) :
+    for j in range(1, i + 1) :
+        print(j, end="")
+    print()
+
+======================================================================
+  FILE 43 – L48-Segitiga Angka Terbalik Berurutan.py
+======================================================================
+
+for i in range(5, 1 - 1 , -1) :
+    for j in range(1, i + 1) :
+        print(j, end="")
+    print()
+
+======================================================================
+  FILE 44 – L49-Segitiga Siku Kanan.py
+======================================================================
+
+for i in range(1, 5 + 1):
+
+    for j in range(1, (5 - i) + 1):
+        print(" ", end="")
+
+    for j in range(1, i + 1):
+        print("*", end="")
+
+======================================================================
+  FILE 45 – L5-Integer.py
 ======================================================================
 
 umur = 18
@@ -452,7 +570,143 @@ umur = 19
 print(umur)
 
 ======================================================================
-  BAB 37 – L6-Float.py
+  FILE 46 – L50-Piramida Bintang.py
+======================================================================
+
+for i in range(1, 5 + 1):
+
+    for j in range(5 - i):
+        print(" ", end="")
+    for j in range((i * 2) - 1):
+        print("*", end="")
+        
+    print()
+
+======================================================================
+  FILE 47 – L51-Piramida Terbalik.py
+======================================================================
+
+for i in range(5, 0, -1 ):
+
+    for j in range(5 - i):
+        print(" ", end="")
+    for j in range((i * 2) - 1):
+        print("*", end="")
+    
+    print()
+
+======================================================================
+  FILE 48 – L52-Diamond (Belah Ketupat).py
+======================================================================
+
+for i in range (1, 5 + 1):
+
+    for j in range(5 - i):
+        print(" ", end="")
+    
+    for j in range((i * 2) - 1):
+        print("*", end="")
+
+    print()
+
+for i in range(4, 0, -1 ):
+
+    for j in range(5 - i):
+        print(" ", end="")
+    for j in range((i * 2) - 1):
+        print("*", end="")
+    
+    print()
+
+======================================================================
+  FILE 49 – L53-Hollow Square (Persegi Kosong).py
+======================================================================
+
+for i in range(1, 5 + 1):
+    for j in range(1 , 5 + 1):
+        if i == 1 or i == 5 :
+            print("*", end="")
+        else :
+            if j == 1 or j == 5 :
+                print("*", end="")
+            else :
+                print(" ", end="")
+    print()
+
+======================================================================
+  FILE 50 – L54-Hollow Triangle (Segitiga Kosong).py
+======================================================================
+
+for i in range(1, 5 + 1):
+    for j in range(1, i + 1):
+        if j == 1 or i == j or i == 5:  
+            print("*", end="")
+        else :
+            print(" ", end="")
+    print()
+
+======================================================================
+  FILE 51 – L55-X Pattern.py
+======================================================================
+
+for i in range(1, 5 + 1):
+    for j in range(1, 5 + 1):
+        if i == j or (i + j) == 6:
+            print("*", end="")
+        else :
+            print(" ", end="")
+    print()
+
+======================================================================
+  FILE 52 – L56-Checkerboard (Papan Catur).py
+======================================================================
+
+for i in range(1, 5 + 1):
+    for j in range(1, 8 + 1):
+        if (i + j) % 2 == 0:
+            print("*", end="")
+        else :
+            print(" ", end="")
+    print()
+
+======================================================================
+  FILE 53 – L57-Multiplication Table (Versi Nested Loop).py
+======================================================================
+
+for i in range(1, 5 + 1):
+    for j in range(1, 5 + 1):
+        if i * j < 10:
+            print(" ", end="")
+
+        print(i * j, end=" ")
+
+    print()
+
+======================================================================
+  FILE 54 – L58-FizzBuzz.py
+======================================================================
+
+for i in range(1, 20 + 1):
+    if i % 5 == 0 and i % 3 == 0 :
+        print("FizzBuzz")
+    elif i % 5 == 0 :
+        print("Buzz")
+    elif i % 3 == 0 :
+        print("Fizz")
+    else :
+        print(i)
+
+======================================================================
+  FILE 55 – L59-LIST (Array).py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+
+for i in buah :
+    print(i)
+
+======================================================================
+  FILE 56 – L6-Float.py
 ======================================================================
 
 tinggi = 170.5
@@ -462,7 +716,114 @@ tinggi = 171.2
 print(tinggi)
 
 ======================================================================
-  BAB 38 – L7-Operasi Penjumlahan pada Integer.py
+  FILE 57 – L60-Mengakses Index List.py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+print(buah[0])
+print(buah[2])
+
+======================================================================
+  FILE 58 – L61-Mengubah Isi List.py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+
+buah[1] = "Durian"
+
+for i in buah :
+    print(i)
+
+======================================================================
+  FILE 59 – L62-Menambah Item ke List (Append).py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk"]
+
+buah.append("Pisang")
+
+for i in buah :
+    print(i)
+
+======================================================================
+  FILE 60 – L63-Menghapus Item (remove).py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+
+buah.remove("Mangga")
+
+for i in buah :
+    print(i)
+
+======================================================================
+  FILE 61 – L64-Panjang List (len).py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+
+print(f"Jumlah buah: {len(buah)}")
+
+======================================================================
+  FILE 62 – L65-Loop dengan Index.py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+
+for i in range(len(buah)):
+    print(i, buah[i])
+
+======================================================================
+  FILE 63 – L66-Cari Data dalam List.py
+======================================================================
+
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+
+cari = input("Cari buah: ")
+
+if cari in buah :
+    print("Buah ditemukan")
+else :
+    print("Buah tidak ditemukan")
+
+======================================================================
+  FILE 64 – L67-Hitung Jumlah Angka dalam List.py
+======================================================================
+
+angka = [10, 20, 30, 40, 50]
+total = 0
+
+for i in angka:
+    total += i
+print(total)
+
+======================================================================
+  FILE 65 – L68-Mencari Nilai Terbesar.py
+======================================================================
+
+angka = [10, 45, 23, 99, 12]
+
+terbesar = angka[0]
+
+for i in range(len(angka)):
+    if angka[i] > terbesar:
+        terbesar = angka[i]
+print(terbesar)
+
+======================================================================
+  FILE 66 – L69-Mencari Nilai Terkecil.py
+======================================================================
+
+angka = [10, 45, 23, 99, 12]
+terkecil = angka[0]
+
+for i in range(len(angka)):
+    if  angka[i] < terkecil:
+        terkecil = angka[i]
+print(terkecil)
+
+======================================================================
+  FILE 67 – L7-Operasi Penjumlahan pada Integer.py
 ======================================================================
 
 angka_1 = 10
@@ -471,7 +832,112 @@ angka_2 = 5
 print(angka_1 + angka_2)
 
 ======================================================================
-  BAB 39 – L8-Menyimpan Hasil Perhitungan ke Variable.py
+  FILE 68 – L70-Menghitung Rata-rata (Average).py
+======================================================================
+
+angka = [10, 20, 30, 40, 50]
+total = 0
+
+for i in range(len(angka)):
+    total += angka[i]
+
+print(f"Rata-rata: {total / len(angka)}")
+
+======================================================================
+  FILE 69 – L71-Hitung Jumlah Angka Genap.py
+======================================================================
+
+angka = [10, 21, 30, 45, 50, 61]
+jumlah = 0
+
+for i in range(len(angka)):
+    if angka[i] % 2 == 0 :
+        jumlah += 1
+print(jumlah)
+
+======================================================================
+  FILE 70 – L72-Hitung Jumlah Angka Ganjil.py
+======================================================================
+
+angka = [10, 21, 30, 45, 50, 61]
+total = 0
+for i in range(len(angka)):
+    if angka[i] % 2 == 1:
+        ganjil += 1
+print(f"Jumlah angka ganjil: {ganjil}")
+
+======================================================================
+  FILE 71 – L73-Input Banyak Data ke List.py
+======================================================================
+
+angka = []
+
+n = int(input("Berapa data? :"))
+
+for i in range(n):
+    nilai = int(input("Masukkan angka: "))
+    angka.append(nilai)
+
+print(angka)
+
+======================================================================
+  FILE 72 – L74 -Total dari Data yang Diinput User.py
+======================================================================
+
+angka = []
+total = 0
+jumlah_input = int(input("Berapa data? : "))
+
+for i in range(jumlah_input):
+    angka_input = int(input("Masukkan angka : "))
+    angka.append(angka_input)
+    total += angka[i]
+print(f"Total : {total}")
+
+======================================================================
+  FILE 73 – L75-Cari Nilai Terbesar dari Input User.py
+======================================================================
+
+angka = []
+
+jumlah_input = int(input("Berapa data? : "))
+
+for i in range(jumlah_input):
+
+    angka_input = int(input("Masukkan angka : "))
+    angka.append(angka_input)
+
+    if i == 0 :
+        terbesar = angka[0]
+
+    elif angka[i] > terbesar :
+        terbesar = angka[i]
+
+print(f"Nilai Terbesar : {terbesar}")
+
+======================================================================
+  FILE 74 – L76-Nilai Terkecil dari Input User.py
+======================================================================
+
+angka = []
+
+jumlah_angka = int(input("Berapa data? : "))
+    
+for i in range(jumlah_angka):
+    
+    input_angka = int(input("Masukkan angka : "))
+    angka.append(input_angka)
+
+    if i == 0 : 
+        terkecil = angka[0]
+
+    elif input_angka > angka[i]:
+        terkecil = angka[i]
+
+print(f"Nilai terkecil : {terkecil}")
+
+======================================================================
+  FILE 75 – L8-Menyimpan Hasil Perhitungan ke Variable.py
 ======================================================================
 
 angka_1 = 20
@@ -481,7 +947,7 @@ hasil = angka_1 + angka_2
 print(hasil)
 
 ======================================================================
-  BAB 40 – L9-Pengurangan.py
+  FILE 76 – L9-Pengurangan.py
 ======================================================================
 
 angka_1 = 20
