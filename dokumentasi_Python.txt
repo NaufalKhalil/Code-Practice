@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-22 16:50:49
+  Dibuat  : 2026-06-22 18:23:02
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 76 file
+  Total   : 80 file
 ======================================================================
 
 ======================================================================
@@ -70,17 +70,17 @@ DAFTAR ISI
    10. L18-Operator OR.py
    11. L19-NOT (kebalikan True or False).py
    12. L2-Lebih dari satu variable.py
-   13. L2-Mengubah Isi Variable.py
-   14. L20-Mini Project Logika.py
-   15. L21-For Loop Dasar.py
-   16. L22-For Loop Kelipatan Dua.py
-   17. L23-For Loop Mundur.py
-   18. L24-Menghitung Total Dengan Loop.py
-   19. L25-Menghitung Jumlah Bilangan Genap.py
-   20. L26-Menghitung Banyak Perulangan.py
-   21. L27-For Loop dan IF.py
-   22. L28-Menampilkan Bilangan Genap.py
-   23. L29-Menampilkan Bilangan Ganjil.py
+   13. L20-Mini Project Logika.py
+   14. L21-For Loop Dasar.py
+   15. L22-For Loop Kelipatan Dua.py
+   16. L23-For Loop Mundur.py
+   17. L24-Menghitung Total Dengan Loop.py
+   18. L25-Menghitung Jumlah Bilangan Genap.py
+   19. L26-Menghitung Banyak Perulangan.py
+   20. L27-For Loop dan IF.py
+   21. L28-Menampilkan Bilangan Genap.py
+   22. L29-Menampilkan Bilangan Ganjil.py
+   23. L3-Mengubah Isi Variable.py
    24. L30-Menghitung Jumlah Bilangan Ganjil.py
    25. L31-While Loop Dasar.py
    26. L32-While Loop Mundur.py
@@ -132,8 +132,12 @@ DAFTAR ISI
    72. L74 -Total dari Data yang Diinput User.py
    73. L75-Cari Nilai Terbesar dari Input User.py
    74. L76-Nilai Terkecil dari Input User.py
-   75. L8-Menyimpan Hasil Perhitungan ke Variable.py
-   76. L9-Pengurangan.py
+   75. L77-RataRata Dari Input User.py
+   76. L78-Menghitung Bilangan Genap Dalam List.py
+   77. L79-Menghitung Bilangan Ganjil Dalam List.py
+   78. L8-Menyimpan Hasil Perhitungan ke Variable.py
+   79. L80-Mencari Posisi Nilai Terbesar.py
+   80. L9-Pengurangan.py
 
 ======================================================================
 
@@ -259,16 +263,7 @@ print(nama)
 print(umur)
 
 ======================================================================
-  FILE 13 – L2-Mengubah Isi Variable.py
-======================================================================
-
-nama = "Naufal"
-nama = "Budi"
-
-print(nama)
-
-======================================================================
-  FILE 14 – L20-Mini Project Logika.py
+  FILE 13 – L20-Mini Project Logika.py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -279,28 +274,28 @@ else :
     print("TIDAK VALID")
 
 ======================================================================
-  FILE 15 – L21-For Loop Dasar.py
+  FILE 14 – L21-For Loop Dasar.py
 ======================================================================
 
 for i in range(1, 5 + 1):
     print(i)
 
 ======================================================================
-  FILE 16 – L22-For Loop Kelipatan Dua.py
+  FILE 15 – L22-For Loop Kelipatan Dua.py
 ======================================================================
 
 for i in range(2 ,10 + 1, 2):
     print(i)
 
 ======================================================================
-  FILE 17 – L23-For Loop Mundur.py
+  FILE 16 – L23-For Loop Mundur.py
 ======================================================================
 
 for i in range(5, 0, -1):
     print(i)
 
 ======================================================================
-  FILE 18 – L24-Menghitung Total Dengan Loop.py
+  FILE 17 – L24-Menghitung Total Dengan Loop.py
 ======================================================================
 
 total = 0
@@ -311,7 +306,7 @@ for i in range (1, 5 + 1):
 print(total)
 
 ======================================================================
-  FILE 19 – L25-Menghitung Jumlah Bilangan Genap.py
+  FILE 18 – L25-Menghitung Jumlah Bilangan Genap.py
 ======================================================================
 
 total = 0
@@ -320,7 +315,7 @@ for i in range(2, 10 + 1, 2):
 print(total)
 
 ======================================================================
-  FILE 20 – L26-Menghitung Banyak Perulangan.py
+  FILE 19 – L26-Menghitung Banyak Perulangan.py
 ======================================================================
 
 jumlah = 0
@@ -329,7 +324,7 @@ for i in range(1, 5 + 1):
 print(jumlah)
 
 ======================================================================
-  FILE 21 – L27-For Loop dan IF.py
+  FILE 20 – L27-For Loop dan IF.py
 ======================================================================
 
 for i in range(1, 10 + 1) :
@@ -337,7 +332,7 @@ for i in range(1, 10 + 1) :
         print(i)
 
 ======================================================================
-  FILE 22 – L28-Menampilkan Bilangan Genap.py
+  FILE 21 – L28-Menampilkan Bilangan Genap.py
 ======================================================================
 
 for i in range (1, 10 + 1) :
@@ -345,12 +340,21 @@ for i in range (1, 10 + 1) :
         print(i)
 
 ======================================================================
-  FILE 23 – L29-Menampilkan Bilangan Ganjil.py
+  FILE 22 – L29-Menampilkan Bilangan Ganjil.py
 ======================================================================
 
 for i in range (1, 10) :
     if i % 2 != 0 :
         print(i)
+
+======================================================================
+  FILE 23 – L3-Mengubah Isi Variable.py
+======================================================================
+
+nama = "Naufal"
+nama = "Budi"
+
+print(nama)
 
 ======================================================================
   FILE 24 – L30-Menghitung Jumlah Bilangan Ganjil.py
@@ -924,7 +928,7 @@ angka = []
 jumlah_angka = int(input("Berapa data? : "))
     
 for i in range(jumlah_angka):
-    
+
     input_angka = int(input("Masukkan angka : "))
     angka.append(input_angka)
 
@@ -937,7 +941,51 @@ for i in range(jumlah_angka):
 print(f"Nilai terkecil : {terkecil}")
 
 ======================================================================
-  FILE 75 – L8-Menyimpan Hasil Perhitungan ke Variable.py
+  FILE 75 – L77-RataRata Dari Input User.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(1, 5 + 1):
+    input_angka = int(input(f"Masukkan angka ke-{i} : "))
+    angka.append(input_angka)
+
+    total += input_angka
+
+print(f"Jumlah = {total}")
+print(f"Rata - rata = {total / len(angka)}")
+
+======================================================================
+  FILE 76 – L78-Menghitung Bilangan Genap Dalam List.py
+======================================================================
+
+angka = []
+genap = 0
+
+for i in range(1, 5 + 1):
+    input_angka = int(input("Masukkan angka : "))
+    angka.append(input_angka)
+    if input_angka % 2 == 0 :
+        genap += 1
+print(f"Jumlah bilangan genap : {genap}")
+
+======================================================================
+  FILE 77 – L79-Menghitung Bilangan Ganjil Dalam List.py
+======================================================================
+
+angka = []
+ganjil = 0
+
+for i in range(1, 5 + 1):
+    input_angka = int(input("Masukkan angka : "))
+    angka.append(input_angka)
+    if input_angka % 2 == 1 :
+        ganjil += 1
+print(f"Jumlah bilangan ganjil : {ganjil}")
+
+======================================================================
+  FILE 78 – L8-Menyimpan Hasil Perhitungan ke Variable.py
 ======================================================================
 
 angka_1 = 20
@@ -947,7 +995,27 @@ hasil = angka_1 + angka_2
 print(hasil)
 
 ======================================================================
-  FILE 76 – L9-Pengurangan.py
+  FILE 79 – L80-Mencari Posisi Nilai Terbesar.py
+======================================================================
+
+angka = []
+posisi = 0
+
+for i in range(0 , 5):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+    if i == 0 :
+        terbesar = angka[0]
+    elif input_angka > terbesar:
+        terbesar = angka[i]
+        posisi = i
+
+print(f"Nilai terbesar = {terbesar}")
+print(f"Angka ke = {posisi + 1}, Posisi ke = {posisi} pada array")
+
+======================================================================
+  FILE 80 – L9-Pengurangan.py
 ======================================================================
 
 angka_1 = 20
