@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-22 20:19:46
+  Dibuat  : 2026-06-23 21:38:12
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 80 file
+  Total   : 90 file
 ======================================================================
 
 ======================================================================
@@ -138,6 +138,16 @@ DAFTAR ISI
    78. L078-Menghitung Bilangan Genap Dalam List.py
    79. L079-Menghitung Bilangan Ganjil Dalam List.py
    80. L080-Mencari Posisi Nilai Terbesar.py
+   81. L081-Mencari Posisi Nilai Terkecil.py
+   82. L082-Mencari Semua Posisi Nilai Terbesar.py
+   83. L083-Menghitung Frekuensi Kemunculan Angka.py
+   84. L084-Menampilkan Posisi Semua Angka yang Dicari.py
+   85. L085-Mencari Nilai Terbesar dan Terkecil Sekaligus.py
+   86. L086-Mencari Selisih Nilai Terbesar dan Terkecil.py
+   87. L087-Nilai Terbesar, Terkecil, dan Rata-rata Sekaligus.py
+   88. L088-Menghitung Jumlah Angka di Atas Rata-rata.py
+   89. L089-Menampilkan Semua Angka di Atas Rata-rata.py
+   90. L090-Menampilkan Angka Terdekat dengan Rata-rata.py
 
 ======================================================================
 
@@ -1023,6 +1033,248 @@ for i in range(0 , 5):
 
 print(f"Nilai terbesar = {terbesar}")
 print(f"Angka ke = {posisi + 1}, Posisi ke = {posisi} pada array")
+
+======================================================================
+  FILE 81 – L081-Mencari Posisi Nilai Terkecil.py
+======================================================================
+
+angka = []
+posisi = 0
+
+for i in range(0 , 5):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+    if i == 0 :
+        terkecil = angka[0]
+    elif input_angka < terkecil:
+        terkecil = angka[i]
+        posisi = i
+
+print(f"Nilai terkecil = {terkecil}")
+print(f"Angka ke = {posisi + 1}, Posisi ke = {posisi} pada array")
+
+======================================================================
+  FILE 82 – L082-Mencari Semua Posisi Nilai Terbesar.py
+======================================================================
+
+angka = []
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+    if i == 0 :
+        terbesar = angka[i]
+    
+    elif input_angka > terbesar :
+        terbesar = input_angka
+
+
+print()
+
+print(f"Nilai terbesar = {terbesar}")
+
+print("Muncul pada :")
+
+for i in range(len(angka)):
+    if angka[i] == terbesar :
+        print(f"Angka ke = {i + 1}, Posisi ke = {i} ")
+
+======================================================================
+  FILE 83 – L083-Menghitung Frekuensi Kemunculan Angka.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan Angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+print("-"*16)
+
+cari = int(input("Cari angka : "))
+
+for i in range(len(angka)):
+    if cari == angka[i]:
+        total += 1
+
+print(f"Angka {cari} muncul sebanyak {total}")
+
+======================================================================
+  FILE 84 – L084-Menampilkan Posisi Semua Angka yang Dicari.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+cari = int(input("Cari angka : "))
+
+for i in range(len(angka)):
+    if angka[i] == cari :
+        total += 1
+
+print("-"*16)
+print(f"Angka {cari} muncul sebanyak {total}")
+print()
+print("Muncul pada :")
+
+for i in range(len(angka)):
+    if angka[i] == cari :
+        print(f"Angka ke = {i + 1}, Posisi = {i}")
+
+======================================================================
+  FILE 85 – L085-Mencari Nilai Terbesar dan Terkecil Sekaligus.py
+======================================================================
+
+angka = []
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+    if i == 0 :
+        terbesar = input_angka
+    elif input_angka > terbesar :
+        terbesar = input_angka
+    
+    if i == 0 :
+        terkecil = input_angka
+    elif input_angka < terkecil  :
+        terkecil = input_angka
+    
+print(f"Nilai terbesar = {terbesar}")
+print(f"Nilai terkecil = {terkecil}")
+
+======================================================================
+  FILE 86 – L086-Mencari Selisih Nilai Terbesar dan Terkecil.py
+======================================================================
+
+angka = []
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+
+    if i == 0 :
+        terbesar = input_angka
+    elif input_angka > terbesar :
+        terbesar = input_angka
+    
+    if i == 0 :
+        terkecil = input_angka
+    elif input_angka < terkecil  :
+        terkecil = input_angka
+    
+print(f"Nilai terbesar = {terbesar}")
+print(f"Nilai terkecil = {terkecil}")
+print(f"Selisih = {terbesar - terkecil}")
+
+======================================================================
+  FILE 87 – L087-Nilai Terbesar, Terkecil, dan Rata-rata Sekaligus.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+    total += input_angka
+
+    if i == 0 :
+        terbesar = input_angka
+    elif input_angka > terbesar :
+        terbesar = input_angka
+    
+    if i == 0 :
+        terkecil = input_angka
+    elif input_angka < terkecil  :
+        terkecil = input_angka
+    
+print(f"Nilai terbesar = {terbesar}")
+print(f"Nilai terkecil = {terkecil}")
+print(f"Rata-rata = {total / len(angka)}")
+
+======================================================================
+  FILE 88 – L088-Menghitung Jumlah Angka di Atas Rata-rata.py
+======================================================================
+
+angka = []
+total = 0
+di_atas_rata_rata = 0
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+    total += input_angka
+
+rata_rata = total / len(angka)
+
+for i in range(len(angka)):
+    if angka[i] > rata_rata :
+        di_atas_rata_rata += 1
+
+print(f"Rata-rata = {rata_rata}")
+print(f"Jumlah angka di atas rata-rata = {di_atas_rata_rata}")
+
+======================================================================
+  FILE 89 – L089-Menampilkan Semua Angka di Atas Rata-rata.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+    total += input_angka
+
+rata_rata = total / len(angka)
+
+
+print(f"Rata-rata = {rata_rata}")
+print("Angka di atas rata-rata :")
+
+for i in range(len(angka)):
+    if angka[i] > rata_rata :
+        print(angka[i])
+
+======================================================================
+  FILE 90 – L090-Menampilkan Angka Terdekat dengan Rata-rata.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    angka.append(input_angka)
+    total += input_angka
+
+rata_rata = total / len(angka)
+
+print("-"*16)
+print(f"Rata-rata : {rata_rata}")
+
+for i in range(len(angka)):
+    jarak = rata_rata - angka[i]
+
+    jarak = abs(jarak) 
+
+    if i == 0 :
+        jarak_terdekat = jarak
+        angka_terdekat = angka[0]
+    elif jarak_terdekat > jarak :
+        jarak_terdekat = jarak
+        angka_terdekat = angka[i]
+
+print(f"Angka terdekat = {angka_terdekat}")
 
 ======================================================================
   AKHIR DOKUMENTASI
