@@ -9,7 +9,7 @@ for i in range(0, 7):
 rata_rata = total / len(angka)
 
 for i in range(len(angka)):
-    
+
     jarak = rata_rata - angka[i]
 
     jarak = abs(jarak)
@@ -17,10 +17,14 @@ for i in range(len(angka)):
     if i == 0 :
         jarak_terdekat = jarak
         angka_terdekat = angka[i]
+        posisi = i
     elif jarak < jarak_terdekat :
         jarak_terdekat = jarak
         angka_terdekat = angka[i]
+        posisi = i
 
+print("-"*16)
 print(f"Rata-rata = {rata_rata}")
-
-print(f"Angka Terdekat dari rata-rata = {angka_terdekat}")
+print(f"Angka terdekat = {angka_terdekat}")
+print(f"Angka ke = {posisi + 1}")
+print(f"Posisi index ke = {posisi}")
