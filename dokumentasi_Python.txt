@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-23 21:38:12
+  Dibuat  : 2026-06-25 15:40:29
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 90 file
+  Total   : 103 file
 ======================================================================
 
 ======================================================================
@@ -148,6 +148,19 @@ DAFTAR ISI
    88. L088-Menghitung Jumlah Angka di Atas Rata-rata.py
    89. L089-Menampilkan Semua Angka di Atas Rata-rata.py
    90. L090-Menampilkan Angka Terdekat dengan Rata-rata.py
+   91. L091-Menampilkan Posisi Angka Terdekat dengan Rata-rata.py
+   92. L092-Menampilkan Semua Angka yang Sama dengan Rata-rata (dibulatkan ke bawah).py
+   93. L093-Menampilkan Angka yang Paling Sering Muncul.py
+   94. L094-Menampilkan Semua Angka yang Memiliki Kemunculan Terbanyak.py
+   95. L095-Menampilkan Angka yang Hanya Muncul Sekali.py
+   96. L096-Menampilkan Angka yang Muncul Lebih dari Sekali.py
+   97. L097-Menampilkan Jumlah Angka Unik.py
+   98. L098-Menampilkan Angka Unik yang Diurutkan Sesuai Kemunculan Pertama.py
+   99. L099-Menampilkan Angka Unik dan Jumlah Kemunculannya.py
+  100. L100-Menampilkan Angka dengan Frekuensi dari Terbesar ke Terkecil.py
+  101. L101-Statistik Angka Lengkap.py
+  102. L102-Menampilkan Angka dengan Frekuensi Terkecil.py
+  103. L103-Menampilkan Angka dengan Frekuensi Tengah.py
 
 ======================================================================
 
@@ -1253,28 +1266,429 @@ angka = []
 total = 0
 
 for i in range(0, 7):
-    input_angka = int(input(f"Masukkan angka ke-{i + 1} : "))
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
     angka.append(input_angka)
     total += input_angka
 
 rata_rata = total / len(angka)
 
-print("-"*16)
-print(f"Rata-rata : {rata_rata}")
-
 for i in range(len(angka)):
+    
     jarak = rata_rata - angka[i]
 
-    jarak = abs(jarak) 
+    jarak = abs(jarak)
 
     if i == 0 :
         jarak_terdekat = jarak
-        angka_terdekat = angka[0]
-    elif jarak_terdekat > jarak :
+        angka_terdekat = angka[i]
+    elif jarak < jarak_terdekat :
         jarak_terdekat = jarak
         angka_terdekat = angka[i]
 
+print(f"Rata-rata = {rata_rata}")
+
+print(f"Angka Terdekat dari rata-rata = {angka_terdekat}")
+
+======================================================================
+  FILE 91 – L091-Menampilkan Posisi Angka Terdekat dengan Rata-rata.py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+    total += input_angka
+
+rata_rata = total / len(angka)
+
+for i in range(len(angka)):
+
+    jarak = rata_rata - angka[i]
+
+    jarak = abs(jarak)
+
+    if i == 0 :
+        jarak_terdekat = jarak
+        angka_terdekat = angka[i]
+        posisi = i
+    elif jarak < jarak_terdekat :
+        jarak_terdekat = jarak
+        angka_terdekat = angka[i]
+        posisi = i
+
+print("-"*16)
+print(f"Rata-rata = {rata_rata}")
 print(f"Angka terdekat = {angka_terdekat}")
+print(f"Angka ke = {posisi + 1}")
+print(f"Posisi index ke = {posisi}")
+
+======================================================================
+  FILE 92 – L092-Menampilkan Semua Angka yang Sama dengan Rata-rata (dibulatkan ke bawah).py
+======================================================================
+
+angka = []
+total = 0
+
+for i in range(0, 7):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+    total += input_angka
+
+rata_rata = int(total / len(angka))
+
+print("-"*16)
+print(f"Rata-rata = {rata_rata}")
+print("Di temukan pada :")
+
+for i in range(len(angka)):
+
+    if angka[i] == rata_rata :
+        print(f"Angka ke = {i + 1}, Posisi = {i}")
+
+======================================================================
+  FILE 93 – L093-Menampilkan Angka yang Paling Sering Muncul.py
+======================================================================
+
+angka = []
+# deklarasi julah_kemunculan_sebelumnya yang belum ada karena masih putaran ke 0
+jumlah_kemunculan_sebelumnya = 0
+
+# masukkan input user ke dalam array angka
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+# perulangan untuk array
+for i in range(len(angka)):
+    
+    # deklarasi cari adalah angka array sekarang
+    cari = angka[i]
+
+    # reset jumlah kemunculan apabila perulangan "j" sudah selesai
+    jumlah_kemunculan = 0    
+
+    # perulangan untuk jumlah angka yang di cari
+    for j in range(len(angka)):
+        if cari == angka[j] :
+            jumlah_kemunculan += 1
+    
+    if jumlah_kemunculan > jumlah_kemunculan_sebelumnya :
+        jumlah_kemunculan_sebelumnya = jumlah_kemunculan
+        angka_modus = angka[i]
+    
+print("-"*16)
+print(f"Angka paling sering muncul = {angka_modus}")
+print(f"Jumlah kemunculan = {jumlah_kemunculan_sebelumnya}")
+
+======================================================================
+  FILE 94 – L094-Menampilkan Semua Angka yang Memiliki Kemunculan Terbanyak.py
+======================================================================
+
+angka = []
+jumlah_modus_sebelumnya = 0
+
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    jumlah_modus = 0
+
+    for j in range(len(angka)):
+
+        if angka[i] == angka[j] :
+            jumlah_modus += 1
+
+    if jumlah_modus > jumlah_modus_sebelumnya :
+        jumlah_modus_sebelumnya = jumlah_modus
+
+print(f"Jumlah kemunculan terbesar = {jumlah_modus_sebelumnya}")
+print("Angka :")
+
+angka_yang_sudah_ditampilkan = []
+
+for i in range(len(angka)):
+
+    jumlah_kemunculan = 0
+
+    for j in range(len(angka)):
+
+        if angka[i] == angka[j] :    
+            jumlah_kemunculan += 1
+
+    if jumlah_modus_sebelumnya == jumlah_kemunculan and angka[i] not in angka_yang_sudah_ditampilkan :
+        print(angka[i])
+        angka_yang_sudah_ditampilkan.append(angka[i])
+
+======================================================================
+  FILE 95 – L095-Menampilkan Angka yang Hanya Muncul Sekali.py
+======================================================================
+
+angka = []
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+print("-"*16)
+print("Angka yang muncul sekali :")
+
+for i in range(len(angka)):
+
+    total_modus = 0
+
+    for j in range(len(angka)):
+        if angka[i] == angka[j]:
+            total_modus += 1
+
+    if total_modus == 1 :
+        print(angka[i])
+
+======================================================================
+  FILE 96 – L096-Menampilkan Angka yang Muncul Lebih dari Sekali.py
+======================================================================
+
+angka = []
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+print("Angka yang muncul lebih dari sekali :")
+
+angka_sudah_ditampilkan = []
+
+for i in range(len(angka)):
+    
+    total_modus = 0
+
+    for j in range(len(angka)):
+        if angka[i] == angka[j]:
+            total_modus += 1
+    
+    if total_modus > 1 and angka[i] not in angka_sudah_ditampilkan :
+        print(angka[i])
+        angka_sudah_ditampilkan.append(angka[i])
+
+======================================================================
+  FILE 97 – L097-Menampilkan Jumlah Angka Unik.py
+======================================================================
+
+angka = []
+angka_tampil = []
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+    if angka[i] not in angka_tampil:
+        angka_tampil.append(angka[i])
+
+print("Angka Unik")
+
+for i in range(len(angka_tampil)):
+    print(angka_tampil[i])
+
+jumlah_angka_unik = len(angka_tampil)
+print(f"Jumlah angka unik = {jumlah_angka_unik}")
+
+======================================================================
+  FILE 98 – L098-Menampilkan Angka Unik yang Diurutkan Sesuai Kemunculan Pertama.py
+======================================================================
+
+angka = []
+angka_tampil = []
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+print("Angka Unik")
+
+for i in range(len(angka)):
+    if angka[i] not in angka_tampil:
+        angka_tampil.append(angka[i])
+        print(angka[i])
+
+======================================================================
+  FILE 99 – L099-Menampilkan Angka Unik dan Jumlah Kemunculannya.py
+======================================================================
+
+angka = []
+angka_sortir = []
+jumlah_muncul = []
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    total_muncul = 0
+
+    for j in range(len(angka)):
+        if angka[j] == angka[i]:
+            total_muncul += 1
+
+    if angka[i] not in angka_sortir :
+        angka_sortir.append(angka[i])
+        jumlah_muncul.append(total_muncul)
+
+print("-"*16)
+
+for i in range(len(angka_sortir)):
+    print(f"{angka_sortir[i]} muncul {jumlah_muncul[i]} kali")
+
+======================================================================
+  FILE 100 – L100-Menampilkan Angka dengan Frekuensi dari Terbesar ke Terkecil.py
+======================================================================
+
+angka = []
+
+angka_sortir = []
+jumlah_muncul = []
+
+for i in range(0, 8):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    total_muncul = 0
+
+    for j in range(len(angka)):
+        if angka[j] == angka[i]:
+            total_muncul += 1
+
+    if angka[i] not in angka_sortir :
+        angka_sortir.append(angka[i])
+        jumlah_muncul.append(total_muncul)
+
+for i in range(len(jumlah_muncul)):
+
+    for j in range(len(jumlah_muncul) - 1 ):
+
+        if jumlah_muncul[j] < jumlah_muncul[j + 1]:
+            jumlah_muncul[j], jumlah_muncul[j + 1] = jumlah_muncul[j + 1], jumlah_muncul[j]
+            angka_sortir[j], angka_sortir[j + 1] = angka_sortir[j + 1], angka_sortir[j]
+        
+print("-"*16)
+
+for i in range(len(angka_sortir)):
+    print(f"{angka_sortir[i]} muncul {jumlah_muncul[i]} kali")
+
+======================================================================
+  FILE 101 – L101-Statistik Angka Lengkap.py
+======================================================================
+
+angka = []
+angka_sortir = []
+list_modus = []
+
+for i in range(0, 10):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    total = 0
+
+    for j in range(len(angka)):
+        if angka[i] == angka[j]:
+            total += 1
+
+    if angka[i] not in angka_sortir :
+        angka_sortir.append(angka[i])
+        list_modus.append(total)
+
+print("-"*24)
+
+print(f"=> Jumlah angka unik = {len(angka_sortir)}")
+
+for i in range(len(angka_sortir)):
+
+    for j in range(len(angka_sortir) - 1):
+
+        if list_modus[j] < list_modus[j + 1]:
+            list_modus[j], list_modus[j + 1] = list_modus[j + 1], list_modus[j]
+            angka_sortir[j], angka_sortir[j + 1] = angka_sortir[j + 1], angka_sortir[j]
+
+print()
+print(f"Jumlah kemunculan = {list_modus[0]}")
+print()
+
+print("-"*24)
+print("=> Angka paling sering muncul :")
+
+for i in range(len(angka_sortir)):
+    if list_modus[0] == list_modus[i]:
+        print(f"{angka_sortir[i]}")
+
+print()
+
+print("-"*24)
+print("=> Statistik :")
+
+for i in range(len(angka_sortir)):
+    print(f"{angka_sortir[i]} muncul {list_modus[i]}")
+
+======================================================================
+  FILE 102 – L102-Menampilkan Angka dengan Frekuensi Terkecil.py
+======================================================================
+
+angka = []
+
+angka_sortir = []
+jumlah_muncul = []
+
+for i in range(0, 10):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    total = 0
+
+    for j in range(len(angka)):
+        if angka[i] == angka[j]:
+            total += 1
+
+    if angka[i] not in angka_sortir:
+        angka_sortir.append(angka[i])
+        jumlah_muncul.append(total)
+
+for i in range(len(angka_sortir)):
+
+    for j in range(len(angka_sortir) - 1):
+
+        if jumlah_muncul[j] < jumlah_muncul[j + 1]:
+            jumlah_muncul[j], jumlah_muncul[j + 1] = jumlah_muncul[j + 1], jumlah_muncul[j]
+            angka_sortir[j], angka_sortir[j + 1] = angka_sortir[j + 1], angka_sortir[j]
+
+n = len(jumlah_muncul) - 1
+
+kemunculan_terkecil = jumlah_muncul[n]
+
+print("-"*24)
+
+print(f"Jumlah kemunculan terkecil = {kemunculan_terkecil}")
+
+print("Angka :")
+
+for i in range(len(angka_sortir)):
+    if jumlah_muncul[i] == kemunculan_terkecil:
+        print(angka_sortir[i])
+
+======================================================================
+  FILE 103 – L103-Menampilkan Angka dengan Frekuensi Tengah.py
+======================================================================
+
+# (file kosong)
 
 ======================================================================
   AKHIR DOKUMENTASI
