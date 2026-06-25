@@ -31,10 +31,9 @@ for i in range(len(angka_sortir)):
             angka_sortir[j], angka_sortir[j + 1] = angka_sortir[j + 1], angka_sortir[j]
 
 print()
-
 print(f"Jumlah kemunculan = {list_modus[0]}")
-
 print()
+
 print("-"*24)
 print("=> Angka paling sering muncul :")
 
@@ -43,6 +42,7 @@ for i in range(len(angka_sortir)):
         print(f"{angka_sortir[i]}")
 
 print()
+
 print("-"*24)
 print("=> Statistik :")
 
