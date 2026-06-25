@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-25 15:40:29
+  Dibuat  : 2026-06-25 21:47:09
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 103 file
+  Total   : 106 file
 ======================================================================
 
 ======================================================================
@@ -161,6 +161,9 @@ DAFTAR ISI
   101. L101-Statistik Angka Lengkap.py
   102. L102-Menampilkan Angka dengan Frekuensi Terkecil.py
   103. L103-Menampilkan Angka dengan Frekuensi Tengah.py
+  104. L104-Jarak Frekuensi.py
+  105. L105-Tetangga Frekuensi.py
+  106. L106-Pasangan Angka Terdekat.py
 
 ======================================================================
 
@@ -1688,7 +1691,184 @@ for i in range(len(angka_sortir)):
   FILE 103 – L103-Menampilkan Angka dengan Frekuensi Tengah.py
 ======================================================================
 
-# (file kosong)
+angka = []
+
+angka_sortir = []
+jumlah_muncul = []
+
+for i in range(0, 10):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    total = 0
+    for j in range(len(angka)):
+        if angka[i] == angka[j]:
+            total += 1
+    
+    if angka[i] not in angka_sortir:
+        angka_sortir.append(angka[i])
+        jumlah_muncul.append(total)
+
+for i in range(len(angka_sortir)):
+
+    for j in range(len(angka_sortir) - 1):
+
+        if jumlah_muncul[j] < jumlah_muncul[j + 1]:
+            jumlah_muncul[j], jumlah_muncul[j + 1] = jumlah_muncul[j + 1], jumlah_muncul[j]
+            angka_sortir[j], angka_sortir[j + 1] = angka_sortir[j + 1], angka_sortir[j]
+
+
+if len(jumlah_muncul) % 2 == 1:
+    nilai_tengah = (len(jumlah_muncul) // 2 )
+else :
+    nilai_tengah = (len(jumlah_muncul) // 2 )
+
+modus_tengah = jumlah_muncul[nilai_tengah]
+
+print("-"*24)
+print(f"Modus tengah = {modus_tengah}")
+print("Angka :")
+
+for i in range(len(angka_sortir)):
+    if jumlah_muncul[nilai_tengah] == jumlah_muncul[i]:
+        print(angka_sortir[i])
+
+======================================================================
+  FILE 104 – L104-Jarak Frekuensi.py
+======================================================================
+
+angka = []
+
+angka_sorting = []
+jumlah_modus = []
+
+for i in range(0, 10):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+
+    total = 0
+
+    for j in range(len(angka)):
+        if angka[i] == angka[j] :
+            total += 1
+
+    if angka[i] not in angka_sorting:
+        angka_sorting.append(angka[i])
+        jumlah_modus.append(total)
+
+for i in range(len(angka_sorting)):
+    
+    for j in range(len(angka_sorting) - 1):
+        
+        if jumlah_modus[j] < jumlah_modus[j + 1]:
+            jumlah_modus[j], jumlah_modus[j + 1] = jumlah_modus[j + 1], jumlah_modus[j]
+            angka_sorting[j], angka_sorting[j + 1] = angka_sorting[j + 1], angka_sorting[j]
+
+posisi_terakhir = len(angka_sorting) - 1
+modus_terbesar = jumlah_modus[0]
+modus_terkecil = jumlah_modus[posisi_terakhir]
+selisih = modus_terbesar - modus_terkecil
+
+print("-"*24)
+
+print(f"Modus terbesar = {modus_terbesar}")
+print("Angka :")
+
+for i in range(len(angka_sorting)):
+    if jumlah_modus[i] == modus_terbesar:
+        print(angka_sorting[i])
+
+print("-"*24)
+
+print(f"Modus terkecil = {modus_terkecil}")
+print("Angka :")
+
+for i in range(len(angka_sorting)):
+    if jumlah_modus[i] == modus_terkecil:
+        print(angka_sorting[i])
+
+print("-"*24)
+
+print(f"Selisih = {selisih}")
+
+======================================================================
+  FILE 105 – L105-Tetangga Frekuensi.py
+======================================================================
+
+angka = []
+
+angka_sorting = []
+modus_sorting = []
+
+for i in range(0, 10):
+    input_angka = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_angka)
+
+for i in range(len(angka)):
+    
+    total = 0
+
+    for j in range(len(angka)):
+        if angka[i] == angka[j]:
+            total += 1
+    
+    if angka[i] not in angka_sorting:
+        angka_sorting.append(angka[i])
+        modus_sorting.append(total)
+
+for i in range(len(angka_sorting)):
+    
+    for j in range(len(angka_sorting) - 1):
+        
+        if modus_sorting[j] < modus_sorting[j + 1]:
+            modus_sorting[j], modus_sorting[j + 1] = modus_sorting[j + 1], modus_sorting[j]
+            angka_sorting[j], angka_sorting[j + 1] = angka_sorting[j + 1], angka_sorting[j]
+
+print("-"*24)
+
+for i in range(len(modus_sorting) - 1):
+
+    print(f"{angka_sorting[i]} dan {angka_sorting[i + 1]} selisih modus = {modus_sorting[i] - modus_sorting[i + 1]} ")
+
+======================================================================
+  FILE 106 – L106-Pasangan Angka Terdekat.py
+======================================================================
+
+angka = []
+
+for i in range(0, 10):
+    input_user = int(input(f"Masukkan angka ke-{i + 1} = "))
+    angka.append(input_user)
+
+for i in range(len(angka)):
+    for j in range(len(angka) - 1):
+        if angka[j] < angka[j + 1]:
+            angka[j], angka[j + 1] = angka[j + 1], angka[j]
+
+print("-"*24)
+print(angka)
+
+
+for i in range(len(angka) - 1):
+
+    selisih = abs(angka[i] - angka[i + 1])
+
+    if i == 0 :
+        
+        for j in range(len(angka)):
+            selisih_update = angka
+
+        selisih_update = angka_terakhir
+    elif 0 < selisih < selisih_update :
+        selisih_update = selisih 
+
+for i in range(len(angka) - 1):
+    if selisih_update == abs(angka[i] - angka[i + 1]):
+        print(f"{angka[i]} dan {angka[i + 1]} dengan selisih = {selisih_update}")
 
 ======================================================================
   AKHIR DOKUMENTASI
