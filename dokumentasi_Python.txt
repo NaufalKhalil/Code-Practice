@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-28 14:01:24
+  Dibuat  : 2026-06-28 14:38:02
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 128 file
+  Total   : 129 file
 ======================================================================
 
 ======================================================================
@@ -185,7 +185,8 @@ DAFTAR ISI
   125. L125-Mata-Mata Tahta.py
   126. L126-Mata-Mata Ganda.py
   127. L127-Huruf Kembar.py
-  128. L128-Huruf Penyendiri.py
+  128. L128-Huruf yang hanya satu kali muncul.py
+  129. L129-Huruf yang muncul lebih dari satu kali.py
 
 ======================================================================
 
@@ -2683,10 +2684,56 @@ for i in range(len(text)):
             sudah_tampil.append(text[i])
 
 ======================================================================
-  FILE 128 – L128-Huruf Penyendiri.py
+  FILE 128 – L128-Huruf yang hanya satu kali muncul.py
 ======================================================================
 
-# (file kosong)
+text = input("Masukkan Text : ")
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total == 1:
+        print(text[i])
+
+======================================================================
+  FILE 129 – L129-Huruf yang muncul lebih dari satu kali.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+sudah_tampil = []
+total_besar = 0
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total > total_besar:
+        total_besar = total
+
+print("Raja huruf :")
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total == total_besar:
+        if text[i] not in sudah_tampil:
+            print(text[i])
+            sudah_tampil.append(text[i])
 
 ======================================================================
   AKHIR DOKUMENTASI
