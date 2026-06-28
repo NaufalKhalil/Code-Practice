@@ -25,10 +25,24 @@ for i in range(len(angka_sort)):
             frekuensi_sort[j], frekuensi_sort[j + 1] = frekuensi_sort[j + 1], frekuensi_sort[j]
             angka_sort[j], angka_sort[j + 1] = angka_sort[j + 1], angka_sort[j]
 
-print("-"*24)
+f_sudah = []
+total_tahta = 1
 
 for i in range(len(frekuensi_sort) - 1):
+    if frekuensi_sort[i + 1] != frekuensi_sort[i]:
+        total_tahta += 1
 
-    selisih = abs(frekuensi_sort[i] - frekuensi_sort[i + 1])
+print(f"Total tahta = {total_tahta}")
+print()
 
-    print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
+for i in range(len(frekuensi_sort) - 1, -1, - 1):
+
+    if frekuensi_sort[i] not in f_sudah:
+        print(f"Tahta {total_tahta} => kemunculan sebanyak {frekuensi_sort[i]} kali :")
+        total_tahta -= 1
+
+    for j in range(len(frekuensi_sort) - 1, -1, - 1):
+        if frekuensi_sort[i] == frekuensi_sort[j] and frekuensi_sort[i] not in f_sudah:
+            print(angka_sort[j])
+
+    f_sudah.append(frekuensi_sort[i])

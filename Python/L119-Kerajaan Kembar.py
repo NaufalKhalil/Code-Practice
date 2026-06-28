@@ -25,10 +25,10 @@ for i in range(len(angka_sort)):
             frekuensi_sort[j], frekuensi_sort[j + 1] = frekuensi_sort[j + 1], frekuensi_sort[j]
             angka_sort[j], angka_sort[j + 1] = angka_sort[j + 1], angka_sort[j]
 
-print("-"*24)
+raja_frekuensi = frekuensi_sort[0]
 
-for i in range(len(frekuensi_sort) - 1):
+print("Raja bersama :")
 
-    selisih = abs(frekuensi_sort[i] - frekuensi_sort[i + 1])
-
-    print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
+for i in range(len(frekuensi_sort)):
+    if raja_frekuensi == frekuensi_sort[i]:
+        print(angka_sort[i])

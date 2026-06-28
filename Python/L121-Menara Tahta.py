@@ -25,10 +25,17 @@ for i in range(len(angka_sort)):
             frekuensi_sort[j], frekuensi_sort[j + 1] = frekuensi_sort[j + 1], frekuensi_sort[j]
             angka_sort[j], angka_sort[j + 1] = angka_sort[j + 1], angka_sort[j]
 
-print("-"*24)
+f_sudah = []
+tahta = 0
 
-for i in range(len(frekuensi_sort) - 1):
+for i in range(len(frekuensi_sort)):
 
-    selisih = abs(frekuensi_sort[i] - frekuensi_sort[i + 1])
+    if frekuensi_sort[i] not in f_sudah:
+        tahta += 1
+        print(f"Tahta {tahta}")
 
-    print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
+    for j in range(len(frekuensi_sort)):
+        if frekuensi_sort[i] == frekuensi_sort[j] and frekuensi_sort[i] not in f_sudah:
+            print(angka_sort[j])
+
+    f_sudah.append(frekuensi_sort[i])

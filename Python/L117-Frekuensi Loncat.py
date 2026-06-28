@@ -31,4 +31,5 @@ for i in range(len(frekuensi_sort) - 1):
 
     selisih = abs(frekuensi_sort[i] - frekuensi_sort[i + 1])
 
-    print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
+    if selisih > 1 :
+        print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
