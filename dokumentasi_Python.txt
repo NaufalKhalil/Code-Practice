@@ -1,6 +1,6 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-28 14:38:02
+  Dibuat  : 2026-06-28 19:42:32
   Folder  : d:\Project\Coding\Code Practice\Python
   Total   : 129 file
 ======================================================================
@@ -58,147 +58,147 @@ Tugasmu adalah menjadi tutor/mentor Python interaktif dengan aturan berikut:
 
 DAFTAR ISI
 ----------------------------------------
-    1. L001-Variable.py
-    2. L002-Lebih dari satu variable.py
-    3. L003-Mengubah Isi Variable.py
-    4. L004-String.py
-    5. L005-Integer.py
-    6. L006-Float.py
+    1. L001-Membuat Satu Variable dan Menampilkan Isinya.py
+    2. L002-Membuat Beberapa Variable Sekaligus.py
+    3. L003-Mengubah Nilai Variable.py
+    4. L004-Tipe Data String.py
+    5. L005-Tipe Data Integer.py
+    6. L006-Tipe Data Float (Bilangan Desimal).py
     7. L007-Operasi Penjumlahan pada Integer.py
     8. L008-Menyimpan Hasil Perhitungan ke Variable.py
-    9. L009-Pengurangan.py
-   10. L010-Perkalian.py
-   11. L011-Pembagian.py
-   12. L012-Pangkat.py
-   13. L013-Input dari User.py
-   14. L014-Pengkondisian (IF dasar).py
-   15. L015-If dengan dua kondisi (elif).py
-   16. L016-Boolean (True or False).py
-   17. L017-Operator Logika (and).py
-   18. L018-Operator OR.py
-   19. L019-NOT (kebalikan True or False).py
-   20. L020-Mini Project Logika.py
-   21. L021-For Loop Dasar.py
-   22. L022-For Loop Kelipatan Dua.py
-   23. L023-For Loop Mundur.py
-   24. L024-Menghitung Total Dengan Loop.py
-   25. L025-Menghitung Jumlah Bilangan Genap.py
-   26. L026-Menghitung Banyak Perulangan.py
-   27. L027-For Loop dan IF.py
-   28. L028-Menampilkan Bilangan Genap.py
-   29. L029-Menampilkan Bilangan Ganjil.py
-   30. L030-Menghitung Jumlah Bilangan Ganjil.py
-   31. L031-While Loop Dasar.py
-   32. L032-While Loop Mundur.py
-   33. L033-Menjumlahkan Dengan While.py
-   34. L034-Input Sampai Benar.py
-   35. L035-Menu Keluar Dengan While.py
-   36. L036-Break.py
-   37. L037-Continue.py
-   38. L038-Tabel Perkalian Sederhana.py
-   39. L039-Tabel-Perkalian-Input.py
-   40. L040-Validasi-Angka-Dengan-Loop.py
-   41. L041-Membuat Kotak Bintang.py
-   42. L042-Segitiga Bintang.py
-   43. L043-Persegi Angka.py
-   44. L044-Segitiga Angka.py
-   45. L045-Segitiga Terbalik.py
-   46. L046-Segitiga Siku-Siku Terbalik Angka.py
-   47. L047-Segitiga Angka Berurutan.py
-   48. L048-Segitiga Angka Terbalik Berurutan.py
-   49. L049-Segitiga Siku Kanan.py
-   50. L050-Piramida Bintang.py
-   51. L051-Piramida Terbalik.py
-   52. L052-Diamond (Belah Ketupat).py
-   53. L053-Hollow Square (Persegi Kosong).py
-   54. L054-Hollow Triangle (Segitiga Kosong).py
-   55. L055-X Pattern.py
-   56. L056-Checkerboard (Papan Catur).py
-   57. L057-Multiplication Table (Versi Nested Loop).py
-   58. L058-FizzBuzz.py
-   59. L059-LIST (Array).py
-   60. L060-Mengakses Index List.py
-   61. L061-Mengubah Isi List.py
-   62. L062-Menambah Item ke List (Append).py
-   63. L063-Menghapus Item (remove).py
-   64. L064-Panjang List (len).py
-   65. L065-Loop dengan Index.py
-   66. L066-Cari Data dalam List.py
-   67. L067-Hitung Jumlah Angka dalam List.py
-   68. L068-Mencari Nilai Terbesar.py
-   69. L069-Mencari Nilai Terkecil.py
-   70. L070-Menghitung Rata-rata (Average).py
-   71. L071-Hitung Jumlah Angka Genap.py
-   72. L072-Hitung Jumlah Angka Ganjil.py
-   73. L073-Input Banyak Data ke List.py
-   74. L074-Total dari Data yang Diinput User.py
-   75. L075-Cari Nilai Terbesar dari Input User.py
-   76. L076-Nilai Terkecil dari Input User.py
-   77. L077-RataRata Dari Input User.py
-   78. L078-Menghitung Bilangan Genap Dalam List.py
-   79. L079-Menghitung Bilangan Ganjil Dalam List.py
-   80. L080-Mencari Posisi Nilai Terbesar.py
-   81. L081-Mencari Posisi Nilai Terkecil.py
-   82. L082-Mencari Semua Posisi Nilai Terbesar.py
-   83. L083-Menghitung Frekuensi Kemunculan Angka.py
-   84. L084-Menampilkan Posisi Semua Angka yang Dicari.py
-   85. L085-Mencari Nilai Terbesar dan Terkecil Sekaligus.py
-   86. L086-Mencari Selisih Nilai Terbesar dan Terkecil.py
-   87. L087-Nilai Terbesar, Terkecil, dan Rata-rata Sekaligus.py
-   88. L088-Menghitung Jumlah Angka di Atas Rata-rata.py
-   89. L089-Menampilkan Semua Angka di Atas Rata-rata.py
-   90. L090-Menampilkan Angka Terdekat dengan Rata-rata.py
-   91. L091-Menampilkan Posisi Angka Terdekat dengan Rata-rata.py
-   92. L092-Menampilkan Semua Angka yang Sama dengan Rata-rata (dibulatkan ke bawah).py
-   93. L093-Menampilkan Angka yang Paling Sering Muncul.py
-   94. L094-Menampilkan Semua Angka yang Memiliki Kemunculan Terbanyak.py
-   95. L095-Menampilkan Angka yang Hanya Muncul Sekali.py
-   96. L096-Menampilkan Angka yang Muncul Lebih dari Sekali.py
-   97. L097-Menampilkan Jumlah Angka Unik.py
-   98. L098-Menampilkan Angka Unik yang Diurutkan Sesuai Kemunculan Pertama.py
-   99. L099-Menampilkan Angka Unik dan Jumlah Kemunculannya.py
-  100. L100-Menampilkan Angka dengan Frekuensi dari Terbesar ke Terkecil.py
-  101. L101-Statistik Angka Lengkap.py
-  102. L102-Menampilkan Angka dengan Frekuensi Terkecil.py
-  103. L103-Menampilkan Angka dengan Frekuensi Tengah.py
-  104. L104-Jarak Frekuensi.py
-  105. L105-Tetangga Frekuensi.py
-  106. L106-Pasangan Angka Terdekat.py
-  107. L107-Pasangan Terjauh.py
-  108. L108-Pasangan Dengan Jumlah Terbesar.py
-  109. L109-Pasangan Dengan Jumlah Paling Kecil.py
-  110. L110-Tiga Angka Maksimum.py
-  111. L111-Tiga Angka Minimum.py
-  112. L112-Median Sederhana.py
-  113. L113-Median Genap.py
-  114. L114-Nilai Tengah Frekuensi.py
-  115. L115-Frekuensi Tetangga.py
-  116. L116-Kelompok Frekuensi Sama.py
-  117. L117-Frekuensi Loncat.py
-  118. L118-Raja Frekuensi.py
-  119. L119-Kerajaan Kembar.py
-  120. L120-Tahta Kedua.py
-  121. L121-Menara Tahta.py
-  122. L122-Tahta Terbalik.py
-  123. L123-Pengkhianat Tahta.py
-  124. L124-Tahta Palsu.py
-  125. L125-Mata-Mata Tahta.py
-  126. L126-Mata-Mata Ganda.py
-  127. L127-Huruf Kembar.py
-  128. L128-Huruf yang hanya satu kali muncul.py
-  129. L129-Huruf yang muncul lebih dari satu kali.py
+    9. L009-Operasi Pengurangan.py
+   10. L010-Operasi Perkalian.py
+   11. L011-Operasi Pembagian.py
+   12. L012-Operasi Pangkat.py
+   13. L013-Menerima Dua Input Angka dan Menjumlahkannya.py
+   14. L014-Percabangan IF-ELSE Dasar.py
+   15. L015-Percabangan IF-ELIF-ELSE.py
+   16. L016-Tipe Data Boolean (True atau False).py
+   17. L017-Operator Logika AND (Cek Angka dalam Rentang).py
+   18. L018-Operator Logika OR (Cek Angka di Luar Rentang).py
+   19. L019-Operator Logika NOT (Membalik Kondisi).py
+   20. L020-Mini Project Validasi Angka dengan AND dan Tidak Sama.py
+   21. L021-For Loop Dasar Menampilkan Angka 1 sampai 5.py
+   22. L022-For Loop Menampilkan Kelipatan 2.py
+   23. L023-For Loop Hitung Mundur dari 5 ke 1.py
+   24. L024-Menjumlahkan Angka 1 sampai 5 dengan For Loop.py
+   25. L025-Menjumlahkan Bilangan Genap 2 sampai 10.py
+   26. L026-Menghitung Berapa Kali Loop Berjalan.py
+   27. L027-For Loop dengan IF Menampilkan Angka di Atas 5.py
+   28. L028-Menampilkan Bilangan Genap dari 1 sampai 10.py
+   29. L029-Menampilkan Bilangan Ganjil dari 1 sampai 9.py
+   30. L030-Menjumlahkan Semua Bilangan Ganjil dari 1 sampai 10.py
+   31. L031-While Loop Menampilkan Angka 1 sampai 5.py
+   32. L032-While Loop Hitung Mundur dari 5 ke 1.py
+   33. L033-Menjumlahkan Angka 1 sampai 5 dengan While Loop.py
+   34. L034-While Loop Input Terus Sampai Angka Benar.py
+   35. L035-While Loop Program Berjalan Sampai Ketik Keluar.py
+   36. L036-Menghentikan Loop di Tengah Jalan dengan Break.py
+   37. L037-Melewati Iterasi Tertentu dengan Continue.py
+   38. L038-Mencetak Tabel Perkalian dengan 2.py
+   39. L039-Mencetak Tabel Perkalian Berdasarkan Input User.py
+   40. L040-Menampilkan Bilangan Genap sampai Batas Input User.py
+   41. L041-Mencetak Pola Kotak Bintang 3x3.py
+   42. L042-Mencetak Pola Segitiga Bintang.py
+   43. L043-Mencetak Pola Persegi dari Angka Baris.py
+   44. L044-Mencetak Pola Segitiga Angka Baris Berulang.py
+   45. L045-Mencetak Pola Segitiga Bintang Terbalik.py
+   46. L046-Mencetak Pola Segitiga Terbalik dari Angka Baris.py
+   47. L047-Mencetak Pola Segitiga Angka Berurutan dari 1.py
+   48. L048-Mencetak Pola Segitiga Terbalik Angka Berurutan.py
+   49. L049-Mencetak Pola Segitiga Siku Kanan Rata Kanan.py
+   50. L050-Mencetak Pola Piramida Bintang.py
+   51. L051-Mencetak Pola Piramida Bintang Terbalik.py
+   52. L052-Mencetak Pola Diamond (Piramida dan Piramida Terbalik).py
+   53. L053-Mencetak Pola Persegi Berongga (Hanya Tepi Bintang).py
+   54. L054-Mencetak Pola Segitiga Berongga (Hanya Tepi Bintang).py
+   55. L055-Mencetak Pola Huruf X dari Bintang.py
+   56. L056-Mencetak Pola Papan Catur (Bintang dan Spasi Selang-Seling).py
+   57. L057-Mencetak Tabel Perkalian 5x5 dengan Nested Loop.py
+   58. L058-FizzBuzz Cetak Fizz Buzz atau Angka 1 sampai 20.py
+   59. L059-Membuat List dan Menampilkan Semua Isinya.py
+   60. L060-Mengakses Elemen List Berdasarkan Index.py
+   61. L061-Mengganti Nilai Elemen List Berdasarkan Index.py
+   62. L062-Menambah Elemen Baru ke List dengan Append.py
+   63. L063-Menghapus Elemen dari List dengan Remove.py
+   64. L064-Menghitung Jumlah Elemen dalam List dengan Len.py
+   65. L065-Loop List Sambil Menampilkan Index dan Nilainya.py
+   66. L066-Mencari Apakah Data Ada dalam List.py
+   67. L067-Menjumlahkan Semua Elemen dalam List.py
+   68. L068-Mencari Nilai Terbesar dalam List.py
+   69. L069-Mencari Nilai Terkecil dalam List.py
+   70. L070-Menghitung Rata-rata Semua Elemen dalam List.py
+   71. L071-Menghitung Banyak Angka Genap dalam List.py
+   72. L072-Menghitung Banyak Angka Ganjil dalam List.py
+   73. L073-Input Sejumlah Angka dari User ke dalam List.py
+   74. L074-Menjumlahkan Angka yang Diinput User ke List.py
+   75. L075-Mencari Nilai Terbesar dari Angka yang Diinput User.py
+   76. L076-Mencari Nilai Terkecil dari Angka yang Diinput User.py
+   77. L077-Menghitung Rata-rata dari 5 Angka yang Diinput User.py
+   78. L078-Menghitung Banyak Bilangan Genap dari Input User.py
+   79. L079-Menghitung Banyak Bilangan Ganjil dari Input User.py
+   80. L080-Mencari Nilai Terbesar dan Posisi Index-nya.py
+   81. L081-Mencari Nilai Terkecil dan Posisi Index-nya.py
+   82. L082-Mencari Semua Posisi Jika Nilai Terbesar Muncul Berulang.py
+   83. L083-Menghitung Berapa Kali Setiap Angka Muncul dalam List.py
+   84. L084-Menampilkan Semua Index dari Angka yang Dicari.py
+   85. L085-Mencari Nilai Terbesar dan Terkecil dalam Satu Loop.py
+   86. L086-Menghitung Selisih antara Nilai Terbesar dan Terkecil.py
+   87. L087-Menampilkan Nilai Maks, Min, dan Rata-rata Sekaligus.py
+   88. L088-Menghitung Banyak Angka yang Nilainya di Atas Rata-rata.py
+   89. L089-Menampilkan Semua Angka yang Nilainya di Atas Rata-rata.py
+   90. L090-Mencari Angka dengan Nilai Paling Dekat ke Rata-rata.py
+   91. L091-Mencari Posisi Index Angka Paling Dekat ke Rata-rata.py
+   92. L092-Menampilkan Angka yang Nilainya Sama dengan Rata-rata Bulat Bawah.py
+   93. L093-Mencari Satu Angka dengan Frekuensi Kemunculan Terbanyak.py
+   94. L094-Menampilkan Semua Angka dengan Frekuensi Tertinggi (Modus).py
+   95. L095-Menampilkan Semua Angka yang Frekuensinya Tepat 1 Kali.py
+   96. L096-Menampilkan Semua Angka yang Muncul Lebih dari 1 Kali.py
+   97. L097-Menghitung Berapa Banyak Angka Unik dalam List.py
+   98. L098-Menampilkan Angka Unik Urut Sesuai Kemunculan Pertama.py
+   99. L099-Menampilkan Setiap Angka Unik Beserta Frekuensinya.py
+  100. L100-Mengurutkan dan Menampilkan Angka dari Frekuensi Terbesar.py
+  101. L101-Menampilkan Statistik Lengkap (Maks, Min, Rata-rata, Frekuensi).py
+  102. L102-Mencari Angka dengan Frekuensi Kemunculan Paling Sedikit.py
+  103. L103-Mencari Angka dengan Frekuensi di Posisi Tengah (Median Frekuensi).py
+  104. L104-Menghitung Selisih antara Frekuensi Terbesar dan Terkecil.py
+  105. L105-Menampilkan Selisih Frekuensi antara Setiap Pasangan Angka Berurutan.py
+  106. L106-Mencari Dua Angka dengan Selisih Nilai Terkecil.py
+  107. L107-Mencari Dua Angka dengan Selisih Nilai Terbesar.py
+  108. L108-Mencari Dua Angka yang Jika Dijumlah Hasilnya Terbesar.py
+  109. L109-Mencari Dua Angka yang Jika Dijumlah Hasilnya Terkecil.py
+  110. L110-Mencari 3 Angka Terbesar dan Total Penjumlahannya.py
+  111. L111-Mencari 3 Angka Terkecil dan Total Penjumlahannya.py
+  112. L112-Mencari Median dari 9 Angka (Jumlah Data Ganjil).py
+  113. L113-Mencari Median dari 10 Angka (Jumlah Data Genap).py
+  114. L114-Mencari Angka yang Frekuensinya di Posisi Tengah Setelah Diurutkan.py
+  115. L115-Menampilkan Selisih Frekuensi Setiap Pasangan Angka Berurutan.py
+  116. L116-Menampilkan Angka yang Selisih Frekuensinya Lebih dari 1 dengan Berikutnya.py
+  117. L117-Menampilkan Pasangan Angka yang Selisih Frekuensinya Lebih dari 1.py
+  118. L118-Mengecek Apakah Ada Satu Angka dengan Frekuensi Tertinggi Mutlak.py
+  119. L119-Menampilkan Semua Angka yang Berbagi Frekuensi Tertinggi Bersama.py
+  120. L120-Mencari Angka dengan Frekuensi Kemunculan Tertinggi Kedua.py
+  121. L121-Mengelompokkan Angka Berdasarkan Tingkat Frekuensi dari Tinggi ke Rendah.py
+  122. L122-Mengelompokkan Angka Berdasarkan Tingkat Frekuensi dari Rendah ke Tinggi.py
+  123. L123-Mencari Angka yang Frekuensinya Unik (Tidak Berbagi dengan Angka Lain).py
+  124. L124-Mencari Kelompok Frekuensi yang Paling Banyak Anggotanya.py
+  125. L125-Menampilkan Angka yang Frekuensinya Bukan Tertinggi dan Bukan Terendah.py
+  126. L126-Menampilkan Kelompok Frekuensi yang Jumlah Anggotanya Genap.py
+  127. L127-Menampilkan Huruf yang Muncul Lebih dari Sekali beserta Jumlahnya.py
+  128. L128-Menampilkan Huruf yang Hanya Muncul Tepat Sekali dalam Teks.py
+  129. L129-Mencari Huruf dengan Frekuensi Kemunculan Terbanyak dalam Teks.py
 
 ======================================================================
 
 ======================================================================
-  FILE 1 – L001-Variable.py
+  FILE 1 – L001-Membuat Satu Variable dan Menampilkan Isinya.py
 ======================================================================
 
 nama = "Naufal"
 print(nama)
 
 ======================================================================
-  FILE 2 – L002-Lebih dari satu variable.py
+  FILE 2 – L002-Membuat Beberapa Variable Sekaligus.py
 ======================================================================
 
 nama = "Naufal"
@@ -208,7 +208,7 @@ print(nama)
 print(umur)
 
 ======================================================================
-  FILE 3 – L003-Mengubah Isi Variable.py
+  FILE 3 – L003-Mengubah Nilai Variable.py
 ======================================================================
 
 nama = "Naufal"
@@ -217,7 +217,7 @@ nama = "Budi"
 print(nama)
 
 ======================================================================
-  FILE 4 – L004-String.py
+  FILE 4 – L004-Tipe Data String.py
 ======================================================================
 
 kota = "Medan"
@@ -227,7 +227,7 @@ kota = "Jakarta"
 print(kota)
 
 ======================================================================
-  FILE 5 – L005-Integer.py
+  FILE 5 – L005-Tipe Data Integer.py
 ======================================================================
 
 umur = 18
@@ -237,7 +237,7 @@ umur = 19
 print(umur)
 
 ======================================================================
-  FILE 6 – L006-Float.py
+  FILE 6 – L006-Tipe Data Float (Bilangan Desimal).py
 ======================================================================
 
 tinggi = 170.5
@@ -266,7 +266,7 @@ hasil = angka_1 + angka_2
 print(hasil)
 
 ======================================================================
-  FILE 9 – L009-Pengurangan.py
+  FILE 9 – L009-Operasi Pengurangan.py
 ======================================================================
 
 angka_1 = 20
@@ -276,7 +276,7 @@ hasil = angka_1 - angka_2
 print(hasil)
 
 ======================================================================
-  FILE 10 – L010-Perkalian.py
+  FILE 10 – L010-Operasi Perkalian.py
 ======================================================================
 
 angka_1 = 6
@@ -286,7 +286,7 @@ hasil = angka_1 * angka_2
 print(hasil)
 
 ======================================================================
-  FILE 11 – L011-Pembagian.py
+  FILE 11 – L011-Operasi Pembagian.py
 ======================================================================
 
 angka_1 = 20
@@ -296,7 +296,7 @@ hasil = angka_1 / angka_2
 print(hasil)
 
 ======================================================================
-  FILE 12 – L012-Pangkat.py
+  FILE 12 – L012-Operasi Pangkat.py
 ======================================================================
 
 angka_1 = 3
@@ -306,7 +306,7 @@ hasil = angka_1 ** angka_2
 print(hasil)
 
 ======================================================================
-  FILE 13 – L013-Input dari User.py
+  FILE 13 – L013-Menerima Dua Input Angka dan Menjumlahkannya.py
 ======================================================================
 
 angka_1 = int(input("Masukan angka pertama : "))
@@ -316,7 +316,7 @@ hasil = angka_1 + angka_2
 print(hasil)
 
 ======================================================================
-  FILE 14 – L014-Pengkondisian (IF dasar).py
+  FILE 14 – L014-Percabangan IF-ELSE Dasar.py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -327,7 +327,7 @@ else :
     print("Kecil atau sama dengan 10")
 
 ======================================================================
-  FILE 15 – L015-If dengan dua kondisi (elif).py
+  FILE 15 – L015-Percabangan IF-ELIF-ELSE.py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -340,7 +340,7 @@ else :
     print("Kecil")
 
 ======================================================================
-  FILE 16 – L016-Boolean (True or False).py
+  FILE 16 – L016-Tipe Data Boolean (True atau False).py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -350,7 +350,7 @@ hasil = angka > 10
 print(hasil)
 
 ======================================================================
-  FILE 17 – L017-Operator Logika (and).py
+  FILE 17 – L017-Operator Logika AND (Cek Angka dalam Rentang).py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -360,7 +360,7 @@ hasil = 5 < angka < 15
 print(hasil)
 
 ======================================================================
-  FILE 18 – L018-Operator OR.py
+  FILE 18 – L018-Operator Logika OR (Cek Angka di Luar Rentang).py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -370,7 +370,7 @@ hasil = angka < 5 or angka > 15
 print(hasil)
 
 ======================================================================
-  FILE 19 – L019-NOT (kebalikan True or False).py
+  FILE 19 – L019-Operator Logika NOT (Membalik Kondisi).py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -380,7 +380,7 @@ hasil = not angka == 10
 print(hasil)
 
 ======================================================================
-  FILE 20 – L020-Mini Project Logika.py
+  FILE 20 – L020-Mini Project Validasi Angka dengan AND dan Tidak Sama.py
 ======================================================================
 
 angka = int(input("Masukkan angka : "))
@@ -391,28 +391,28 @@ else :
     print("TIDAK VALID")
 
 ======================================================================
-  FILE 21 – L021-For Loop Dasar.py
+  FILE 21 – L021-For Loop Dasar Menampilkan Angka 1 sampai 5.py
 ======================================================================
 
 for i in range(1, 5 + 1):
     print(i)
 
 ======================================================================
-  FILE 22 – L022-For Loop Kelipatan Dua.py
+  FILE 22 – L022-For Loop Menampilkan Kelipatan 2.py
 ======================================================================
 
 for i in range(2 ,10 + 1, 2):
     print(i)
 
 ======================================================================
-  FILE 23 – L023-For Loop Mundur.py
+  FILE 23 – L023-For Loop Hitung Mundur dari 5 ke 1.py
 ======================================================================
 
 for i in range(5, 0, -1):
     print(i)
 
 ======================================================================
-  FILE 24 – L024-Menghitung Total Dengan Loop.py
+  FILE 24 – L024-Menjumlahkan Angka 1 sampai 5 dengan For Loop.py
 ======================================================================
 
 total = 0
@@ -423,7 +423,7 @@ for i in range (1, 5 + 1):
 print(total)
 
 ======================================================================
-  FILE 25 – L025-Menghitung Jumlah Bilangan Genap.py
+  FILE 25 – L025-Menjumlahkan Bilangan Genap 2 sampai 10.py
 ======================================================================
 
 total = 0
@@ -432,7 +432,7 @@ for i in range(2, 10 + 1, 2):
 print(total)
 
 ======================================================================
-  FILE 26 – L026-Menghitung Banyak Perulangan.py
+  FILE 26 – L026-Menghitung Berapa Kali Loop Berjalan.py
 ======================================================================
 
 jumlah = 0
@@ -441,7 +441,7 @@ for i in range(1, 5 + 1):
 print(jumlah)
 
 ======================================================================
-  FILE 27 – L027-For Loop dan IF.py
+  FILE 27 – L027-For Loop dengan IF Menampilkan Angka di Atas 5.py
 ======================================================================
 
 for i in range(1, 10 + 1) :
@@ -449,7 +449,7 @@ for i in range(1, 10 + 1) :
         print(i)
 
 ======================================================================
-  FILE 28 – L028-Menampilkan Bilangan Genap.py
+  FILE 28 – L028-Menampilkan Bilangan Genap dari 1 sampai 10.py
 ======================================================================
 
 for i in range (1, 10 + 1) :
@@ -457,7 +457,7 @@ for i in range (1, 10 + 1) :
         print(i)
 
 ======================================================================
-  FILE 29 – L029-Menampilkan Bilangan Ganjil.py
+  FILE 29 – L029-Menampilkan Bilangan Ganjil dari 1 sampai 9.py
 ======================================================================
 
 for i in range (1, 10) :
@@ -465,7 +465,7 @@ for i in range (1, 10) :
         print(i)
 
 ======================================================================
-  FILE 30 – L030-Menghitung Jumlah Bilangan Ganjil.py
+  FILE 30 – L030-Menjumlahkan Semua Bilangan Ganjil dari 1 sampai 10.py
 ======================================================================
 
 total = 0
@@ -476,7 +476,7 @@ for i in range (1, 10 + 1):
 print(total)
 
 ======================================================================
-  FILE 31 – L031-While Loop Dasar.py
+  FILE 31 – L031-While Loop Menampilkan Angka 1 sampai 5.py
 ======================================================================
 
 angka = 1
@@ -486,7 +486,7 @@ while angka <= 5 :
     angka += 1
 
 ======================================================================
-  FILE 32 – L032-While Loop Mundur.py
+  FILE 32 – L032-While Loop Hitung Mundur dari 5 ke 1.py
 ======================================================================
 
 angka = 5
@@ -496,7 +496,7 @@ while angka > 0 :
     angka -= 1
 
 ======================================================================
-  FILE 33 – L033-Menjumlahkan Dengan While.py
+  FILE 33 – L033-Menjumlahkan Angka 1 sampai 5 dengan While Loop.py
 ======================================================================
 
 angka = 1
@@ -508,7 +508,7 @@ while angka <= 5 :
 print(total)
 
 ======================================================================
-  FILE 34 – L034-Input Sampai Benar.py
+  FILE 34 – L034-While Loop Input Terus Sampai Angka Benar.py
 ======================================================================
 
 angka = 0
@@ -520,7 +520,7 @@ if angka == 7 :
     print("Benar!")
 
 ======================================================================
-  FILE 35 – L035-Menu Keluar Dengan While.py
+  FILE 35 – L035-While Loop Program Berjalan Sampai Ketik Keluar.py
 ======================================================================
 
 perintah = ""
@@ -531,7 +531,7 @@ while perintah != "keluar" :
 print("Program Selesai")
 
 ======================================================================
-  FILE 36 – L036-Break.py
+  FILE 36 – L036-Menghentikan Loop di Tengah Jalan dengan Break.py
 ======================================================================
 
 angka = 0
@@ -543,7 +543,7 @@ while True :
         break
 
 ======================================================================
-  FILE 37 – L037-Continue.py
+  FILE 37 – L037-Melewati Iterasi Tertentu dengan Continue.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -552,7 +552,7 @@ for i in range(1, 5 + 1) :
     print(i)
 
 ======================================================================
-  FILE 38 – L038-Tabel Perkalian Sederhana.py
+  FILE 38 – L038-Mencetak Tabel Perkalian dengan 2.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -560,7 +560,7 @@ for i in range(1, 5 + 1) :
     print(f"{i} x 2 = {hasil}")
 
 ======================================================================
-  FILE 39 – L039-Tabel-Perkalian-Input.py
+  FILE 39 – L039-Mencetak Tabel Perkalian Berdasarkan Input User.py
 ======================================================================
 
 angka = int(input("Masukan angka : "))
@@ -570,7 +570,7 @@ for i in range(1, 10 + 1) :
     print(f"{angka} x {i} = {hasil}")
 
 ======================================================================
-  FILE 40 – L040-Validasi-Angka-Dengan-Loop.py
+  FILE 40 – L040-Menampilkan Bilangan Genap sampai Batas Input User.py
 ======================================================================
 
 angka = int(input("Masukkan batas angka : "))
@@ -580,7 +580,7 @@ for i in range(1, angka + 1):
         print(i)
 
 ======================================================================
-  FILE 41 – L041-Membuat Kotak Bintang.py
+  FILE 41 – L041-Mencetak Pola Kotak Bintang 3x3.py
 ======================================================================
 
 for i in range(1, 3 + 1) :
@@ -589,14 +589,14 @@ for i in range(1, 3 + 1) :
         print("*", end="")
 
 ======================================================================
-  FILE 42 – L042-Segitiga Bintang.py
+  FILE 42 – L042-Mencetak Pola Segitiga Bintang.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
     print("*" * i)
 
 ======================================================================
-  FILE 43 – L043-Persegi Angka.py
+  FILE 43 – L043-Mencetak Pola Persegi dari Angka Baris.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -605,7 +605,7 @@ for i in range(1, 5 + 1) :
     print()
 
 ======================================================================
-  FILE 44 – L044-Segitiga Angka.py
+  FILE 44 – L044-Mencetak Pola Segitiga Angka Baris Berulang.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -614,7 +614,7 @@ for i in range(1, 5 + 1) :
         print(i, end="")
 
 ======================================================================
-  FILE 45 – L045-Segitiga Terbalik.py
+  FILE 45 – L045-Mencetak Pola Segitiga Bintang Terbalik.py
 ======================================================================
 
 for i in range(5, 1 - 1, -1) :
@@ -623,7 +623,7 @@ for i in range(5, 1 - 1, -1) :
         print("*", end="")
 
 ======================================================================
-  FILE 46 – L046-Segitiga Siku-Siku Terbalik Angka.py
+  FILE 46 – L046-Mencetak Pola Segitiga Terbalik dari Angka Baris.py
 ======================================================================
 
 for i in range(5, 1 - 1, -1) :
@@ -632,7 +632,7 @@ for i in range(5, 1 - 1, -1) :
         print(i, end="")
 
 ======================================================================
-  FILE 47 – L047-Segitiga Angka Berurutan.py
+  FILE 47 – L047-Mencetak Pola Segitiga Angka Berurutan dari 1.py
 ======================================================================
 
 for i in range(1, 5 + 1) :
@@ -641,7 +641,7 @@ for i in range(1, 5 + 1) :
     print()
 
 ======================================================================
-  FILE 48 – L048-Segitiga Angka Terbalik Berurutan.py
+  FILE 48 – L048-Mencetak Pola Segitiga Terbalik Angka Berurutan.py
 ======================================================================
 
 for i in range(5, 1 - 1 , -1) :
@@ -650,7 +650,7 @@ for i in range(5, 1 - 1 , -1) :
     print()
 
 ======================================================================
-  FILE 49 – L049-Segitiga Siku Kanan.py
+  FILE 49 – L049-Mencetak Pola Segitiga Siku Kanan Rata Kanan.py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -662,7 +662,7 @@ for i in range(1, 5 + 1):
         print("*", end="")
 
 ======================================================================
-  FILE 50 – L050-Piramida Bintang.py
+  FILE 50 – L050-Mencetak Pola Piramida Bintang.py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -675,7 +675,7 @@ for i in range(1, 5 + 1):
     print()
 
 ======================================================================
-  FILE 51 – L051-Piramida Terbalik.py
+  FILE 51 – L051-Mencetak Pola Piramida Bintang Terbalik.py
 ======================================================================
 
 for i in range(5, 0, -1 ):
@@ -688,7 +688,7 @@ for i in range(5, 0, -1 ):
     print()
 
 ======================================================================
-  FILE 52 – L052-Diamond (Belah Ketupat).py
+  FILE 52 – L052-Mencetak Pola Diamond (Piramida dan Piramida Terbalik).py
 ======================================================================
 
 for i in range (1, 5 + 1):
@@ -711,7 +711,7 @@ for i in range(4, 0, -1 ):
     print()
 
 ======================================================================
-  FILE 53 – L053-Hollow Square (Persegi Kosong).py
+  FILE 53 – L053-Mencetak Pola Persegi Berongga (Hanya Tepi Bintang).py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -726,7 +726,7 @@ for i in range(1, 5 + 1):
     print()
 
 ======================================================================
-  FILE 54 – L054-Hollow Triangle (Segitiga Kosong).py
+  FILE 54 – L054-Mencetak Pola Segitiga Berongga (Hanya Tepi Bintang).py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -738,7 +738,7 @@ for i in range(1, 5 + 1):
     print()
 
 ======================================================================
-  FILE 55 – L055-X Pattern.py
+  FILE 55 – L055-Mencetak Pola Huruf X dari Bintang.py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -750,7 +750,7 @@ for i in range(1, 5 + 1):
     print()
 
 ======================================================================
-  FILE 56 – L056-Checkerboard (Papan Catur).py
+  FILE 56 – L056-Mencetak Pola Papan Catur (Bintang dan Spasi Selang-Seling).py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -762,7 +762,7 @@ for i in range(1, 5 + 1):
     print()
 
 ======================================================================
-  FILE 57 – L057-Multiplication Table (Versi Nested Loop).py
+  FILE 57 – L057-Mencetak Tabel Perkalian 5x5 dengan Nested Loop.py
 ======================================================================
 
 for i in range(1, 5 + 1):
@@ -775,7 +775,7 @@ for i in range(1, 5 + 1):
     print()
 
 ======================================================================
-  FILE 58 – L058-FizzBuzz.py
+  FILE 58 – L058-FizzBuzz Cetak Fizz Buzz atau Angka 1 sampai 20.py
 ======================================================================
 
 for i in range(1, 20 + 1):
@@ -789,7 +789,7 @@ for i in range(1, 20 + 1):
         print(i)
 
 ======================================================================
-  FILE 59 – L059-LIST (Array).py
+  FILE 59 – L059-Membuat List dan Menampilkan Semua Isinya.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -798,7 +798,7 @@ for i in buah :
     print(i)
 
 ======================================================================
-  FILE 60 – L060-Mengakses Index List.py
+  FILE 60 – L060-Mengakses Elemen List Berdasarkan Index.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -806,7 +806,7 @@ print(buah[0])
 print(buah[2])
 
 ======================================================================
-  FILE 61 – L061-Mengubah Isi List.py
+  FILE 61 – L061-Mengganti Nilai Elemen List Berdasarkan Index.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -817,7 +817,7 @@ for i in buah :
     print(i)
 
 ======================================================================
-  FILE 62 – L062-Menambah Item ke List (Append).py
+  FILE 62 – L062-Menambah Elemen Baru ke List dengan Append.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk"]
@@ -828,7 +828,7 @@ for i in buah :
     print(i)
 
 ======================================================================
-  FILE 63 – L063-Menghapus Item (remove).py
+  FILE 63 – L063-Menghapus Elemen dari List dengan Remove.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -839,7 +839,7 @@ for i in buah :
     print(i)
 
 ======================================================================
-  FILE 64 – L064-Panjang List (len).py
+  FILE 64 – L064-Menghitung Jumlah Elemen dalam List dengan Len.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -847,7 +847,7 @@ buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
 print(f"Jumlah buah: {len(buah)}")
 
 ======================================================================
-  FILE 65 – L065-Loop dengan Index.py
+  FILE 65 – L065-Loop List Sambil Menampilkan Index dan Nilainya.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -856,7 +856,7 @@ for i in range(len(buah)):
     print(i, buah[i])
 
 ======================================================================
-  FILE 66 – L066-Cari Data dalam List.py
+  FILE 66 – L066-Mencari Apakah Data Ada dalam List.py
 ======================================================================
 
 buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
@@ -869,7 +869,7 @@ else :
     print("Buah tidak ditemukan")
 
 ======================================================================
-  FILE 67 – L067-Hitung Jumlah Angka dalam List.py
+  FILE 67 – L067-Menjumlahkan Semua Elemen dalam List.py
 ======================================================================
 
 angka = [10, 20, 30, 40, 50]
@@ -880,7 +880,7 @@ for i in angka:
 print(total)
 
 ======================================================================
-  FILE 68 – L068-Mencari Nilai Terbesar.py
+  FILE 68 – L068-Mencari Nilai Terbesar dalam List.py
 ======================================================================
 
 angka = [10, 45, 23, 99, 12]
@@ -893,7 +893,7 @@ for i in range(len(angka)):
 print(terbesar)
 
 ======================================================================
-  FILE 69 – L069-Mencari Nilai Terkecil.py
+  FILE 69 – L069-Mencari Nilai Terkecil dalam List.py
 ======================================================================
 
 angka = [10, 45, 23, 99, 12]
@@ -905,7 +905,7 @@ for i in range(len(angka)):
 print(terkecil)
 
 ======================================================================
-  FILE 70 – L070-Menghitung Rata-rata (Average).py
+  FILE 70 – L070-Menghitung Rata-rata Semua Elemen dalam List.py
 ======================================================================
 
 angka = [10, 20, 30, 40, 50]
@@ -917,7 +917,7 @@ for i in range(len(angka)):
 print(f"Rata-rata: {total / len(angka)}")
 
 ======================================================================
-  FILE 71 – L071-Hitung Jumlah Angka Genap.py
+  FILE 71 – L071-Menghitung Banyak Angka Genap dalam List.py
 ======================================================================
 
 angka = [10, 21, 30, 45, 50, 61]
@@ -929,7 +929,7 @@ for i in range(len(angka)):
 print(jumlah)
 
 ======================================================================
-  FILE 72 – L072-Hitung Jumlah Angka Ganjil.py
+  FILE 72 – L072-Menghitung Banyak Angka Ganjil dalam List.py
 ======================================================================
 
 angka = [10, 21, 30, 45, 50, 61]
@@ -940,7 +940,7 @@ for i in range(len(angka)):
 print(f"Jumlah angka ganjil: {ganjil}")
 
 ======================================================================
-  FILE 73 – L073-Input Banyak Data ke List.py
+  FILE 73 – L073-Input Sejumlah Angka dari User ke dalam List.py
 ======================================================================
 
 angka = []
@@ -954,7 +954,7 @@ for i in range(n):
 print(angka)
 
 ======================================================================
-  FILE 74 – L074-Total dari Data yang Diinput User.py
+  FILE 74 – L074-Menjumlahkan Angka yang Diinput User ke List.py
 ======================================================================
 
 angka = []
@@ -968,7 +968,7 @@ for i in range(jumlah_input):
 print(f"Total : {total}")
 
 ======================================================================
-  FILE 75 – L075-Cari Nilai Terbesar dari Input User.py
+  FILE 75 – L075-Mencari Nilai Terbesar dari Angka yang Diinput User.py
 ======================================================================
 
 angka = []
@@ -989,7 +989,7 @@ for i in range(jumlah_input):
 print(f"Nilai Terbesar : {terbesar}")
 
 ======================================================================
-  FILE 76 – L076-Nilai Terkecil dari Input User.py
+  FILE 76 – L076-Mencari Nilai Terkecil dari Angka yang Diinput User.py
 ======================================================================
 
 angka = []
@@ -1010,7 +1010,7 @@ for i in range(jumlah_angka):
 print(f"Nilai terkecil : {terkecil}")
 
 ======================================================================
-  FILE 77 – L077-RataRata Dari Input User.py
+  FILE 77 – L077-Menghitung Rata-rata dari 5 Angka yang Diinput User.py
 ======================================================================
 
 angka = []
@@ -1026,7 +1026,7 @@ print(f"Jumlah = {total}")
 print(f"Rata - rata = {total / len(angka)}")
 
 ======================================================================
-  FILE 78 – L078-Menghitung Bilangan Genap Dalam List.py
+  FILE 78 – L078-Menghitung Banyak Bilangan Genap dari Input User.py
 ======================================================================
 
 angka = []
@@ -1040,7 +1040,7 @@ for i in range(1, 5 + 1):
 print(f"Jumlah bilangan genap : {genap}")
 
 ======================================================================
-  FILE 79 – L079-Menghitung Bilangan Ganjil Dalam List.py
+  FILE 79 – L079-Menghitung Banyak Bilangan Ganjil dari Input User.py
 ======================================================================
 
 angka = []
@@ -1054,7 +1054,7 @@ for i in range(1, 5 + 1):
 print(f"Jumlah bilangan ganjil : {ganjil}")
 
 ======================================================================
-  FILE 80 – L080-Mencari Posisi Nilai Terbesar.py
+  FILE 80 – L080-Mencari Nilai Terbesar dan Posisi Index-nya.py
 ======================================================================
 
 angka = []
@@ -1074,7 +1074,7 @@ print(f"Nilai terbesar = {terbesar}")
 print(f"Angka ke = {posisi + 1}, Posisi ke = {posisi} pada array")
 
 ======================================================================
-  FILE 81 – L081-Mencari Posisi Nilai Terkecil.py
+  FILE 81 – L081-Mencari Nilai Terkecil dan Posisi Index-nya.py
 ======================================================================
 
 angka = []
@@ -1094,7 +1094,7 @@ print(f"Nilai terkecil = {terkecil}")
 print(f"Angka ke = {posisi + 1}, Posisi ke = {posisi} pada array")
 
 ======================================================================
-  FILE 82 – L082-Mencari Semua Posisi Nilai Terbesar.py
+  FILE 82 – L082-Mencari Semua Posisi Jika Nilai Terbesar Muncul Berulang.py
 ======================================================================
 
 angka = []
@@ -1121,7 +1121,7 @@ for i in range(len(angka)):
         print(f"Angka ke = {i + 1}, Posisi ke = {i} ")
 
 ======================================================================
-  FILE 83 – L083-Menghitung Frekuensi Kemunculan Angka.py
+  FILE 83 – L083-Menghitung Berapa Kali Setiap Angka Muncul dalam List.py
 ======================================================================
 
 angka = []
@@ -1142,7 +1142,7 @@ for i in range(len(angka)):
 print(f"Angka {cari} muncul sebanyak {total}")
 
 ======================================================================
-  FILE 84 – L084-Menampilkan Posisi Semua Angka yang Dicari.py
+  FILE 84 – L084-Menampilkan Semua Index dari Angka yang Dicari.py
 ======================================================================
 
 angka = []
@@ -1168,7 +1168,7 @@ for i in range(len(angka)):
         print(f"Angka ke = {i + 1}, Posisi = {i}")
 
 ======================================================================
-  FILE 85 – L085-Mencari Nilai Terbesar dan Terkecil Sekaligus.py
+  FILE 85 – L085-Mencari Nilai Terbesar dan Terkecil dalam Satu Loop.py
 ======================================================================
 
 angka = []
@@ -1191,7 +1191,7 @@ print(f"Nilai terbesar = {terbesar}")
 print(f"Nilai terkecil = {terkecil}")
 
 ======================================================================
-  FILE 86 – L086-Mencari Selisih Nilai Terbesar dan Terkecil.py
+  FILE 86 – L086-Menghitung Selisih antara Nilai Terbesar dan Terkecil.py
 ======================================================================
 
 angka = []
@@ -1215,7 +1215,7 @@ print(f"Nilai terkecil = {terkecil}")
 print(f"Selisih = {terbesar - terkecil}")
 
 ======================================================================
-  FILE 87 – L087-Nilai Terbesar, Terkecil, dan Rata-rata Sekaligus.py
+  FILE 87 – L087-Menampilkan Nilai Maks, Min, dan Rata-rata Sekaligus.py
 ======================================================================
 
 angka = []
@@ -1241,7 +1241,7 @@ print(f"Nilai terkecil = {terkecil}")
 print(f"Rata-rata = {total / len(angka)}")
 
 ======================================================================
-  FILE 88 – L088-Menghitung Jumlah Angka di Atas Rata-rata.py
+  FILE 88 – L088-Menghitung Banyak Angka yang Nilainya di Atas Rata-rata.py
 ======================================================================
 
 angka = []
@@ -1263,7 +1263,7 @@ print(f"Rata-rata = {rata_rata}")
 print(f"Jumlah angka di atas rata-rata = {di_atas_rata_rata}")
 
 ======================================================================
-  FILE 89 – L089-Menampilkan Semua Angka di Atas Rata-rata.py
+  FILE 89 – L089-Menampilkan Semua Angka yang Nilainya di Atas Rata-rata.py
 ======================================================================
 
 angka = []
@@ -1285,7 +1285,7 @@ for i in range(len(angka)):
         print(angka[i])
 
 ======================================================================
-  FILE 90 – L090-Menampilkan Angka Terdekat dengan Rata-rata.py
+  FILE 90 – L090-Mencari Angka dengan Nilai Paling Dekat ke Rata-rata.py
 ======================================================================
 
 angka = []
@@ -1316,7 +1316,7 @@ print(f"Rata-rata = {rata_rata}")
 print(f"Angka Terdekat dari rata-rata = {angka_terdekat}")
 
 ======================================================================
-  FILE 91 – L091-Menampilkan Posisi Angka Terdekat dengan Rata-rata.py
+  FILE 91 – L091-Mencari Posisi Index Angka Paling Dekat ke Rata-rata.py
 ======================================================================
 
 angka = []
@@ -1351,7 +1351,7 @@ print(f"Angka ke = {posisi + 1}")
 print(f"Posisi index ke = {posisi}")
 
 ======================================================================
-  FILE 92 – L092-Menampilkan Semua Angka yang Sama dengan Rata-rata (dibulatkan ke bawah).py
+  FILE 92 – L092-Menampilkan Angka yang Nilainya Sama dengan Rata-rata Bulat Bawah.py
 ======================================================================
 
 angka = []
@@ -1374,7 +1374,7 @@ for i in range(len(angka)):
         print(f"Angka ke = {i + 1}, Posisi = {i}")
 
 ======================================================================
-  FILE 93 – L093-Menampilkan Angka yang Paling Sering Muncul.py
+  FILE 93 – L093-Mencari Satu Angka dengan Frekuensi Kemunculan Terbanyak.py
 ======================================================================
 
 angka = []
@@ -1409,7 +1409,7 @@ print(f"Angka paling sering muncul = {angka_modus}")
 print(f"Jumlah kemunculan = {jumlah_kemunculan_sebelumnya}")
 
 ======================================================================
-  FILE 94 – L094-Menampilkan Semua Angka yang Memiliki Kemunculan Terbanyak.py
+  FILE 94 – L094-Menampilkan Semua Angka dengan Frekuensi Tertinggi (Modus).py
 ======================================================================
 
 angka = []
@@ -1451,7 +1451,7 @@ for i in range(len(angka)):
         angka_yang_sudah_ditampilkan.append(angka[i])
 
 ======================================================================
-  FILE 95 – L095-Menampilkan Angka yang Hanya Muncul Sekali.py
+  FILE 95 – L095-Menampilkan Semua Angka yang Frekuensinya Tepat 1 Kali.py
 ======================================================================
 
 angka = []
@@ -1475,7 +1475,7 @@ for i in range(len(angka)):
         print(angka[i])
 
 ======================================================================
-  FILE 96 – L096-Menampilkan Angka yang Muncul Lebih dari Sekali.py
+  FILE 96 – L096-Menampilkan Semua Angka yang Muncul Lebih dari 1 Kali.py
 ======================================================================
 
 angka = []
@@ -1501,7 +1501,7 @@ for i in range(len(angka)):
         angka_sudah_ditampilkan.append(angka[i])
 
 ======================================================================
-  FILE 97 – L097-Menampilkan Jumlah Angka Unik.py
+  FILE 97 – L097-Menghitung Berapa Banyak Angka Unik dalam List.py
 ======================================================================
 
 angka = []
@@ -1524,7 +1524,7 @@ jumlah_angka_unik = len(angka_tampil)
 print(f"Jumlah angka unik = {jumlah_angka_unik}")
 
 ======================================================================
-  FILE 98 – L098-Menampilkan Angka Unik yang Diurutkan Sesuai Kemunculan Pertama.py
+  FILE 98 – L098-Menampilkan Angka Unik Urut Sesuai Kemunculan Pertama.py
 ======================================================================
 
 angka = []
@@ -1542,7 +1542,7 @@ for i in range(len(angka)):
         print(angka[i])
 
 ======================================================================
-  FILE 99 – L099-Menampilkan Angka Unik dan Jumlah Kemunculannya.py
+  FILE 99 – L099-Menampilkan Setiap Angka Unik Beserta Frekuensinya.py
 ======================================================================
 
 angka = []
@@ -1571,7 +1571,7 @@ for i in range(len(angka_sortir)):
     print(f"{angka_sortir[i]} muncul {jumlah_muncul[i]} kali")
 
 ======================================================================
-  FILE 100 – L100-Menampilkan Angka dengan Frekuensi dari Terbesar ke Terkecil.py
+  FILE 100 – L100-Mengurutkan dan Menampilkan Angka dari Frekuensi Terbesar.py
 ======================================================================
 
 angka = []
@@ -1609,7 +1609,7 @@ for i in range(len(angka_sortir)):
     print(f"{angka_sortir[i]} muncul {jumlah_muncul[i]} kali")
 
 ======================================================================
-  FILE 101 – L101-Statistik Angka Lengkap.py
+  FILE 101 – L101-Menampilkan Statistik Lengkap (Maks, Min, Rata-rata, Frekuensi).py
 ======================================================================
 
 angka = []
@@ -1664,7 +1664,7 @@ for i in range(len(angka_sortir)):
     print(f"{angka_sortir[i]} muncul {list_modus[i]}")
 
 ======================================================================
-  FILE 102 – L102-Menampilkan Angka dengan Frekuensi Terkecil.py
+  FILE 102 – L102-Mencari Angka dengan Frekuensi Kemunculan Paling Sedikit.py
 ======================================================================
 
 angka = []
@@ -1711,7 +1711,7 @@ for i in range(len(angka_sortir)):
         print(angka_sortir[i])
 
 ======================================================================
-  FILE 103 – L103-Menampilkan Angka dengan Frekuensi Tengah.py
+  FILE 103 – L103-Mencari Angka dengan Frekuensi di Posisi Tengah (Median Frekuensi).py
 ======================================================================
 
 angka = []
@@ -1759,7 +1759,7 @@ for i in range(len(angka_sortir)):
         print(angka_sortir[i])
 
 ======================================================================
-  FILE 104 – L104-Jarak Frekuensi.py
+  FILE 104 – L104-Menghitung Selisih antara Frekuensi Terbesar dan Terkecil.py
 ======================================================================
 
 angka = []
@@ -1819,7 +1819,7 @@ print("-"*24)
 print(f"Selisih = {selisih}")
 
 ======================================================================
-  FILE 105 – L105-Tetangga Frekuensi.py
+  FILE 105 – L105-Menampilkan Selisih Frekuensi antara Setiap Pasangan Angka Berurutan.py
 ======================================================================
 
 angka = []
@@ -1858,7 +1858,7 @@ for i in range(len(modus_sorting) - 1):
     print(f"{angka_sorting[i]} dan {angka_sorting[i + 1]} selisih modus = {modus_sorting[i] - modus_sorting[i + 1]} ")
 
 ======================================================================
-  FILE 106 – L106-Pasangan Angka Terdekat.py
+  FILE 106 – L106-Mencari Dua Angka dengan Selisih Nilai Terkecil.py
 ======================================================================
 
 angka = []
@@ -1900,7 +1900,7 @@ for i in range(len(angka)-1):
 print(f"Selisih = {selisih_update}")
 
 ======================================================================
-  FILE 107 – L107-Pasangan Terjauh.py
+  FILE 107 – L107-Mencari Dua Angka dengan Selisih Nilai Terbesar.py
 ======================================================================
 
 angka = []
@@ -1921,7 +1921,7 @@ n = len(angka)
 print(f"Pasangan terjauh = {angka[0]} dan {angka[n - 1]}, dengan selisih = {angka[0] - angka[n - 1]}")
 
 ======================================================================
-  FILE 108 – L108-Pasangan Dengan Jumlah Terbesar.py
+  FILE 108 – L108-Mencari Dua Angka yang Jika Dijumlah Hasilnya Terbesar.py
 ======================================================================
 
 angka = []
@@ -1939,7 +1939,7 @@ print(f"Pasangan terbesar : {angka[0]} dan {angka[1]}")
 print(f"Jumlah = {angka[0] + angka[1]}")
 
 ======================================================================
-  FILE 109 – L109-Pasangan Dengan Jumlah Paling Kecil.py
+  FILE 109 – L109-Mencari Dua Angka yang Jika Dijumlah Hasilnya Terkecil.py
 ======================================================================
 
 angka = []
@@ -1957,7 +1957,7 @@ print(f"Pasangan dengan penjumlahan terkecil = {angka[0]} dan {angka[1]}")
 print(f"Jumlah = {angka[1] + angka[0]}")
 
 ======================================================================
-  FILE 110 – L110-Tiga Angka Maksimum.py
+  FILE 110 – L110-Mencari 3 Angka Terbesar dan Total Penjumlahannya.py
 ======================================================================
 
 angka = []
@@ -1975,7 +1975,7 @@ print(f"Tiga angka terbesar jika di jumlahkan : {angka[0]}, {angka[1]}, dan {ang
 print(f"Dengan hasil penjumlahan = {angka[0] + angka[1] + angka[2]}")
 
 ======================================================================
-  FILE 111 – L111-Tiga Angka Minimum.py
+  FILE 111 – L111-Mencari 3 Angka Terkecil dan Total Penjumlahannya.py
 ======================================================================
 
 angka = []
@@ -1993,7 +1993,7 @@ print(f"Tiga angka terkecil jika di jumlahkan : {angka[0]}, {angka[1]}, dan {ang
 print(f"Dengan hasil penjumlahan = {angka[0] + angka[1] + angka[2]}")
 
 ======================================================================
-  FILE 112 – L112-Median Sederhana.py
+  FILE 112 – L112-Mencari Median dari 9 Angka (Jumlah Data Ganjil).py
 ======================================================================
 
 angka = []
@@ -2012,7 +2012,7 @@ median = len(angka) // 2
 print(f"Median = {angka[median]}")
 
 ======================================================================
-  FILE 113 – L113-Median Genap.py
+  FILE 113 – L113-Mencari Median dari 10 Angka (Jumlah Data Genap).py
 ======================================================================
 
 angka = []
@@ -2032,7 +2032,7 @@ median = (angka[x] + angka[x + 1]) / 2
 print(f"Median = {median}")
 
 ======================================================================
-  FILE 114 – L114-Nilai Tengah Frekuensi.py
+  FILE 114 – L114-Mencari Angka yang Frekuensinya di Posisi Tengah Setelah Diurutkan.py
 ======================================================================
 
 angka = []
@@ -2071,7 +2071,7 @@ for i in range(len(angka_sorting)):
         print(angka_sorting[i])
 
 ======================================================================
-  FILE 115 – L115-Frekuensi Tetangga.py
+  FILE 115 – L115-Menampilkan Selisih Frekuensi Setiap Pasangan Angka Berurutan.py
 ======================================================================
 
 angka = []
@@ -2110,7 +2110,7 @@ for i in range(len(frekuensi_sort) - 1):
     print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
 
 ======================================================================
-  FILE 116 – L116-Kelompok Frekuensi Sama.py
+  FILE 116 – L116-Menampilkan Angka yang Selisih Frekuensinya Lebih dari 1 dengan Berikutnya.py
 ======================================================================
 
 angka = []
@@ -2152,7 +2152,7 @@ for i in range(len(frekuensi_sort)):
             print(f"{angka_sort[k] }")
 
 ======================================================================
-  FILE 117 – L117-Frekuensi Loncat.py
+  FILE 117 – L117-Menampilkan Pasangan Angka yang Selisih Frekuensinya Lebih dari 1.py
 ======================================================================
 
 angka = []
@@ -2192,7 +2192,7 @@ for i in range(len(frekuensi_sort) - 1):
         print(f"{angka_sort[i]} dan {angka_sort[i + 1]} : selisih frekuensi = {selisih}")
 
 ======================================================================
-  FILE 118 – L118-Raja Frekuensi.py
+  FILE 118 – L118-Mengecek Apakah Ada Satu Angka dengan Frekuensi Tertinggi Mutlak.py
 ======================================================================
 
 angka = []
@@ -2229,7 +2229,7 @@ else :
     print("Tidak ada raja")
 
 ======================================================================
-  FILE 119 – L119-Kerajaan Kembar.py
+  FILE 119 – L119-Menampilkan Semua Angka yang Berbagi Frekuensi Tertinggi Bersama.py
 ======================================================================
 
 angka = []
@@ -2268,7 +2268,7 @@ for i in range(len(frekuensi_sort)):
         print(angka_sort[i])
 
 ======================================================================
-  FILE 120 – L120-Tahta Kedua.py
+  FILE 120 – L120-Mencari Angka dengan Frekuensi Kemunculan Tertinggi Kedua.py
 ======================================================================
 
 angka = []
@@ -2315,7 +2315,7 @@ else :
             print(angka_sort[i])
 
 ======================================================================
-  FILE 121 – L121-Menara Tahta.py
+  FILE 121 – L121-Mengelompokkan Angka Berdasarkan Tingkat Frekuensi dari Tinggi ke Rendah.py
 ======================================================================
 
 angka = []
@@ -2361,7 +2361,7 @@ for i in range(len(frekuensi_sort)):
     f_sudah.append(frekuensi_sort[i])
 
 ======================================================================
-  FILE 122 – L122-Tahta Terbalik.py
+  FILE 122 – L122-Mengelompokkan Angka Berdasarkan Tingkat Frekuensi dari Rendah ke Tinggi.py
 ======================================================================
 
 angka = []
@@ -2414,7 +2414,7 @@ for i in range(len(frekuensi_sort) - 1, -1, - 1):
     f_sudah.append(frekuensi_sort[i])
 
 ======================================================================
-  FILE 123 – L123-Pengkhianat Tahta.py
+  FILE 123 – L123-Mencari Angka yang Frekuensinya Unik (Tidak Berbagi dengan Angka Lain).py
 ======================================================================
 
 angka = []
@@ -2457,7 +2457,7 @@ for i in range(len(frekuensi_sort)):
         print(angka_sort[i])
 
 ======================================================================
-  FILE 124 – L124-Tahta Palsu.py
+  FILE 124 – L124-Mencari Kelompok Frekuensi yang Paling Banyak Anggotanya.py
 ======================================================================
 
 angka = []
@@ -2519,7 +2519,7 @@ for i in range(len(angka_sort)):
 print(f"Jumlah anggota = {jumlah_anggota} ")
 
 ======================================================================
-  FILE 125 – L125-Mata-Mata Tahta.py
+  FILE 125 – L125-Menampilkan Angka yang Frekuensinya Bukan Tertinggi dan Bukan Terendah.py
 ======================================================================
 
 angka = []
@@ -2605,7 +2605,7 @@ else:
     print("=> kerena anggota tiap tahta sama atau hanya terdapat 2 tahta")
 
 ======================================================================
-  FILE 126 – L126-Mata-Mata Ganda.py
+  FILE 126 – L126-Menampilkan Kelompok Frekuensi yang Jumlah Anggotanya Genap.py
 ======================================================================
 
 angka = []
@@ -2664,7 +2664,7 @@ if ada_genap == False:
     print("Tidak ada tahta yang beranggota genap")
 
 ======================================================================
-  FILE 127 – L127-Huruf Kembar.py
+  FILE 127 – L127-Menampilkan Huruf yang Muncul Lebih dari Sekali beserta Jumlahnya.py
 ======================================================================
 
 text = input("Masukkan Text : ")
@@ -2684,7 +2684,7 @@ for i in range(len(text)):
             sudah_tampil.append(text[i])
 
 ======================================================================
-  FILE 128 – L128-Huruf yang hanya satu kali muncul.py
+  FILE 128 – L128-Menampilkan Huruf yang Hanya Muncul Tepat Sekali dalam Teks.py
 ======================================================================
 
 text = input("Masukkan Text : ")
@@ -2701,7 +2701,7 @@ for i in range(len(text)):
         print(text[i])
 
 ======================================================================
-  FILE 129 – L129-Huruf yang muncul lebih dari satu kali.py
+  FILE 129 – L129-Mencari Huruf dengan Frekuensi Kemunculan Terbanyak dalam Teks.py
 ======================================================================
 
 text = input("Masukkan Text : ")
