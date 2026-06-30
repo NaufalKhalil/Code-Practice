@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-28 19:42:32
+  Dibuat  : 2026-06-30 22:50:09
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 129 file
+  Total   : 145 file
 ======================================================================
 
 ======================================================================
@@ -46,6 +46,40 @@ Tugasmu adalah menjadi tutor/mentor Python interaktif dengan aturan berikut:
  7. Lihat daftar kode di bawah untuk mengetahui syntax dan topik
     apa saja yang sudah pernah dipelajari. Gunakan ini sebagai
     acuan level dan titik lanjut pembelajaran.
+
+ 8. Setiap soal HARUS punya nama level yang jelas dan sesuai
+    dengan materi/topik soal tersebut.
+    - Contoh: 'Level 3 - Looping Dasar (for)', 'Level 5 - Array & Pencarian Nilai'.
+    - Jangan hanya menulis 'Level 3' tanpa nama topiknya.
+
+ 9. Soal sebisa mungkin relate / relevan dengan kasus nyata
+    dalam pemrograman, bukan sekadar soal abstrak/teoretis.
+    - Contoh: hitung total belanja, validasi input umur, cari nilai
+      tertinggi dari daftar nilai siswa, dsb.
+
+ 10. Setiap soal HARUS menyertakan aturan syntax apa saja yang
+     boleh digunakan untuk mengerjakannya.
+     - Utamakan membatasi syntax yang boleh dipakai ke syntax yang
+       sudah dikuasai pemula, supaya fundamental/pondasi logikanya
+       kuat dulu (tidak langsung mengandalkan fungsi instan).
+     - Contoh: 'Boleh pakai: variabel, if/else, perulangan for.
+       Belum boleh pakai: min(), max(), sorted().'
+
+ 11. Syntax/fungsi baru yang lebih ringkas BOLEH di-unlock jika
+     fundamental pengguna di topik terkait sudah cukup kuat.
+     - Contoh: setelah pengguna lancar mencari nilai tertinggi/
+       terendah di array secara manual (pakai if angka[i] > nilai_terbesar),
+       barulah boleh dikenalkan shortcut seperti min()/max().
+     - Jelaskan bahwa ini 'unlock syntax baru' sebagai bentuk
+       progres, bukan diberikan dari awal.
+
+ 12. Materi/topik baru BOLEH di-unlock jika materi sebelumnya
+     sudah dikuasai dengan baik (bukan cuma sekali lulus, tapi
+     sudah cukup beberapa soal di topik tersebut).
+     - Contoh: setelah topik Array/List sudah tuntas dan pengguna
+       cukup jago, baru boleh unlock materi baru seperti Dictionary.
+     - Saat unlock materi baru, beri tahu pengguna secara eksplisit
+       bahwa ini adalah materi baru yang baru dibuka.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  CARA MEMULAI SESI INI
@@ -187,6 +221,22 @@ DAFTAR ISI
   127. L127-Menampilkan Huruf yang Muncul Lebih dari Sekali beserta Jumlahnya.py
   128. L128-Menampilkan Huruf yang Hanya Muncul Tepat Sekali dalam Teks.py
   129. L129-Mencari Huruf dengan Frekuensi Kemunculan Terbanyak dalam Teks.py
+  130. L130-Menampilkan Huruf dengan Frekuensi Kemunculan Terkecil.py
+  131. L131-Menampilkan Huruf dengan Frekuensi Kemunculan Tertinggi Kedua.py
+  132. L132-Menampilkan Pasangan Huruf dengan Selisih Frekuensi Terkecil.py
+  133. L133-Menampilkan Kelompok Huruf Berdasarkan Tingkat Frekuensi.py
+  134. L134-Menampilkan Huruf dengan Tetangga Frekuensi Terdekat.py
+  135. L135-Analisis Kata Paling Sering Dipakai.py
+  136. L136-Hitung Kata Terlarang (moderasi chat sederhana).py
+  137. L137-Sensor Kata Otomatis.py
+  138. L138-Hitung Persentase Toxic Chat.py
+  139. L139-Ranking Kata Paling Sering di Chat.py
+  140. L140-Analisis Log Login User.py
+  141. L141-Cari User Paling Aktif.py
+  142. L142-Persentase Aktivitas User.py
+  143. L143-Deteksi User Mencurigakan.py
+  144. L144-Top 3 User Paling Aktif.py
+  145. L145-Jam Sibuk Website (peak activity).py
 
 ======================================================================
 
@@ -2734,6 +2784,622 @@ for i in range(len(text)):
         if text[i] not in sudah_tampil:
             print(text[i])
             sudah_tampil.append(text[i])
+
+======================================================================
+  FILE 130 – L130-Menampilkan Huruf dengan Frekuensi Kemunculan Terkecil.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+sudah_tampil = []
+total_kecil = len(text)
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total < total_kecil:
+        total_kecil = total
+
+print(f"Frekuensi terkecil = {total_kecil}")
+print("huruf :")
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total == total_kecil:
+        if text[i] not in sudah_tampil:
+            print(text[i])
+            sudah_tampil.append(text[i])
+
+======================================================================
+  FILE 131 – L131-Menampilkan Huruf dengan Frekuensi Kemunculan Tertinggi Kedua.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+sudah_tampil = []
+total_besar_1 = 0
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total > total_besar_1:
+        total_besar_1 = total
+
+total_besar_2 = 0
+
+flag = False
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+
+    if total_besar_2 < total < total_besar_1:
+        total_besar_2 = total
+        flag = True
+
+if flag == True :
+
+    print(f"Frekuensi Terbesar ke dua = {total_besar_2}")
+    print("huruf :")
+
+    for i in range(len(text)):
+
+        total = 0
+
+        for j in range(len(text)):
+            if text[i] == text[j]:
+                total += 1
+
+        if total == total_besar_2:
+            if text[i] not in sudah_tampil:
+                print(text[i])
+                sudah_tampil.append(text[i])
+
+else:
+    print("Tidak ada Frekuensi Terbesar ke dua")
+
+======================================================================
+  FILE 132 – L132-Menampilkan Pasangan Huruf dengan Selisih Frekuensi Terkecil.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+f_huruf = []
+huruf_disortir = []
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+        
+    if text[i] not in huruf_disortir:
+        f_huruf.append(total)
+        huruf_disortir.append(text[i])
+
+for i in range(len(f_huruf)):
+    for j in range(len(f_huruf) - 1):
+        if f_huruf[j] < f_huruf[j + 1]:
+            f_huruf[j], f_huruf[j + 1] = f_huruf[j + 1], f_huruf[j]
+            huruf_disortir[j], huruf_disortir[j + 1] = huruf_disortir[j + 1], huruf_disortir[j]
+
+selisih_terkecil = len(text)
+flag = False
+
+for i in range(len(f_huruf) - 1):
+
+    selisih = abs(f_huruf[i] - f_huruf[i + 1])
+
+    if selisih < selisih_terkecil and selisih != 0 :
+        selisih_terkecil = selisih
+        flag = True
+
+if flag == True :
+
+    print("Pasangan :")
+
+    for i in range(len(f_huruf) - 1):
+        
+        selisih = abs(f_huruf[i] - f_huruf[i + 1])
+
+        if selisih_terkecil == selisih :
+            print(f"{huruf_disortir[i]} dan {huruf_disortir[i + 1]}")
+    
+    print()
+    print(f"Selisih = {selisih_terkecil}")
+
+else :
+    print("Tidak ada selisih terkecil")
+
+======================================================================
+  FILE 133 – L133-Menampilkan Kelompok Huruf Berdasarkan Tingkat Frekuensi.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+f_huruf = []
+huruf_disortir = []
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+        
+    if text[i] not in huruf_disortir:
+        f_huruf.append(total)
+        huruf_disortir.append(text[i])
+
+for i in range(len(f_huruf)):
+    for j in range(len(f_huruf) - 1):
+        if f_huruf[j] < f_huruf[j + 1]:
+            f_huruf[j], f_huruf[j + 1] = f_huruf[j + 1], f_huruf[j]
+            huruf_disortir[j], huruf_disortir[j + 1] = huruf_disortir[j + 1], huruf_disortir[j]
+
+f_sudah = []
+
+for i in range(len(f_huruf)):
+    
+    if f_huruf[i] not in f_sudah:
+        print(f"Frekuensi {f_huruf[i]} :")
+        f_sudah.append(f_huruf[i])
+
+        for j in range(len(f_huruf)):
+            if f_huruf[i] == f_huruf[j]:
+                print(huruf_disortir[j])
+
+======================================================================
+  FILE 134 – L134-Menampilkan Huruf dengan Tetangga Frekuensi Terdekat.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+f_huruf = []
+huruf_disortir = []
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+        
+    if text[i] not in huruf_disortir:
+        f_huruf.append(total)
+        huruf_disortir.append(text[i])
+
+for i in range(len(f_huruf)):
+    for j in range(len(f_huruf) - 1):
+        if f_huruf[j] < f_huruf[j + 1]:
+            f_huruf[j], f_huruf[j + 1] = f_huruf[j + 1], f_huruf[j]
+            huruf_disortir[j], huruf_disortir[j + 1] = huruf_disortir[j + 1], huruf_disortir[j]
+
+for i in range(len(huruf_disortir) - 1):
+    print(f"{huruf_disortir[i]} -> {huruf_disortir[i + 1]}")
+
+======================================================================
+  FILE 135 – L135-Analisis Kata Paling Sering Dipakai.py
+======================================================================
+
+text = input("Masukkan text :")
+
+kata = text.split()
+
+total_terbesar = 0
+
+
+for i in range(len(kata)):
+    
+    total = 0
+        
+    for j in range(len(kata)):
+        if kata[i] == kata[j]:
+            total += 1
+
+    if total_terbesar < total:
+        total_terbesar = total
+
+sudah_tampil = []
+
+for i in range(len(kata)):
+    
+    total = 0
+
+    for j in range(len(kata)):
+        if kata[i] == kata[j]:
+            total += 1
+        
+    if total == total_terbesar and kata[i] not in sudah_tampil:
+        print(f"{kata[i]} = {total_terbesar}")
+        sudah_tampil.append(kata[i])
+
+======================================================================
+  FILE 136 – L136-Hitung Kata Terlarang (moderasi chat sederhana).py
+======================================================================
+
+terlarang = [
+    "bodoh", "jelek", "nigga", "jawa", 
+    "anjing", "babi", "bangsat", "keparat", 
+    "goblok", "tolol", "bego", "setan", "fuck",
+    "shit", "asshole", "bitch", "bastard", "suck",
+    "crap", "idiot", "noob",
+]
+
+text = input("Chat :")
+text = text.split()
+
+sudah_tampil = []
+
+total = 0
+
+for i in range(len(text)):
+    if text[i] in terlarang and text[i] not in sudah_tampil:
+        print(text[i])
+    if text[i] in terlarang:
+        total += 1
+    sudah_tampil.append(text[i])
+    
+
+print(f"Total kata terlarang yang di temukan = {total}")
+
+======================================================================
+  FILE 137 – L137-Sensor Kata Otomatis.py
+======================================================================
+
+terlarang = [
+    "bodoh", "jelek", "nigga", "jawa", 
+    "anjing", "babi", "bangsat", "keparat", 
+    "goblok", "tolol", "bego", "setan", "fuck",
+    "shit", "asshole", "bitch", "bastard", "suck",
+    "crap", "idiot", "noob",
+]
+
+text = input("Chat :")
+text = text.split()
+
+for i in range(len(text)):
+    if text[i] in terlarang:
+        print("*" * len(text[i]), end=" ")
+    else :
+        print(text[i], end=" ")
+
+======================================================================
+  FILE 138 – L138-Hitung Persentase Toxic Chat.py
+======================================================================
+
+terlarang = [
+    "bodoh", "jelek", "nigga", "jawa", 
+    "anjing", "babi", "bangsat", "keparat", 
+    "goblok", "tolol", "bego", "setan", "fuck",
+    "shit", "asshole", "bitch", "bastard", "suck",
+    "crap", "idiot", "noob",
+]
+
+text = input("Chat :")
+text = text.split()
+
+total = 0
+
+for i in range(len(text)):
+
+    if text[i] in terlarang:
+        print("*" * len(text[i]), end=" ")
+        total += 1
+    if text[i] not in terlarang:
+        print(text[i], end=" ")
+    
+persentase = (total / len(text)) * 100
+persentase = round(persentase, 1)
+print()
+print("-"*24)
+print(f"Total kata : {len(text)}")
+print(f"Total kata toxic : {total}")
+print(f"Toxic : {persentase} %")
+
+======================================================================
+  FILE 139 – L139-Ranking Kata Paling Sering di Chat.py
+======================================================================
+
+text = input("Masukkan Text : ")
+
+text = text.split() 
+
+frekuensi_text = []
+text_disortir = []
+
+for i in range(len(text)):
+
+    total = 0
+
+    for j in range(len(text)):
+        if text[i] == text[j]:
+            total += 1
+        
+    if text[i] not in text_disortir:
+        frekuensi_text.append(total)
+        text_disortir.append(text[i])
+
+for i in range(len(frekuensi_text)):
+    for j in range(len(frekuensi_text) - 1):
+        if frekuensi_text[j] < frekuensi_text[j + 1]:
+            frekuensi_text[j], frekuensi_text[j + 1] = frekuensi_text[j + 1], frekuensi_text[j]
+            text_disortir[j], text_disortir[j + 1] = text_disortir[j + 1], text_disortir[j]
+
+print("-" * 24)
+print("Rangking :")
+
+for i in range(len(frekuensi_text)):
+    print(f"{text_disortir[i]} = {frekuensi_text[i]}")
+
+======================================================================
+  FILE 140 – L140-Analisis Log Login User.py
+======================================================================
+
+login = input("Masukkan Username : ")
+
+login = login.split() 
+
+f_login = []
+login_sortir = []
+
+for i in range(len(login)):
+
+    total = 0
+
+    for j in range(len(login)):
+        if login[i] == login[j]:
+            total += 1
+        
+    if login[i] not in login_sortir:
+        f_login.append(total)
+        login_sortir.append(login[i])
+
+for i in range(len(f_login)):
+    for j in range(len(f_login) - 1):
+        if f_login[j] < f_login[j + 1]:
+            f_login[j], f_login[j + 1] = f_login[j + 1], f_login[j]
+            login_sortir[j], login_sortir[j + 1] = login_sortir[j + 1], login_sortir[j]
+
+print("-" * 24)
+print("User aktif :")
+
+for i in range(len(f_login)):
+    print(f"{login_sortir[i]} = {f_login[i]} kali login")
+
+======================================================================
+  FILE 141 – L141-Cari User Paling Aktif.py
+======================================================================
+
+login = input("Masukkan Username : ")
+
+login = login.split() 
+
+f_login = []
+login_sortir = []
+
+for i in range(len(login)):
+
+    total = 0
+
+    for j in range(len(login)):
+        if login[i] == login[j]:
+            total += 1
+        
+    if login[i] not in login_sortir:
+        f_login.append(total)
+        login_sortir.append(login[i])
+
+for i in range(len(f_login)):
+    for j in range(len(f_login) - 1):
+        if f_login[j] < f_login[j + 1]:
+            f_login[j], f_login[j + 1] = f_login[j + 1], f_login[j]
+            login_sortir[j], login_sortir[j + 1] = login_sortir[j + 1], login_sortir[j]
+
+print("-" * 24)
+print("User aktif :")
+
+for i in range(len(f_login)):
+    print(f"{login_sortir[i]} = {f_login[i]} kali login")
+
+print()
+print("-" * 24)
+print("User paling aktif :")
+
+for i in range(len(f_login)):
+    if f_login[i] == f_login[0]:
+        print(f"{login_sortir[i]} = {f_login[i]} kali login")
+
+======================================================================
+  FILE 142 – L142-Persentase Aktivitas User.py
+======================================================================
+
+login = input("Masukkan Username : ")
+
+login = login.split() 
+
+f_login = []
+login_sortir = []
+
+for i in range(len(login)):
+
+    total = 0
+
+    for j in range(len(login)):
+        if login[i] == login[j]:
+            total += 1
+        
+    if login[i] not in login_sortir:
+        f_login.append(total)
+        login_sortir.append(login[i])
+
+for i in range(len(f_login)):
+    for j in range(len(f_login) - 1):
+        if f_login[j] < f_login[j + 1]:
+            f_login[j], f_login[j + 1] = f_login[j + 1], f_login[j]
+            login_sortir[j], login_sortir[j + 1] = login_sortir[j + 1], login_sortir[j]
+
+print("-" * 24)
+print("Persentase aktivitas :")
+
+for i in range(len(f_login)):
+
+    persentase = (f_login[i] / len(login)) * 100
+    persentase = round(persentase, 1)
+
+    print(f"{login_sortir[i]} = {persentase}%")
+
+======================================================================
+  FILE 143 – L143-Deteksi User Mencurigakan.py
+======================================================================
+
+login = input("Masukkan Username : ")
+
+login = login.split() 
+
+f_login = []
+login_sortir = []
+
+for i in range(len(login)):
+
+    total = 0
+
+    for j in range(len(login)):
+        if login[i] == login[j]:
+            total += 1
+        
+    if login[i] not in login_sortir:
+        f_login.append(total)
+        login_sortir.append(login[i])
+
+for i in range(len(f_login)):
+    for j in range(len(f_login) - 1):
+        if f_login[j] < f_login[j + 1]:
+            f_login[j], f_login[j + 1] = f_login[j + 1], f_login[j]
+            login_sortir[j], login_sortir[j + 1] = login_sortir[j + 1], login_sortir[j]
+
+print("-" * 24)
+print("Persentase aktivitas :")
+
+flag = False
+
+for i in range(len(f_login)):
+
+    persentase = (f_login[i] / len(login)) * 100
+    persentase = round(persentase, 1)
+
+    if persentase > 50 :
+        print(f"{login_sortir[i]} = {persentase}%")
+        flag = True
+    
+if flag == False :
+    print("Tidak ada user mencurigakan")
+
+======================================================================
+  FILE 144 – L144-Top 3 User Paling Aktif.py
+======================================================================
+
+login = input("Masukkan Username : ")
+
+login = login.split() 
+
+f_login = []
+login_sortir = []
+
+for i in range(len(login)):
+
+    total = 0
+
+    for j in range(len(login)):
+        if login[i] == login[j]:
+            total += 1
+        
+    if login[i] not in login_sortir:
+        f_login.append(total)
+        login_sortir.append(login[i])
+
+for i in range(len(f_login)):
+    for j in range(len(f_login) - 1):
+        if f_login[j] < f_login[j + 1]:
+            f_login[j], f_login[j + 1] = f_login[j + 1], f_login[j]
+            login_sortir[j], login_sortir[j + 1] = login_sortir[j + 1], login_sortir[j]
+
+print("-" * 24)
+
+if len(f_login) < 3 :
+    total_tampil = len(f_login)
+else :
+    total_tampil = 3
+
+if len(f_login) > 3:
+    for i in range(3, len(f_login)):
+        if f_login[i] == f_login[2]:
+            total_tampil += 1
+        else:
+            break
+
+print(f"Top {total_tampil} User :")
+for i in range(total_tampil):
+    print(f"- {login_sortir[i]} = {f_login[i]}")
+
+======================================================================
+  FILE 145 – L145-Jam Sibuk Website (peak activity).py
+======================================================================
+
+jam_login = (input("Masukkan Jam login User = "))
+jam_login = jam_login.split()
+
+f_jam_login = []
+a_jam_login = []
+
+for i in range(len(jam_login)):
+
+    total = 0
+
+    for j in range(len(jam_login)):
+        if jam_login[i] == jam_login[j]:
+            total += 1
+        
+    if jam_login[i] not in a_jam_login:
+        f_jam_login.append(total)
+        a_jam_login.append(jam_login[i])
+
+for i in range(len(f_jam_login)):
+    for j in range(len(f_jam_login) - 1):
+        if f_jam_login[j] < f_jam_login[j + 1]:
+            f_jam_login[j], f_jam_login[j + 1] = f_jam_login[j + 1], f_jam_login[j]
+            a_jam_login[j], a_jam_login[j + 1] = a_jam_login[j + 1], a_jam_login[j]
+
+print()
+print("Jam tersibuk :")
+
+for i in range(len(f_jam_login)):
+    if f_jam_login[i] == f_jam_login[0]:
+        print(f"{a_jam_login[i]} = {f_jam_login[i]} login")
 
 ======================================================================
   AKHIR DOKUMENTASI
