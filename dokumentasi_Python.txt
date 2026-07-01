@@ -1,6 +1,6 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-06-30 22:50:09
+  Dibuat  : 2026-07-01 14:23:47
   Folder  : d:\Project\Coding\Code Practice\Python
   Total   : 145 file
 ======================================================================
@@ -984,6 +984,7 @@ print(jumlah)
 
 angka = [10, 21, 30, 45, 50, 61]
 total = 0
+ganjil = 0
 for i in range(len(angka)):
     if angka[i] % 2 == 1:
         ganjil += 1
