@@ -1,0 +1,283 @@
+array_nama = []
+array_nilai = []
+
+# input user
+
+total_input = int(input("Masukkan jumlah siswa : "))
+
+for i in range(0, total_input):
+
+    print()
+    print(f"========[Input ke-{i + 1}]========")
+    nama = input("=> Nama siswa : ")
+    nilai = int(input(f"=> Nilai Ujian {nama} : "))
+    
+    array_nama.append(nama)
+    array_nilai.append(nilai)
+
+# pengurutan nilai terbesar ke terkecil
+for i in range(len(array_nilai)):
+    for j in range(len(array_nilai) - 1):
+        if array_nilai[j] < array_nilai[j + 1]:
+            array_nilai[j], array_nilai[j + 1] = array_nilai[j + 1], array_nilai[j]
+            array_nama[j], array_nama[j + 1] = array_nama[j + 1], array_nama[j]
+
+run_menu = True
+
+#cari rata-rata
+jumlah_semua = 0
+for i in range(len(array_nilai)):
+    jumlah_semua += array_nilai[i]
+rata_rata = jumlah_semua / len(array_nilai)
+rata_rata = round(rata_rata, 2)
+
+while run_menu == True:
+    # tampilkan menu
+    print()
+    print("=" * 12, "Menu", "=" * 12)
+    print("1. Cari Nilai")
+    print("2. Cari Nama")
+    print("3. Cari Ranking")
+    print("4. Tampilakan semuanya")
+    print("5. Keluar")
+    print("=" * (12 + 6 + 12))
+
+    # input user perintah berdasarkan menu
+    menu_input = input("-> Perintah berdasarkan nomor : ")
+
+    if menu_input == "1":   #pilihan 1 = Cari nilai
+        
+        flag_1 = True
+
+        while flag_1 == True :
+
+            #tampilkan sub menu cari nilai [01]
+            print()
+            print("=" * 3, "Sub menu cari [nilai]", "=" * 3)
+            print("1. Cari nilai tertentu")
+            print("2. Cari nilai tertinggi")
+            print("3. Cari nilai terendah")
+            print("4. Rata-rata seluruh nilai")
+            print("5. Median nilai")
+            print("6. Kembali ke menu utama")
+            print("=" * (3 + 23 + 3))
+
+            #input user perintah berdasarkan sub menu cari nilai [01]
+            sub_menu_01 = input("-> Perintah berdasarkan nomor : ")
+
+            if sub_menu_01 == "1":
+
+                print("-" * 20)
+                cari_nilai_01 = int(input("Cari Nilai : "))
+
+                print("-" * 20)
+                print(f"Siswa dengan nilai {cari_nilai_01}")
+                print()
+
+                for i in range(len(array_nilai)):
+                    if array_nilai[i] == cari_nilai_01:
+                        print(f"- {array_nama[i]}, posisi ke-{i + 1}")
+            
+            elif sub_menu_01 == "2":
+
+                print("-" * 20)
+                print("Siswa dengan nilai tertinggi")
+                print()
+
+                for i in range(len(array_nilai)):
+                    if array_nilai[i] == array_nilai[0]:
+                        print(f"- {array_nama[i]}, posisi/Rank ke-{i + 1}")
+
+                print(f"=> berhasil meraih nilai = {array_nilai[0]}")
+
+            elif sub_menu_01 == "3":
+
+                print("-" * 20)
+                print("Siswa dengan nilai terendah")
+                print()
+
+                for i in range(len(array_nilai) - 1, -1, - 1):
+                    if array_nilai[i] == array_nilai[len(array_nilai) - 1]:
+                        print(f"- {array_nama[i]}, posisi/Rank ke-{i}")
+
+                print(f"=> Sayang sekali!, meraih nilai = {array_nilai[len(array_nilai) - 1]}")
+
+            elif sub_menu_01 == "4":
+
+                print("-" * 20)
+                print(f"Rata-rata seluruh nilai : {rata_rata}, dengan jumlah siswa sebanyak {total_input} ")
+                print()
+            
+            elif sub_menu_01 == "5":
+
+                print("-" * 20)
+
+                if total_input % 2 == 0:
+                    nilai_tengah = len(array_nilai[(total_input // 2) - 1])
+                    nilai_tengah_2 = len(array_nilai[total_input // 2])
+                    print(f"Median : {nilai_tengah} dan {nilai_tengah_2}, siswa dengan nilai media = ")
+                else :
+                    nilai_tengah = len(array_nilai[(total_input // 2) - 1])
+                    print(f"Median : {nilai_tengah}, siswa dengan nilai median = ")
+
+                print()
+
+                for i in range(len(array_nilai)):
+                    if nilai_tengah == array_nilai[i] or nilai_tengah_2 == array_nilai[i]:
+                        print(f"{i + 1}. {array_nama[i]} = {array_nilai[i]}  => Rank/Posisi-{i + 1}.")
+
+            elif sub_menu_01 == "6":
+
+                flag_1 = False
+
+            else:
+
+                print("[Error] Perintah tidak valid!, Masukkan nomor yang valid!")
+
+
+    elif menu_input == "2":   #pilihan 2 = cari nama
+
+        print("-" * 20)
+        cari_nama = input("Cari nama siswa : ")
+        print()
+        nama_ada = False
+
+        for i in range(len(array_nilai)):
+            if array_nama[i] == cari_nama:
+                print(f"- {array_nama[i]}, dengan nilai = {array_nilai[i]}, posisi/rank ke-{i + 1}")
+                nama_ada = True
+        
+        if nama_ada == False:
+            print(f"Siswa dengan nama {cari_nama}, Tidak di temukan")
+
+
+    elif menu_input == "3":   #pilihan 3 = cari ranking
+
+        flag_2 = True
+
+        while flag_2 == True :
+
+            #tampilkan sub menu cari rangking [03]
+            print()
+            print("=" * 3, "Sub menu cari [Ranking]", "=" * 3)
+            print("1. Cari Rank tertentu")
+            print("2. Tampilkan Rank Top 3")
+            print("3. Tampilkan Rank Top 5")
+            print("4. Tampilkan Rank Top 10")
+            print("5. Kembali ke menu utama")
+            print("=" * (3 + 25 + 3))
+
+            #input user perintah berdasarkan sub menu cari nilai [03]
+            sub_menu_03 = input("-> Perintah berdasarkan nomor : ")
+
+            if sub_menu_03 == "1":
+
+                print("-" * 20)
+                cari_posisi = int(input("Cari posisi/rank siswa : "))
+                print()
+            
+                for i in range(len(array_nilai)):
+                    if len(array_nilai) >= cari_posisi:
+                        print(f"Posisi/rank ke-{i + 1} => {array_nama[i]}, dengan nilai = {array_nilai[i]}")           
+                    else :
+                        print(f"[Error] Posisi/rank : {cari_posisi}, Tidak di temukan... Angka di luar jangkauan jumlah siswa!")
+
+            elif sub_menu_03 == "2":
+
+                if len(array_nilai) < 3 :
+                    total_tampil = len(array_nilai)
+                else :
+                    total_tampil = 3
+
+                if len(array_nilai) > 3:
+                    for i in range(3, len(array_nilai)):
+                        if array_nilai[i] == array_nilai[2]:
+                            total_tampil += 1
+                        else:
+                            break
+
+                print("-" * 20)
+                print(f"Siswa dengan Rank Top {total_tampil} besar :")
+                print()
+
+                for i in range(total_tampil):
+                    print(f"{i + 1}. {array_nama[i]} = {array_nilai[i]}  => Rank-{i + 1}.")
+                
+            elif sub_menu_03 == "3":
+
+                if len(array_nilai) < 5 :
+                    total_tampil = len(array_nilai)
+                else :
+                    total_tampil = 5
+
+                if len(array_nilai) > 5:
+                    for i in range(5, len(array_nilai)):
+                        if array_nilai[i] == array_nilai[4]:
+                            total_tampil += 1
+                        else:
+                            break
+
+                print("-" * 20)
+                print(f"Siswa dengan Rank/Posisi Top {total_tampil} besar :")
+                print()
+
+                for i in range(total_tampil):
+                    print(f"Rank-{i + 1} => {array_nama[i]} = {array_nilai[i]}")
+
+            elif sub_menu_03 == "4":
+
+                if len(array_nilai) < 10 :
+                    total_tampil = len(array_nilai)
+                else :
+                    total_tampil = 10
+
+                if len(array_nilai) > 10:
+                    for i in range(10, len(array_nilai)):
+                        if array_nilai[i] == array_nilai[9]:
+                            total_tampil += 1
+                        else:
+                            break
+                
+                print("-" * 20)
+                print(f"Siswa dengan Rank/Posisi Top {total_tampil} besar :")
+                print()
+
+                for i in range(total_tampil):
+                    if i < 3:
+                        print(f"Rank-{i + 1}   => {array_nama[i]} = {array_nilai[i]}")
+                    elif i >= 3:
+                        print(f"Posisi-{i + 1} => {array_nama[i]} = {array_nilai[i]}")
+            
+            elif sub_menu_03 == "5":
+
+                flag_2 = False
+            
+            else :
+
+                print()
+                print("[Error] Perintah tidak valid!, Masukkan nomor yang valid!")
+
+
+    elif menu_input == "4":   #pilihan 4 = Tampilkan semuanya
+        
+        print("=" * 30)
+        
+        for i in range(len(array_nama)):
+            if i < 3:
+                print(f"{i + 1}. {array_nama[i]} = {array_nilai[i]}  => Rank-{i + 1}.")
+        print()
+        for i in range(len(array_nama)):    
+            if i >= 3:
+                print(f"{i + 1}. {array_nama[i]} = {array_nilai[i]}  => Posisi-{i + 1}.")
+
+    elif menu_input == "5":
+
+        print("=" * 30)
+        print("[Info] Keluar dari program")
+        print()
+        run_menu = False
+
+    else:
+
+        print()
+        print("[Error] Perintah tidak valid!, Masukkan nomor yang valid!")
