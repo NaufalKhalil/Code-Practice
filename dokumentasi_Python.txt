@@ -1,8 +1,8 @@
 ======================================================================
   DOKUMENTASI KODE PYTHON – PYTHON
-  Dibuat  : 2026-07-01 14:23:47
+  Dibuat  : 2026-07-04 12:30:11
   Folder  : d:\Project\Coding\Code Practice\Python
-  Total   : 145 file
+  Total   : 158 file
 ======================================================================
 
 ======================================================================
@@ -237,6 +237,19 @@ DAFTAR ISI
   143. L143-Deteksi User Mencurigakan.py
   144. L144-Top 3 User Paling Aktif.py
   145. L145-Jam Sibuk Website (peak activity).py
+  146. L146-Analisis Penjualan Produk Terlaris.py
+  147. L147-Search Engine Produk Sederhana.py
+  148. L148-Filter Produk Berdasarkan Kategori.py
+  149. L149-Cari Produk Berdasarkan Nama atau Kategori.py
+  150. L150-Mini Aplikasi Inventaris Toko.py
+  151. L151-Function.py
+  152. L152-Function dengan Parameter.py
+  153. L153-Function yang Mengembalikan Nilai (return).py
+  154. L154-Sistem Kasir Sederhana.py
+  155. L155-Mini Sistem Nilai Mahasiswa.py
+  156. L157-Sistem Inventaris dengan penggunaan Parameter yang Tepat.py
+  157. L158-String Processing Challenge.py
+  158. test.py
 
 ======================================================================
 
@@ -3401,6 +3414,1167 @@ print("Jam tersibuk :")
 for i in range(len(f_jam_login)):
     if f_jam_login[i] == f_jam_login[0]:
         print(f"{a_jam_login[i]} = {f_jam_login[i]} login")
+
+======================================================================
+  FILE 146 – L146-Analisis Penjualan Produk Terlaris.py
+======================================================================
+
+produk = [
+    "Mouse",
+    "Keyboard",
+    "Mouse",
+    "Monitor",
+    "Keyboard",
+    "Mouse",
+    "Webcam",
+    "Monitor",
+    "Keyboard",
+    "Mouse"
+]
+
+array_produk = []
+array_jumlah = []
+
+for i in range(len(produk)):
+
+    total = 0
+
+    for j in range(len(produk)):
+        if produk[i] == produk[j]:
+            total += 1
+
+    if produk[i] not in array_produk:
+        array_produk.append(produk[i])
+        array_jumlah.append(total)
+
+for i in range(len(array_jumlah)):
+    for j in range(len(array_jumlah) - 1):
+        if array_jumlah[j] < array_jumlah[j + 1]:
+            array_jumlah[j], array_jumlah[j + 1] = array_jumlah[j + 1], array_jumlah[j]
+            array_produk[j], array_produk[j + 1] = array_produk[j + 1], array_produk[j]
+print("===[ Statistik Penjualan ]===")
+print()
+
+for i in range(len(array_jumlah)):
+    print(f"- {array_produk[i]} : {array_jumlah[i]} kali")
+
+print()
+print("=> Produk terlaris :")
+
+for i in range(len(array_jumlah)):
+    if array_jumlah[i] >= array_jumlah[0]:
+        print(f"- {array_produk[i]}, dengan jumlah penjualan : {array_jumlah[0]} kali")
+
+======================================================================
+  FILE 147 – L147-Search Engine Produk Sederhana.py
+======================================================================
+
+produk = [
+    "Gaming Mouse",
+    "Mechanical Keyboard",
+    "Gaming Headset",
+    "Mouse Pad XXL",
+    "Webcam HD",
+    "Gaming Chair",
+    "Office Keyboard",
+    "Wireless Mouse"
+]
+
+cari = input("Cari Produk : ")
+print()
+
+total_pencarian = 0
+
+for i in range(len(produk)):
+    if cari in produk[i]:
+        total_pencarian += 1
+        print(f"{total_pencarian}. {produk[i]}")
+
+print()
+if total_pencarian > 0 :
+    print(f"Total produk ditemukan : {total_pencarian}")
+else :
+    print("Produk tidak ditemukan.")
+
+======================================================================
+  FILE 148 – L148-Filter Produk Berdasarkan Kategori.py
+======================================================================
+
+produk = [
+    ["Gaming Mouse", "gaming"],
+    ["Mechanical Keyboard", "gaming"],
+    ["Office Keyboard", "office"],
+    ["Gaming Chair", "gaming"],
+    ["Webcam HD", "aksesoris"],
+    ["Mouse Pad XXL", "aksesoris"],
+    ["Office Chair", "office"]
+]
+
+kategori = input("Cari kategori produk : ")
+kategori = kategori.lower()
+
+print("-" * 20)
+print(f"Daftar produk kategori {kategori} :")
+
+total = 0
+
+for i in range(len(produk)):
+    if kategori == produk[i][1]:
+        total += 1
+        print(f"{total}. {produk[i][0]}")
+
+print()
+if total > 0 :
+    print(f"Total produk ditemukan : {total}")
+else :
+    print("Produk tidak ditemukan!")
+
+======================================================================
+  FILE 149 – L149-Cari Produk Berdasarkan Nama atau Kategori.py
+======================================================================
+
+produk = [
+    ["gaming mouse", "gaming"],
+    ["mechanical keyboard", "gaming"],
+    ["office keyboard", "office"],
+    ["gaming chair", "gaming"],
+    ["webcam hd", "aksesoris"],
+    ["mouse pad xxl", "aksesoris"],
+    ["office chair", "office"]
+]
+
+cari = input("Cari : ")
+cari = cari.lower()
+
+total = 0
+
+for i in range(len(produk)):
+    if cari == produk[i][1]:
+        total += 1
+        print(f"{total}. {produk[i][0]} ({produk[i][1]})")
+    elif cari in produk[i][0]:
+        total += 1
+        print(f"{total}. {produk[i][0]} ({produk[i][1]})")
+
+if total > 0:
+    print(f"Total ditemukan : {total}")
+else:
+    print("Data tidak di temukan")
+
+======================================================================
+  FILE 150 – L150-Mini Aplikasi Inventaris Toko.py
+======================================================================
+
+produk = [
+
+    ["gaming mouse", "gaming", 250_000],
+    ["mechanical keyboard", "gaming", 850_000],
+    ["gaming chair", "gaming", 2_500_000],
+    ["gaming headset", "gaming", 450_000],
+    ["gamepad wireless", "gaming", 350_000],
+    ["cooling pad laptop", "gaming", 180_000],
+
+    ["office keyboard", "office", 300_000],
+    ["office chair", "office", 1_500_000],
+    ["office mouse", "office", 150_000],
+    ["meja kerja minimalis", "office", 1_200_000],
+    ["shredder kertas mini", "office", 350_000],
+    ["papan jalan jepit", "office", 25_000],
+
+    ["webcam hd", "aksesoris", 450_000],
+    ["mouse pad xxl", "aksesoris", 120_000],
+    ["usb hub type-c", "aksesoris", 150_000],
+    ["kabel hdmi 2m", "aksesoris", 65_000],
+    ["pouch organizer", "aksesoris", 80_000],
+    ["cleaning kit lcd", "aksesoris", 30_000],
+
+    ["desk lamp led", "belajar", 125_000],
+    ["laptop stand", "belajar", 150_000],
+    ["buku catatan a5", "belajar", 35_000],
+    ["kalkulator ilmiah", "belajar", 220_000],
+    ["rak buku meja", "belajar", 90_000],
+    ["highlighter set", "belajar", 30_000]
+]
+
+
+flag = True
+
+while flag == True:
+    print()
+    print("===== INVENTARIS TOKO =====")
+    print("1. Lihat semua produk")
+    print("2. Cari produk")
+    print("3. Filter kategori")
+    print("4. Produk termurah")
+    print("5. Produk termahal")
+    print("6. Keluar")
+    print("---------------------------")
+
+    input_user = input(f"=> Pilih Menu : ")
+
+    print()
+    print("---------------------------")
+
+    if input_user == "1":
+        print("=> Menampilkan semua produk :")
+        for i in range(len(produk)):
+            print(f"{i + 1}. {produk[i][0]} ({produk[i][1]}) - {produk[i][2]}")
+    elif input_user == "2":
+        cari = input("Cari produk :")
+        cari = cari.lower()
+        print()
+
+        total = 0
+        for i in range(len(produk)):
+            if cari == produk[i][1] or cari in produk[i][0]:
+                total += 1
+                print(f"{total}. {produk[i][0]} ({produk[i][1]}) - Rp.{produk[i][2]}")
+        print()
+        if total > 0:
+            print(f"=> Sebanyak {total} Produk ditemukan.")
+        else:
+            print("Produk tidak ditemukan")
+    
+    elif input_user == "3":
+        cari = input("Cari Kategori :")
+        cari = cari.lower()
+        print()
+
+        total = 0
+        for i in range(len(produk)):
+            if cari == produk[i][1]:
+                total += 1
+                print(f"{total}. {produk[i][0]} ({produk[i][1]}) - Rp.{produk[i][2]}")
+        print()
+
+        if total > 0:
+            print(f"=> Sebanyak {total} Produk dengan kategori {cari} ditemukan.")
+        else:
+            print(f"Produk dengan kategori {cari} tidak ditemukan")
+    
+    elif input_user == "4":
+        for i in range(len(produk)):
+            if i == 0 :
+                termurah = produk[i][2]
+            elif termurah > produk[i][2]:
+                termurah = produk[i][2]
+        
+        print("Produk termurah :")
+
+        for i in range(len(produk)):
+            if termurah == produk[i][2]:
+                print(f"- {produk[i][0]} ({produk[i][1]}) - Rp.{produk[i][2]}")
+    
+    elif input_user == "5":
+        for i in range(len(produk)):
+            if i == 0 :
+                termahal = produk[i][2]
+            elif termahal < produk[i][2]:
+                termahal = produk[i][2]
+        
+        print("Produk termahal :")
+
+        for i in range(len(produk)):
+            if termahal == produk[i][2]:
+                print(f"- {produk[i][0]} ({produk[i][1]}) - Rp.{produk[i][2]}")
+    
+    elif input_user == "6":
+        flag = False
+    
+    else:
+        print("[Error] Masukkan perintah yang valid!")
+
+======================================================================
+  FILE 151 – L151-Function.py
+======================================================================
+
+def menu():
+    print()
+    print("===== MENU =====")
+    print("1. Halo")
+    print("2. Tentang")
+    print("3. Keluar")
+
+def opsi_1():
+    print()
+    print("Halo, selamat datang di aplikasi inventaris!")
+
+def opsi_2():
+    print()
+    print("Aplikasi ini dibuat untuk belajar Python Function.")
+
+flag = True
+
+while True:
+    
+    if flag == True :
+        menu()
+
+    input_user = input("=> :")
+
+    if input_user == "1":
+        opsi_1()
+        flag = True
+    elif input_user == "2":
+        opsi_2()
+        flag = True
+    elif input_user == "3":
+        break
+    else:
+        flag = False
+        print("Perintah tidak valid!")
+
+======================================================================
+  FILE 152 – L152-Function dengan Parameter.py
+======================================================================
+
+def tampilkan_produk(data):
+    for i in range(len(data)):
+        print(f"{i + 1}. {data[i][0]} ({data[i][1]}) - Rp.{data[i][2]}.")
+
+produk = [
+    ["Gaming Mouse", "gaming", 250000],
+    ["Office Keyboard", "office", 300000],
+    ["Webcam HD", "aksesoris", 450000]
+]
+
+produk_diskon = [
+    ["Flashdisk", "storage", 90000],
+    ["SSD 1TB", "storage", 1200000]
+]
+
+print("Produk utama :")
+tampilkan_produk(produk)
+print()
+print("Produk diskon :")
+tampilkan_produk(produk_diskon)
+
+======================================================================
+  FILE 153 – L153-Function yang Mengembalikan Nilai (return).py
+======================================================================
+
+def hitung_total(data):
+    total = 0
+    for i in range(len(data)):
+        total += data[i][2]
+    return total 
+
+def tampilkan_produk(data):
+    for i in range(len(data)):
+        print(f"{i + 1}. {data[i][0]} ({data[i][1]}) - Rp.{data[i][2]}.")
+
+produk = [
+    ["Gaming Mouse", "gaming", 250000],
+    ["Office Keyboard", "office", 300000],
+    ["Webcam HD", "aksesoris", 450000]
+]
+
+tampilkan_produk(produk)
+print("-"*18)
+hasil = hitung_total(produk)
+print(f"Total belanjaan : Rp.{hasil}")
+
+======================================================================
+  FILE 154 – L154-Sistem Kasir Sederhana.py
+======================================================================
+
+def tampilkan_produk(data):
+    print("===== DAFTAR PRODUK =====")
+    for i in range(len(data)):
+        print(f"{i + 1}. {data[i][0]} - Rp.{data[i][1]}.")
+    print()
+
+def hitung_total(data, pilih_produk, jumlah_produk):
+    total = 0
+    pilih_produk -= 1
+    for i in range(jumlah_produk):
+        total += data[pilih_produk][1]
+    return total
+
+produk = [
+    ["Gaming Mouse", 250000],
+    ["Office Keyboard", 300000],
+    ["Webcam HD", 450000],
+    ["Mouse Pad XXL", 120000],
+    ["Gaming Chair", 2500000]
+]
+
+tampilkan_produk(produk)
+
+pilih_produk = 0
+jumlah_produk = 0
+
+while pilih_produk <= 0 or pilih_produk > len(produk):
+    pilih_produk = int(input("Pilih Produk : "))
+
+while jumlah_produk <= 0:
+    jumlah_produk = int(input("Jumlah Produk : "))
+
+hasil = hitung_total(produk, pilih_produk, jumlah_produk)
+
+print()
+print(f"Total belajaan : Rp.{hasil}")
+
+======================================================================
+  FILE 155 – L155-Mini Sistem Nilai Mahasiswa.py
+======================================================================
+
+mahasiswa = [
+    ["Andi", 85],
+    ["Budi", 72],
+    ["Citra", 91],
+    ["Dinda", 68],
+    ["Eko", 77],
+    ["Farah", 95],
+    ["Galih", 80]
+]
+
+
+#menampilkan menu
+def tampilkan_menu():
+    print()
+    print("===== SISTEM NILAI =====")
+    print("1. Lihat semua mahasiswa")
+    print("2. Cari mahasiswa")
+    print("3. Nilai tertinggi")
+    print("4. Nilai terendah")
+    print("5. Rata-rata nilai")
+    print("6. Keluar")
+    print()
+
+
+#menampilkan semua mahasiswa
+def tampilkan_semua_data(data):
+    for i in range(len(data)):
+        print(f"{i + 1}. {data[i][0]} = {data[i][1]}")
+
+
+#mengurutkan tertinggi - terendah
+def mengurutkan_max_min(data):
+    for i in range(len(data)):
+        for j in range(len(data) - 1):
+            if data[j][1] < data[j + 1][1]:
+                data[j], data[j + 1] = data[j + 1], data[j]
+    tertinggi = data[0][1]
+    terendah = data[len(data) - 1][1]
+    return data, tertinggi, terendah
+
+
+#mencari nama mahasiswa
+def mencari_nama(data, cari):
+    ketemu = False
+    for i in range(len(data)):
+        if cari == data[i][0]:
+            print(f"-> {data[i][0]} = {data[i][1]}")
+            ketemu = True
+    if ketemu == False:
+        print(f"Mahasiswa dengan nama {cari}, Tidak ditemukan dalam daftar!")
+
+
+#menampilkan nama mahasiswa dengan nilai tertentu
+def menampilkan_nilai_tertentu(data, cari_nilai):
+    for i in range(len(data)):
+        if cari_nilai == data[i][1]:
+            print(f"{i + 1}. {data[i][0]} = {data[i][1]}")
+
+
+#mencari rata-rata
+def mencari_rata_rata(data):
+    total = 0
+    for i in range(len(data)):
+        total += data[i][1]
+    rata_rata = total / len(data)
+    rata_rata = round(rata_rata, 2)
+    return rata_rata
+
+
+tampil = True #mencegah menu tercetak ketika perintah invalid
+
+while True :
+
+    if tampil == True: #mencegah menu tercetak ketika perintah invalid
+        tampilkan_menu()
+    tampil = False
+
+    opsi = input("=> Masukkan Perintah :")
+
+    #eksekusi perintah
+    if opsi == "1": #tampilkan semua
+        print()
+        print("===[Daftar Nilai Mahasiswa]===")
+
+        hasil, _, _ = mengurutkan_max_min(mahasiswa)
+        tampilkan_semua_data(hasil)
+
+        input("Tekan (Enter) untuk kembali ke menu utama ->")
+        tampil = True
+
+    elif opsi == "2": #cari nama
+        print()
+
+        cari = input("Cari nama :")
+        mencari_nama(mahasiswa, cari)
+
+        input("Tekan (Enter) untuk kembali ke menu utama ->")
+        tampil = True
+
+    elif opsi == "3": #nilai tertinggi
+        print()
+        print("=> Mahasiswa dengan nilai tertinggi :")
+
+        hasil, nilai_tertinggi, _ = mengurutkan_max_min(mahasiswa)
+        menampilkan_nilai_tertentu(hasil, nilai_tertinggi)
+
+        input("Tekan (Enter) untuk kembali ke menu utama ->")
+        tampil = True
+
+    elif opsi == "4": #nilai terendah
+        print()
+        print("=> Mahasiswa dengan nilai terendah :")
+
+        hasil, _, nilai_terendah = mengurutkan_max_min(mahasiswa)
+        menampilkan_nilai_tertentu(hasil, nilai_terendah)
+
+        input("Tekan (Enter) untuk kembali ke menu utama ->")
+        tampil = True
+
+    elif opsi == "5": #nilai rata-rata semua mahasiswa
+        print()
+        hasil = mencari_rata_rata(mahasiswa)
+        print(f"=> Rata-rata nilai seluruh Mahasiswa : {hasil}")
+
+        input("Tekan (Enter) untuk kembali ke menu utama ->")
+        tampil = True
+
+    elif opsi == "6": #keluar dari program
+        print("[Info] Keluar dari program...")
+        break
+
+    else: #perintah invalid!
+        tampil = False
+        print("[Error] Masukkan perintah yang valid!")
+
+======================================================================
+  FILE 156 – L157-Sistem Inventaris dengan penggunaan Parameter yang Tepat.py
+======================================================================
+
+import os
+
+def clear():
+    os.system("cls")
+
+array_produk = [
+
+    ["Gaming Mouse", "Gaming", 250000, 10],
+    ["Mechanical Keyboard", "Gaming", 850000, 5],
+    ["Gaming Chair", "Gaming", 2500000, 2],
+    ["Gaming Headset", "Gaming", 600000, 12],
+    ["Monitor Gaming 24 Inc", "Gaming", 1800000, 4],
+    ["Mousepad RGB", "Gaming", 120000, 20],
+    
+    ["Wireless Office Mouse", "Office", 180000, 14],
+    ["Laptop Stand Aluminium", "Office", 220000, 9],
+    ["Desk Mat Felt", "Office", 130000, 0],
+    ["Ergonomic Footrest", "Office", 250000, 7],
+    ["Office Keyboard", "Office", 300000, 8],
+    ["Office Chair", "Office", 1500000, 3],
+
+    ["Microphone Kondensor", "Aksesoris", 550000, 0],
+    ["Ring Light LED", "Aksesoris", 175000, 13],
+    ["Kabel HDMI 4K", "Aksesoris", 85000, 25],
+    ["External SSD 1TB", "Aksesoris", 1250000, 8],
+    ["Speaker Bluetooth", "Aksesoris", 350000, 10],
+    ["Cooling Pad Laptop", "Aksesoris", 140000, 18],
+    ["Webcam HD", "Aksesoris", 450000, 7],
+    ["USB Hub", "Aksesoris", 150000, 15]
+
+]
+
+#def tampilkan menu
+
+def d_tampilkan_menu():
+    print("===== MENU UTAMA =====")
+    print("1. Lihat Semua Produk")
+    print("2. Cari")
+    print("3. Edit Produk")
+    print("4. Keluar")
+    print()
+
+def d_menampilkan_sub_menu_cari():
+    print("===== MENU CARI =====")
+    print("1. Cari produk")
+    print("2. Cari Kategori")
+    print("3. Cari Harga")
+    print("4. Cari Stock")
+    print("5. Kembali ke Menu utama")
+    print()
+
+def d_menampilkan_sub_sub_menu_harga():
+    print("===== MENU HARGA PRODUK =====")
+    print("1. Cari Produk dengan harga tertentu")
+    print("2. Cari produk dengan harga tertinggi")
+    print("3. Cari Produk dengan harga terendah")
+    print("4. Total inventaris gudang")
+    print("5. Kembali ke Menu utama")
+    print()
+
+def d_menampilkan_sub_sub_menu_stock():
+    print("===== MENU STOCK PRODUK =====")
+    print("1. Cari Produk dengan stock tertentu")
+    print("2. Cari Produk dengan stock tertinggi")
+    print("3. Cari Produk dengan stock terendah/kosong")
+    print("4. Kembali ke Menu utama")
+    print()
+
+def d_menampilkan_sub_menu_edit_produk():
+    print("===== MENU EDIT PRODUK =====")
+    print("1. Edit Nama Produk")
+    print("2. Edit Kategori Produk")
+    print("3. Edit Harga Produk")
+    print("4. Edit Stock Produk")
+    print("5. Batalkan Edit Produk")
+    print()
+
+
+#def tampilkan hasil dari fungsi
+
+def d_menampilkan_produk(data):
+    for i in range(len(data)):
+        print(f"{i + 1}. {data[i][0]} ({data[i][1]})")
+        print(f"   -> Harga: Rp.{data[i][2]}.")
+        print(f"   -> Stock: {data[i][3]}")
+        print()
+
+def d_menampilkan_produk_tanpa_nomor(data):
+    for i in range(len(data)):
+        print(f"==> {data[i][0]} ({data[i][1]})")
+        print(f" -> Harga: Rp.{data[i][2]}.")
+        print(f" -> Stock: {data[i][3]}")
+        print()
+
+#def cari
+
+def d_validasi_array(data, cari):
+    cari += 1
+    valid = False
+    if cari <= len(data) and cari >= 0:
+        valid = True
+        return valid
+    else :
+        return valid
+    
+def d_cari_array(data, cari):
+    array_ketemu = []
+    array_ketemu.append(data[cari])
+    return array_ketemu
+
+def d_cari_produk(data, cari):
+    array_ketemu = []
+    for i in range(len(data)):
+        if cari in data[i][0]:
+            array_ketemu.append(data[i])
+    return array_ketemu
+
+def d_cari_kategori(data, cari):
+    array_ketemu = []
+    for i in range(len(data)):
+        if cari == data[i][1]:
+            array_ketemu.append(data[i])
+    return array_ketemu
+
+def d_cari_harga(data, cari):
+    array_ketemu = []
+    for i in range(len(data)):
+        if cari == data[i][2]:
+            array_ketemu.append(data[i])
+    return array_ketemu
+
+def d_cari_stock(data, cari):
+    array_ketemu = []
+    for i in range(len(data)):
+        if cari == data[i][3]:
+            array_ketemu.append(data[i])
+    return array_ketemu
+
+#def fungsi max, min, total all inventaris
+
+#harga max/min
+def d_cari_harga_max(data):
+    for i in range(len(data)):
+        if i == 0 :
+            harga_max = data[i][2]
+        elif harga_max < data[i][2]:
+            harga_max = data[i][2]
+    return harga_max
+
+def d_cari_harga_min(data):
+    for i in range(len(data)):
+        if i == 0 :
+            harga_min = data[i][2]
+        elif harga_min > data[i][2]:
+            harga_min = data[i][2]
+    return harga_min
+
+#stock max/min
+def d_cari_stock_max(data):
+    for i in range(len(data)):
+        if i == 0 :
+            stock_max = data[i][3]
+        elif stock_max < data[i][3]:
+            stock_max = data[i][3]
+    return stock_max
+
+def d_cari_stock_min(data):
+    for i in range(len(data)):
+        if i == 0 :
+            stock_min = data[i][3]
+        elif stock_min > data[i][3]:
+            stock_min = data[i][3]
+    return stock_min
+
+#def edit
+def d_edit_nama(data, posisi, nama):
+    data[posisi][0] = nama
+
+def d_edit_kategori(data, posisi, kategori):
+    data[posisi][1] = kategori
+
+def d_edit_harga(data, posisi, harga):
+    data[posisi][2] = harga
+
+def d_edit_stock(data, posisi, stock):
+    data[posisi][3] = stock
+
+#total invetaris
+def d_total_nilai_gudang(data):
+    total = 0
+    for i in range(len(data)):
+        total += (data[i][2] * data[i][3])
+    return total
+
+def d_total_stock_gudang(data):
+    total = 0
+    for i in range(len(data)):
+        total += data[i][3]
+    return total
+
+menu_tampil = True
+
+while True:
+
+    #mencegah menu tercetak ketika perintah invalid
+    if menu_tampil == True:
+        clear()
+        d_tampilkan_menu()
+    menu_tampil = False
+
+    opsi = input("=> Pilih Menu : ")
+    
+    #eksekusi perintah
+    if opsi == "1":
+        clear()
+        print("===== SEMUA PRODUK =====")
+        print()
+        d_menampilkan_produk(array_produk)
+
+        program_selesai = input("Tekan (Enter) untuk kembali ke menu utama ->")
+        menu_tampil = True
+        clear()
+        
+    elif opsi == "2":
+
+        clear()
+        menu_tampil = True
+
+        while True:
+
+            if menu_tampil == True:
+                d_menampilkan_sub_menu_cari()
+            menu_tampil = False
+
+            sub_opsi_2 = input("=> Pilih Menu : ")
+
+            if sub_opsi_2 == "1": #cari produk
+
+                clear()
+                cari = input("Cari Nama Produk : ")
+                print()
+
+                hasil = d_cari_produk(array_produk, cari)
+                if len(hasil) == 0 :
+                    print(f"Produk dengan nama : {cari}, Tidak ditemukan!")
+                else :
+                    d_menampilkan_produk_tanpa_nomor(hasil)
+
+                program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                clear()
+                menu_tampil = True
+
+            elif sub_opsi_2 == "2": #cari kategori
+                
+                clear()
+                cari = input("Cari Kategori Produk : ")
+                print()
+
+                hasil = d_cari_kategori(array_produk, cari)
+                if len(hasil) == 0 :
+                    print(f"Produk dengan kategori : {cari}, Tidak ditemukan!")
+                else :
+                    d_menampilkan_produk_tanpa_nomor(hasil)
+
+                program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                clear()
+                menu_tampil = True
+
+            elif sub_opsi_2 == "3": #cari harga
+
+                menu_tampil = True
+                clear()
+                
+                while True:  
+
+                    if menu_tampil == True:
+                        d_menampilkan_sub_sub_menu_harga()
+                    menu_tampil = False
+
+                    sub_sub_opsi_3 = input("=> Pilih Menu : ")
+
+                    if sub_sub_opsi_3 == "1":
+
+                        clear()
+                        cari = int(input("Cari Harga Produk : "))
+                        print()
+
+                        hasil = d_cari_harga(array_produk, cari)
+                        if len(hasil) == 0 :
+                            print(f"Produk dengan harga : {cari}, Tidak ditemukan!")
+                        else :
+                            d_menampilkan_produk_tanpa_nomor(hasil)
+
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+
+                    elif sub_sub_opsi_3 == "2":
+
+                        clear()
+                        print("===== PRODUK DENGAN HARGA TERTINGGI =====")
+                        
+                        hasil = d_cari_harga_max(array_produk)
+                        hasil = d_cari_harga(array_produk, hasil)
+                        d_menampilkan_produk_tanpa_nomor(hasil)
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+                        
+                    elif sub_sub_opsi_3 == "3":
+
+                        clear()
+                        print("===== PRODUK DENGAN HARGA TERENDAH/KOSONG =====")
+                        
+                        hasil = d_cari_harga_min(array_produk)
+                        hasil = d_cari_harga(array_produk, hasil)
+                        d_menampilkan_produk_tanpa_nomor(hasil)
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+
+                    elif sub_sub_opsi_3 == "4":
+
+                        clear()
+                        print("===== TOTAL INVENTARIS GUDANG =====")
+                        
+                        hasil = d_total_nilai_gudang(array_produk)
+                        print(f"-> Harga Total Gudang    : {hasil}")
+                        
+                        hasil = d_total_stock_gudang(array_produk)
+                        print(f"-> Stock Barang Tersedia : {hasil}")
+
+                        print(f"-> Jumlah Jenis Barang   : {len(array_produk)}")
+
+                        hasil = d_cari_stock(array_produk, 0)
+                        if len(hasil) != 0:
+                            print()
+                            print("[Peringatan]")
+                            print(f"-> Terdapat {len(hasil)} Produk dengan stock kosong! ")
+
+                        print()
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+
+                    elif sub_sub_opsi_3 == "5":
+
+                        clear()
+                        menu_tampil = True
+                        break
+
+                    else:
+                        menu_tampil = False
+                        print("[Error] Masukkan perintah yang valid!")
+                        
+
+            elif sub_opsi_2 == "4": #cari stock
+                
+                menu_tampil = True
+                clear()
+
+                while True:  
+
+                    if menu_tampil == True:
+                        d_menampilkan_sub_sub_menu_stock()
+                    menu_tampil = False
+
+                    sub_sub_opsi_3 = input("=> Pilih Menu : ")
+
+                    if sub_sub_opsi_3 == "1":
+
+                        clear()
+                        cari = int(input("Cari Stock Produk : "))
+                        print()
+
+                        hasil = d_cari_stock(array_produk, cari)
+                        if len(hasil) == 0 :
+                            print(f"Produk dengan stock : {cari}, Tidak ditemukan!")
+                        else :
+                            d_menampilkan_produk_tanpa_nomor(hasil)
+
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+
+                    elif sub_sub_opsi_3 == "2":
+
+                        clear()
+                        print("===== PRODUK DENGAN STOCK BARANG TERTINGGI =====")
+                        
+                        hasil = d_cari_stock_max(array_produk)
+                        hasil = d_cari_stock(array_produk, hasil)
+                        d_menampilkan_produk_tanpa_nomor(hasil)
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+                        
+                    elif sub_sub_opsi_3 == "3":
+
+                        clear()
+                        print("===== PRODUK DENGAN STOCK BARANG TERENDAH/KOSONG =====")
+                        
+                        hasil = d_cari_stock_min(array_produk)
+                        hasil = d_cari_stock(array_produk, hasil)
+                        d_menampilkan_produk_tanpa_nomor(hasil)
+                        program_selesai = input("Tekan (Enter) untuk kembali ke Sub menu cari ->")
+                        clear()
+                        menu_tampil = True
+
+                    elif sub_sub_opsi_3 == "4":
+
+                        clear()
+                        menu_tampil = True
+                        break
+
+                    else :
+                        print("[Error] Masukkan perintah yang valid!")
+
+                clear()
+
+            elif sub_opsi_2 == "5": #kembali ke menu utama
+                clear()
+                menu_tampil = True
+                break
+
+            else:
+                print("[Error] Masukkan perintah yang valid!")
+        
+        clear()
+
+    elif opsi == "3":
+
+        menu_tampil = True
+        clear()
+
+        while True:
+            
+            print()
+            if menu_tampil == True :
+                print("===== EDIT PRODUK =====")
+                d_menampilkan_produk(array_produk)
+            menu_tampil = False
+
+            
+            sub_opsi_3 = int(input("=> Masukkan Nomor Barang, 0 = Kembali Ke Menu Utama : "))
+            sub_opsi_3 -= 1
+            valid = d_validasi_array(array_produk, sub_opsi_3)
+
+            if sub_opsi_3 == -1:
+                break
+            elif valid == False:
+                print(f"Produk dengan nomor barang {sub_opsi_3 + 1}, Tidak ditemukan... Nomor barang di luar jangkauan data.")
+                menu_tampil = False
+            else:
+                
+                hasil = d_cari_array(array_produk, sub_opsi_3)
+
+                clear()
+                print("===== EDIT PRODUK =====")
+                print(f">>> Nomor Produk : {sub_opsi_3 + 1} <<<")
+                print()
+                d_menampilkan_produk_tanpa_nomor(hasil)
+                print()
+
+                menu_tampil = True
+
+                while True:
+
+                    if menu_tampil == True:
+                        d_menampilkan_sub_menu_edit_produk()
+                        menu_tampil = False
+
+                    sub_sub_opsi_ada = input("=> Pilih Menu : ")
+
+                    clear()
+                    if sub_sub_opsi_ada == "1":
+                        isi = input(f"=> Ganti Nama Produk [ {array_produk[sub_opsi_3][0]} ], Menjadi : ")
+                        d_edit_nama(array_produk, sub_opsi_3, isi)
+                        menu_tampil = True
+                    elif sub_sub_opsi_ada == "2":
+                        isi = input(f"=> Ganti Kategori Produk [ {array_produk[sub_opsi_3][0]} ], Menjadi : ")
+                        d_edit_kategori(array_produk, sub_opsi_3, isi)
+                        menu_tampil = True
+                    elif sub_sub_opsi_ada == "3":
+                        isi = int(input(f"=> Ganti Harga Produk [ {array_produk[sub_opsi_3][0]} ], Menjadi : "))
+                        d_edit_harga(array_produk, sub_opsi_3, isi)
+                        menu_tampil = True
+                    elif sub_sub_opsi_ada == "4":
+                        isi = int(input(f"=> Ganti Stock Produk [ {array_produk[sub_opsi_3][0]} ], Menjadi : "))
+                        d_edit_stock(array_produk, sub_opsi_3, isi)
+                        menu_tampil = True
+                    elif sub_sub_opsi_ada == "5":
+                        menu_tampil = True
+                        break
+                    else :
+                        print("[Error] Masukkan perintah yang valid!")
+                        menu_tampil = False
+
+        menu_tampil = True
+
+    elif opsi == "4":
+        
+        print("[Info] Keluar dari program...")
+        break
+    
+    else:
+        print("[Error] Masukkan perintah yang valid!")
+
+======================================================================
+  FILE 157 – L158-String Processing Challenge.py
+======================================================================
+
+import os
+
+def clear_terminal():
+    os.system("cls")
+
+mahasiswa = [
+    ["  andi saputra  ", 85],
+    ["BUDI santoso", 72],
+    ["citra   lestari", 91],
+    ["Dinda Pratiwi", 68],
+    ["eko   nugroho", 77],
+    ["FARAH amelia", 95],
+    ["galih Wibowo", 80]
+]
+
+def d_tampilkan_menu_utama():
+    print("===== SISTEM DATA MAHASISWA =====")
+    print("1. Lihat Data")
+    print("2. Rapikan Semua Nama")
+    print("3. Cari Mahasiswa")
+    print("4. Ganti Nama/Nilai Mahasiswa")
+    print("5. Statistik Mahasiswa")
+    print("6. Keluar")
+    print()
+
+def d_tampilakan_statistik(
+    data, nama_terpanjang, nama_terpendek, rata_rata_panjang_nama,
+    nilai_tertinggi, nilai_terendah, rata_rata_nilai):
+    
+    print("===== STATISTIK MAHASISWA =====")
+    print(f"-> Jumlah mahasiswa         : {len(data)}")
+    print(f"-> Nama terpanjang          : {nama_terpanjang}")
+    print(f"-> Nama terpendek           : {nama_terpendek}")
+    print(f"-> Rata-rata panjang nama   : {rata_rata_panjang_nama}")
+    print(f"-> Nilai tertinggi          : {nilai_tertinggi}")
+    print(f"-> Nilai terendah           : {nilai_terendah}")
+    print(f"-> Rata-rata nilai          : {rata_rata_nilai}")
+    print()
+
+def d_tampilkan_menu_edit_nama_atau_nilai():
+    print("===== EDIT {nama}")
+    print("1. Edit Nama Mahasiswa")
+    print("2. Edit Nilai Mahasiswa")
+
+def d_tampilkan_nama(data):
+    for i in range(len(data)):
+        print(f"{i + 1}. {data[i][0]} = {data[i][1]}")
+
+def d_tampilkan_nama_tanpa_nomor(data, cari):
+    for i in range(len(data)):
+        if cari == data[i]:
+            print(f"- {data[i][0]} = {data[i][1]}")
+
+def d_cari_nama(data, cari):
+    ketemu = []
+    for i in range(len(data)):
+        if cari == data[i][0]:
+            ketemu.append(data[i])
+
+def d_merapikan_nama(data):
+    data_hasil = []
+
+    for i in range(len(data)):
+        nama_ = data[i][0]
+        nama_ = nama_.split()
+        nama_ = " ".join(nama_)
+        nama_ = nama_.title()
+
+        data_hasil.append([nama_, data[i][1]])
+    
+    return data_hasil
+
+def d_validasi_edit(data, cari):
+    valid = False
+    cari -= 1
+    if 0 <= cari <= len(data):
+        valid = True
+    return valid
+
+def d_edit_nama_dan_nilai(data, opsi, index, value):
+    index -= 1
+    if opsi == 1:
+        data[index][0] = value
+    elif opsi == 2:
+        data[index][1] = value
+
+while True:
+
+    d_tampilkan_menu_utama()
+
+    try:
+        opsi_utama = int(input("=> : "))
+        if opsi_utama < 1 or opsi_utama > 6:
+            raise ValueError("[Error] Pilih angka yang tersedia di menu!")
+        break
+    except ValueError:
+        raise ValueError("[Error] Pilih angka yang tersedia di menu!")
+
+    clear_terminal()
+
+======================================================================
+  FILE 158 – test.py
+======================================================================
+
+# (file kosong)
 
 ======================================================================
   AKHIR DOKUMENTASI
