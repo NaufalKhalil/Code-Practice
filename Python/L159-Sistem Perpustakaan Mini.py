@@ -54,7 +54,7 @@ buku = [
 ]
 
 def d_clear():
-    os.system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
 
 def d_tampilkan_menu_utama():
     print("========== PERPUSTAKAAN ==========")
@@ -104,9 +104,17 @@ def d_cegah_input_kosong(pesan_input, pesan_error):
         else:
             return input_user
 
+def d_cegah_input_bukan_angka(pesan_input, pesan_error):
+    while True:
+        input_user = d_cegah_input_kosong(pesan_input, pesan_error)
+        if input_user.isdigit():
+            return int(input_user)
+        else:
+            print("[ERROR] Input harus berupa angka!")
+
 def d_cari(data, cari, index):
     hasil = []
-    
+
     if index == 0 or index == 1:
         for i in range(len(data)):
             if cari in data[i][index]:
@@ -130,14 +138,72 @@ def d_pesan_opsi_not_valid():
     print("[ERROR] Input tidak valid!")
 
 def d_acc_opsi(pesan):
-    opsi = input(f"[y/n] {pesan}").lower()
-    if opsi == "y":
-        opsi = True
-    elif opsi == "n":
-        opsi = False
+    while True:
+        opsi = input(f"[y/n] {pesan}").strip().lower()
+        if opsi == "y":
+            return True
+        elif opsi == "n":
+            return False
+        else:
+            print("[ERROR] Masukkan y atau n!")
+
+def d_minta_nomor_buku(data, pesan_input="=> Masukkan nomor buku : "):
+    while True:
+        while True:
+            try:
+                nomor_buku = int(input(pesan_input))
+                break
+            except ValueError:
+                print("[ERROR] Anda tidak memasukkan sebuah angka!")
+
+        if nomor_buku > len(data) or nomor_buku < 1:
+            print(f"[ERROR] Tidak ditemukan buku dengan nomor {nomor_buku}")
+        else:
+            return nomor_buku
+
+def d_tambah_buku(data):
+    nama = d_cegah_input_kosong("=> Judul buku      : ", "[INFO] Input kosong!")
+    penulis = d_cegah_input_kosong("=> Penulis buku    : ", "[INFO] Input kosong!")
+    tahun = d_cegah_input_bukan_angka("=> Tahun terbit    : ", "[INFO] Input kosong!")
+    stock = d_cegah_input_bukan_angka("=> Jumlah stock    : ", "[INFO] Input kosong!")
+
+    data.append([nama, penulis, tahun, stock])
+    print(f'\n[INFO] Buku "{nama}" berhasil ditambahkan ke daftar!')
+
+def d_pinjam_buku(data, nomor_buku):
+    nomor_buku -= 1
+    if data[nomor_buku][3] > 0:
+        data[nomor_buku][3] -= 1
+        return True
+    return False
+
+def d_kembalikan_buku(data, nomor_buku):
+    nomor_buku -= 1
+    data[nomor_buku][3] += 1
+
+def d_statistik(data):
+    total_judul = len(data)
+    total_stock = sum(b[3] for b in data)
+    buku_terbanyak = max(data, key=lambda b: b[3])
+    buku_tersedikit = min(data, key=lambda b: b[3])
+    buku_tertua = min(data, key=lambda b: b[2])
+    buku_terbaru = max(data, key=lambda b: b[2])
+    buku_habis = [b for b in data if b[3] == 0]
+
+    print(f"Total judul buku      : {total_judul}")
+    print(f"Total seluruh stock   : {total_stock}")
+    print(f'Stock terbanyak       : "{buku_terbanyak[0]}" ({buku_terbanyak[3]})')
+    print(f'Stock tersedikit      : "{buku_tersedikit[0]}" ({buku_tersedikit[3]})')
+    print(f'Buku paling lama      : "{buku_tertua[0]}" ({buku_tertua[2]})')
+    print(f'Buku paling baru      : "{buku_terbaru[0]}" ({buku_terbaru[2]})')
+    print(f"Judul dengan stock 0  : {len(buku_habis)}")
+    if buku_habis:
+        print("-" * 32)
+        for b in buku_habis:
+            print(f'   - "{b[0]}"')
 
 while True:
-    
+
     d_tampilkan_menu_utama()
 
     opsi = input("=> : ")
@@ -147,7 +213,7 @@ while True:
         print("========== DAFTAR BUKU ==========")
         d_tampilkan_daftar_nomor(buku)
         d_program_selesai()
-    
+
     elif opsi == "2":
         d_clear()
         cari = d_cegah_input_kosong("=> Cari : ", "[INFO] Input kosong!")
@@ -162,7 +228,7 @@ while True:
                 print(f"===> Nama buku : {cari}")
                 print("-" * 32)
                 d_tampilkan_daftar_tanpa_nomor(hasil)
-            
+
             index = 1
             hasil = d_cari(buku, cari, index)
             if len(hasil) != 0:
@@ -190,59 +256,126 @@ while True:
         if hasil_pencarian_ada == False:
             print(f'[INFO] Hasil pencarian untuk "{cari}" tidak ditemukan pada pustaka data (Judul, Penulis, Tahun, Stok).')
         d_program_selesai()
+
     elif opsi == "3":
-        None    
+        d_clear()
+        print("========== TAMBAH BUKU ==========")
+        d_tambah_buku(buku)
+        d_program_selesai()
 
     elif opsi == "4":
         d_clear()
         print("========== DAFTAR BUKU ==========")
         d_tampilkan_daftar_nomor(buku)
-        
+
+        nomor_buku = d_minta_nomor_buku(buku)
+
         while True:
-            while True:
-                try:
-                    nomor_buku = int(input("=> Masukkan nomor buku : "))
+            d_clear()
+            print(f"===== EDIT BUKU: {buku[nomor_buku - 1][0]} =====")
+            d_tampilkan_menu_edit_buku()
+            opsi_edit = input("=> : ")
+
+            if opsi_edit == "1":  # edit nama
+                edit = d_cegah_input_kosong(
+                    f'=> Ubah judul buku dari "{buku[nomor_buku - 1][0]}", menjadi : ',
+                    "[INFO] Input kosong!"
+                )
+                if d_acc_opsi(f'Yakin ingin mengubah judul menjadi "{edit}"? '):
+                    d_edit_buku(buku, nomor_buku, 0, edit)
+                    print("[INFO] Judul buku berhasil diubah!")
+                else:
+                    print("[INFO] Perubahan dibatalkan.")
+                d_program_selesai()
+
+            elif opsi_edit == "2":  # edit penulis
+                edit = d_cegah_input_kosong(
+                    f'=> Ubah penulis buku dari "{buku[nomor_buku - 1][1]}", menjadi : ',
+                    "[INFO] Input kosong!"
+                )
+                if d_acc_opsi(f'Yakin ingin mengubah penulis menjadi "{edit}"? '):
+                    d_edit_buku(buku, nomor_buku, 1, edit)
+                    print("[INFO] Penulis buku berhasil diubah!")
+                else:
+                    print("[INFO] Perubahan dibatalkan.")
+                d_program_selesai()
+
+            elif opsi_edit == "3":  # edit tahun
+                edit = d_cegah_input_bukan_angka(
+                    f'=> Ubah tahun terbit buku dari "{buku[nomor_buku - 1][2]}", menjadi : ',
+                    "[INFO] Input kosong!"
+                )
+                if d_acc_opsi(f'Yakin ingin mengubah tahun terbit menjadi "{edit}"? '):
+                    d_edit_buku(buku, nomor_buku, 2, edit)
+                    print("[INFO] Tahun terbit berhasil diubah!")
+                else:
+                    print("[INFO] Perubahan dibatalkan.")
+                d_program_selesai()
+
+            elif opsi_edit == "4":  # edit stock
+                edit = d_cegah_input_bukan_angka(
+                    f'=> Ubah jumlah stock buku dari "{buku[nomor_buku - 1][3]}", menjadi : ',
+                    "[INFO] Input kosong!"
+                )
+                if d_acc_opsi(f'Yakin ingin mengubah jumlah stock menjadi "{edit}"? '):
+                    d_edit_buku(buku, nomor_buku, 3, edit)
+                    print("[INFO] Jumlah stock berhasil diubah!")
+                else:
+                    print("[INFO] Perubahan dibatalkan.")
+                d_program_selesai()
+
+            elif opsi_edit == "5":  # hapus buku
+                if d_acc_opsi(f'Yakin ingin menghapus buku "{buku[nomor_buku - 1][0]}"? '):
+                    judul_dihapus = buku.pop(nomor_buku - 1)[0]
+                    print(f'[INFO] Buku "{judul_dihapus}" berhasil dihapus!')
+                    d_program_selesai()
                     break
-                except ValueError:
-                    print("[Error] Anda tidak memasukkan sebuah angka!")
-            
+                else:
+                    print("[INFO] Penghapusan dibatalkan.")
+                    d_program_selesai()
 
-            if nomor_buku > len(buku) or nomor_buku < 1:
-                print(f"[ERROR] Tidak ditemukan buku dengan nomor {nomor_buku}")
-            else:
+            elif opsi_edit == "6":  # cancel
                 break
-        
-        d_clear()
-        d_tampilkan_menu_edit_buku()
 
-        while True:
-            opsi = input("=> : ")
-            pesan = "[INFO] Input kosong!"    
-
-            if opsi == "1": #edit nama
-                edit = input(f'=> Ubah judul buku dari "{buku[nomor_buku - 1][0]}", Menjadi : ')
-                hasil = d_edit_buku(buku, nomor_buku, 0, edit)
-                d_acc_opsi("")
-            elif opsi == "2": #edit penulis
-                input_user = input(f'=> Ubah penulis buku dari "{buku[nomor_buku - 1][1]}", Menjadi : ')
-                rename = d_int_or_string(input_user, pesan)
-            elif opsi == "3": #edit tahun
-                input_user = f'=> ubah tahun terbit buku dari "{buku[nomor_buku - 1][2]}", Menjadi : '
-                rename = d_int_or_string(input_user, pesan)
-            elif opsi == "4": #edit stock
-                input_user = f'=> ubah jumlah stock buku dari "{buku[nomor_buku - 1][3]}", Menjadi : '
-                rename = d_int_or_string(input_user, pesan)
-            elif opsi == "5": #hapus buku
-                None
-            elif opsi == "6": #cancel
-                break
             else:
                 d_pesan_opsi_not_valid()
+                d_program_selesai()
 
+    elif opsi == "5":
+        d_clear()
+        print("========== PINJAM BUKU ==========")
+        d_tampilkan_daftar_nomor(buku)
 
+        nomor_buku = d_minta_nomor_buku(buku, "=> Masukkan nomor buku yang ingin dipinjam : ")
+        berhasil = d_pinjam_buku(buku, nomor_buku)
+        if berhasil:
+            print(f'[INFO] Buku "{buku[nomor_buku - 1][0]}" berhasil dipinjam! Sisa stock: {buku[nomor_buku - 1][3]}')
+        else:
+            print(f'[INFO] Maaf, stock buku "{buku[nomor_buku - 1][0]}" sedang habis!')
+        d_program_selesai()
 
+    elif opsi == "6":
+        d_clear()
+        print("========== KEMBALIKAN BUKU ==========")
+        d_tampilkan_daftar_nomor(buku)
 
+        nomor_buku = d_minta_nomor_buku(buku, "=> Masukkan nomor buku yang ingin dikembalikan : ")
+        d_kembalikan_buku(buku, nomor_buku)
+        print(f'[INFO] Buku "{buku[nomor_buku - 1][0]}" berhasil dikembalikan! Stock sekarang: {buku[nomor_buku - 1][3]}')
+        d_program_selesai()
 
+    elif opsi == "7":
+        d_clear()
+        print("========== STATISTIK ==========")
+        d_statistik(buku)
+        d_program_selesai()
 
+    elif opsi == "8":
+        d_clear()
+        print("Terima kasih telah menggunakan aplikasi Perpustakaan!")
+        time.sleep(1)
+        break
 
-
+    else:
+        d_pesan_opsi_not_valid()
+        d_program_selesai()
