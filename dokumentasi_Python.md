@@ -1,8 +1,8 @@
 # Python
 
-- **Dibuat:** 2026-08-07 16:18:13
-- **Sumber:** `d:\Project\Coding\Code Practice\Python`
-- **Total file:** 157 (0 sub-folder disertakan)
+- **Dibuat:** 2026-08-07 16:48:37
+- **Sumber:** `D:\Project\Coding\Code Practice\Python`
+- **Total file:** 158 (0 sub-folder disertakan)
 
 ## Konteks & Peraturan untuk AI — Baca Ini Dulu
 
@@ -200,7 +200,8 @@ Python/
 ├── L154-Sistem Kasir Sederhana.py
 ├── L155-Mini Sistem Nilai Mahasiswa.py
 ├── L157-Sistem Inventaris dengan penggunaan Parameter yang Tepat.py
-└── L158-String Processing Challenge.py
+├── L158-String Processing Challenge.py
+└── L159-Dictionary Dasar.py
 ```
 
 ## Daftar Isi
@@ -362,6 +363,7 @@ Python/
 - [L155-Mini Sistem Nilai Mahasiswa.py](#l155-mini-sistem-nilai-mahasiswapy)
 - [L157-Sistem Inventaris dengan penggunaan Parameter yang Tepat.py](#l157-sistem-inventaris-dengan-penggunaan-parameter-yang-tepatpy)
 - [L158-String Processing Challenge.py](#l158-string-processing-challengepy)
+- [L159-Dictionary Dasar.py](#l159-dictionary-dasarpy)
 
 ## File
 
@@ -4946,5 +4948,23 @@ while True:
         d_clear_terminal()
         print("Terima kasih telah menggunakan Sistem Data Mahasiswa!")
         break
+```
+
+### `L159-Dictionary Dasar.py`
+
+```python
+siswa = {}
+
+nama_input = input("Masukkan Nama : ")
+umur_input = input("Masukkan Umur : ")
+kelas_input = input("Masukkan Kelas : ")
+
+siswa["Nama"] = nama_input
+siswa["Umur"] = umur_input
+siswa["Kelas"] = kelas_input
+
+print()
+
+print(siswa)
 ```
 
