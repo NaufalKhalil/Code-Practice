@@ -1,8 +1,8 @@
 # Python
 
-- **Dibuat:** 2026-08-07 16:48:37
-- **Sumber:** `D:\Project\Coding\Code Practice\Python`
-- **Total file:** 158 (0 sub-folder disertakan)
+- **Dibuat:** 2026-08-20 17:47:58
+- **Sumber:** `d:\Project\Coding\Code Practice\Python`
+- **Total file:** 173 (0 sub-folder disertakan)
 
 ## Konteks & Peraturan untuk AI — Baca Ini Dulu
 
@@ -201,7 +201,22 @@ Python/
 ├── L155-Mini Sistem Nilai Mahasiswa.py
 ├── L157-Sistem Inventaris dengan penggunaan Parameter yang Tepat.py
 ├── L158-String Processing Challenge.py
-└── L159-Dictionary Dasar.py
+├── L159-Dictionary Dasar.py
+├── L160-Dictionary Menghitung total nilai.py
+├── L161-Dictionary Barang Termahal.py
+├── L162-Dictionary Barang Termurah.py
+├── L163-Dictionary Selisih Barang Termahal dan Termurah.py
+├── L164-Dictionary Rata-rata Harga Barang.py
+├── L165-Dictionary Barang di Atas Rata-rata.py
+├── L166-Dictionary Hitung Jumlah Barang di Atas Rata-rata.py
+├── L167-Dictionary Barang dengan Harga Tertentu.py
+├── L168-Dictionary Filter Berdasarkan Rentang Harga.py
+├── L169-Dictionary Total Harga Hasil Filter.py
+├── L170-Dictionary Pisahkan Proses dan Tampilan.py
+├── L171-Dictionary Cari Barang.py
+├── L172-Pencarian Sebagian Nama.py
+├── L173-Pencarian yang Lebih Robust.py
+└── L174-Pencarian + Jumlah Hasil.py
 ```
 
 ## Daftar Isi
@@ -364,6 +379,21 @@ Python/
 - [L157-Sistem Inventaris dengan penggunaan Parameter yang Tepat.py](#l157-sistem-inventaris-dengan-penggunaan-parameter-yang-tepatpy)
 - [L158-String Processing Challenge.py](#l158-string-processing-challengepy)
 - [L159-Dictionary Dasar.py](#l159-dictionary-dasarpy)
+- [L160-Dictionary Menghitung total nilai.py](#l160-dictionary-menghitung-total-nilaipy)
+- [L161-Dictionary Barang Termahal.py](#l161-dictionary-barang-termahalpy)
+- [L162-Dictionary Barang Termurah.py](#l162-dictionary-barang-termurahpy)
+- [L163-Dictionary Selisih Barang Termahal dan Termurah.py](#l163-dictionary-selisih-barang-termahal-dan-termurahpy)
+- [L164-Dictionary Rata-rata Harga Barang.py](#l164-dictionary-rata-rata-harga-barangpy)
+- [L165-Dictionary Barang di Atas Rata-rata.py](#l165-dictionary-barang-di-atas-rata-ratapy)
+- [L166-Dictionary Hitung Jumlah Barang di Atas Rata-rata.py](#l166-dictionary-hitung-jumlah-barang-di-atas-rata-ratapy)
+- [L167-Dictionary Barang dengan Harga Tertentu.py](#l167-dictionary-barang-dengan-harga-tertentupy)
+- [L168-Dictionary Filter Berdasarkan Rentang Harga.py](#l168-dictionary-filter-berdasarkan-rentang-hargapy)
+- [L169-Dictionary Total Harga Hasil Filter.py](#l169-dictionary-total-harga-hasil-filterpy)
+- [L170-Dictionary Pisahkan Proses dan Tampilan.py](#l170-dictionary-pisahkan-proses-dan-tampilanpy)
+- [L171-Dictionary Cari Barang.py](#l171-dictionary-cari-barangpy)
+- [L172-Pencarian Sebagian Nama.py](#l172-pencarian-sebagian-namapy)
+- [L173-Pencarian yang Lebih Robust.py](#l173-pencarian-yang-lebih-robustpy)
+- [L174-Pencarian + Jumlah Hasil.py](#l174-pencarian-jumlah-hasilpy)
 
 ## File
 
@@ -4966,5 +4996,896 @@ siswa["Kelas"] = kelas_input
 print()
 
 print(siswa)
+```
+
+### `L160-Dictionary Menghitung total nilai.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000
+}
+
+def d_kalkulasi_harga(data):
+    total = 0
+    for value in data.values():
+        total += value
+    return total
+
+def d_tampilkan(data, total_harga):
+    for key, value in data.items():
+        print(f"- {key} : {value}")
+    print("-" * 16)
+    print(f"Total Harga = Rp{total_harga}")
+
+print("Belanja anda hari ini :")
+hasil = d_kalkulasi_harga(data)
+d_tampilkan(data, hasil)
+```
+
+### `L161-Dictionary Barang Termahal.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_termahal(data):
+    termahal = 0
+    for key, value in data.items():
+        if termahal < value:
+            termahal = value
+            nama_barang = key
+    return nama_barang, termahal 
+
+nama, harga = d_termahal(data)
+print("Barang Termahal :")
+print(f"{nama} = Rp.{harga}")
+```
+
+### `L162-Dictionary Barang Termurah.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_termurah(data):
+    for key, value in data.items():
+        termurah = value
+        nama_barang = key
+        break
+
+    for key, value in data.items():
+        if termurah > value:
+            termurah = value
+            nama_barang = key
+    return nama_barang, termurah 
+
+nama, harga = d_termurah(data)
+print("Barang Termurah :")
+print(f"{nama} = Rp.{harga}")
+```
+
+### `L163-Dictionary Selisih Barang Termahal dan Termurah.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_termahal(data):
+    for key, value in data.items():
+        nama_barang = key
+        harga_barang = value
+        break
+
+    for key, value in data.items():
+        if harga_barang < value:
+            nama_barang = key
+            harga_barang = value
+
+    return nama_barang, harga_barang
+
+def d_termurah(data):
+    for key, value in data.items():
+        nama_barang = key
+        harga_barang = value
+        break
+
+    for key, value in data.items():
+        if harga_barang > value:
+            nama_barang = key
+            harga_barang = value
+
+    return nama_barang, harga_barang
+
+def d_selisih_harga(harga_max, harga_min):
+    selisih = harga_max - harga_min
+    return selisih
+
+def d_tampilkan(nama_max, nama_min, harga_max, harga_min, selisih_harga):
+    print("Barang Termahal :")
+    print(f"-> {nama_max} : Rp.{harga_max}")
+    print()
+    print("Barang Termurah : ")
+    print(f"-> {nama_min} : Rp.{harga_min}")
+    print()
+    print(f"Selisih harga = Rp.{selisih_harga}")
+
+nama_barang_termahal, harga_barang_termahal = d_termahal(data)     
+nama_barang_termurah, harga_barang_termurah = d_termurah(data)
+selisih_harga = d_selisih_harga(harga_barang_termahal, harga_barang_termurah)
+
+d_tampilkan(nama_barang_termahal, nama_barang_termurah, harga_barang_termahal, harga_barang_termurah, selisih_harga)
+```
+
+### `L164-Dictionary Rata-rata Harga Barang.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_total_harga_dan_jumlah_barang(data):
+    total = 0
+    jumlah_barang = 0
+    for _, value in data.items():
+        total += value
+        jumlah_barang += 1
+    return total, jumlah_barang
+
+def d_rata_rata(total, jumlah_barang):
+    rata_rata = total / jumlah_barang
+    return round(rata_rata, 2)
+
+def d_tampilkan(total, jumlah_barang, rata_rata):
+    print(f"-> Jumlah Barang    : {jumlah_barang}")
+    print(f"-> Total Harga      : Rp.{total}")
+    print(f"-> Rata-rata        : Rp.{rata_rata}")
+
+total, jumlah_barang = d_total_harga_dan_jumlah_barang(data)
+rata_rata = d_rata_rata(total, jumlah_barang)
+d_tampilkan(total, jumlah_barang, rata_rata)
+```
+
+### `L165-Dictionary Barang di Atas Rata-rata.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_total_harga_dan_jumlah_barang(data):
+    total = 0
+    jumlah_barang = 0
+    for _, value in data.items():
+        total += value
+        jumlah_barang += 1
+    return total, jumlah_barang
+
+def d_rata_rata(total, jumlah_barang):
+    rata_rata = total / jumlah_barang
+    return round(rata_rata, 2)
+
+def d_tampilkan(data, rata_rata):
+    print(f"Rata-rata harga : Rp.{rata_rata}")
+    print()
+    print("Barang dengan harga di atas rata-rata :")
+    for key, value in data.items():
+        if value > rata_rata:
+            print(f"-> {key} : Rp.{value}")
+
+total, jumlah_barang = d_total_harga_dan_jumlah_barang(data)
+rata_rata = d_rata_rata(total, jumlah_barang)
+d_tampilkan(data, rata_rata)
+```
+
+### `L166-Dictionary Hitung Jumlah Barang di Atas Rata-rata.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_total_harga_dan_jumlah_barang(data):
+    total = 0
+    jumlah_barang = 0
+    for _, value in data.items():
+        total += value
+        jumlah_barang += 1
+    return total, jumlah_barang
+
+def d_rata_rata(total, jumlah_barang):
+    rata_rata = total / jumlah_barang
+    return round(rata_rata, 2)
+
+def d_tampilkan(data, rata_rata):
+    print(f"Rata-rata harga : Rp.{rata_rata}")
+    print()
+    print("Barang dengan harga di atas rata-rata :")
+    total = 0
+    for key, value in data.items():
+        if value > rata_rata:
+            print(f"-> {key} : Rp.{value}")
+            total += 1
+    print()
+    print(f"Jumlah barang di atas rata-rata : {total}")
+
+total, jumlah_barang = d_total_harga_dan_jumlah_barang(data)
+rata_rata = d_rata_rata(total, jumlah_barang)
+d_tampilkan(data, rata_rata)
+```
+
+### `L167-Dictionary Barang dengan Harga Tertentu.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_input_int():
+    while True:
+        batas_harga = (input("Masukkan batas harga : "))
+        try:
+            batas_harga = int(batas_harga)
+            return batas_harga
+        except ValueError:
+            print("[Error] Masukkan sebuah nilai/angka!")
+
+def d_sortir_barang_dengan_batas_harga(batas_harga, data):
+    hasil_data = {}
+    jumlah_barang = 0
+    for key, value in data.items():
+        if value <= batas_harga:
+            hasil_data[key] = value
+            jumlah_barang += 1
+    return hasil_data, jumlah_barang
+
+def d_tampilkan(batas_harga, data, jumlah_barang):
+    print(f"Barang dengan harga <= Rp.{batas_harga}")
+    print()
+    for key, value in data.items():
+        print(f"-> {key} : Rp.{value}")
+    print()
+    print(f"Jumlah barang : {jumlah_barang}")
+
+batas_harga = d_input_int()
+print()
+hasil_data, jumlah_barang = d_sortir_barang_dengan_batas_harga(batas_harga, data)
+d_tampilkan(batas_harga, hasil_data, jumlah_barang)
+```
+
+### `L168-Dictionary Filter Berdasarkan Rentang Harga.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_input_int(text, validasi):
+    while True:
+        batas_harga = (input(text))
+        try:
+            batas_harga = int(batas_harga)
+            if batas_harga >= validasi:
+                return batas_harga
+            else:
+                print("[Error] Nilai/angka Maksimum tidak boleh kurang dari nilai Minimum ")
+        except ValueError:
+            print("[Error] Masukkan sebuah nilai/angka!")
+
+def d_sortir_barang_dengan_batas_harga(min_harga, max_harga, data):
+    hasil_data = {}
+    jumlah_barang = 0
+    for key, value in data.items():
+        if min_harga <= value <= max_harga :
+            hasil_data[key] = value
+            jumlah_barang += 1
+    return hasil_data, jumlah_barang
+
+def d_tampilkan(min_harga, max_harga, data, jumlah_barang):
+    print(f"Barang dengan harga Rp.{min_harga} - Rp.{max_harga}")
+    print()
+    for key, value in data.items():
+        print(f"-> {key} : Rp.{value}")
+    print()
+    print(f"Jumlah barang : {jumlah_barang}")
+
+min_harga = d_input_int("Masukkan harga minimum : ", 0)
+max_harga = d_input_int("Masukkan harga maksimum : ", min_harga)
+print()
+hasil_data, jumlah_barang = d_sortir_barang_dengan_batas_harga(min_harga, max_harga, data)
+d_tampilkan(min_harga, max_harga, hasil_data, jumlah_barang)
+```
+
+### `L169-Dictionary Total Harga Hasil Filter.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000
+}
+
+def d_input_int(text, nilai_minimum):
+    while True:
+        batas_harga = (input(text))
+        try:
+            batas_harga = int(batas_harga)
+            if batas_harga >= nilai_minimum:
+                return batas_harga
+            else:
+                print("[Error] Nilai/angka Maksimum tidak boleh kurang dari nilai Minimum ")
+        except ValueError:
+            print("[Error] Masukkan sebuah nilai/angka!")
+
+def d_sortir_barang_dengan_batas_harga(min_harga, max_harga, data):
+    hasil_data = {}
+    jumlah_barang = 0
+    for key, value in data.items():
+        if min_harga <= value <= max_harga :
+            hasil_data[key] = value
+            jumlah_barang += 1
+    return hasil_data, jumlah_barang
+
+def d_tampilkan(min_harga, max_harga, data, jumlah_barang):
+    print(f"Barang dengan harga Rp.{min_harga} - Rp.{max_harga}")
+    print()
+    total_harga = 0
+    for key, value in data.items():
+        print(f"-> {key} : Rp.{value}")
+        total_harga += value
+    print()
+    print(f"Jumlah barang : {jumlah_barang}")
+    print(f"Total harga : Rp.{total_harga}")
+
+min_harga = d_input_int("Masukkan harga minimum : ", 0)
+max_harga = d_input_int("Masukkan harga maksimum : ", min_harga)
+print()
+hasil_data, jumlah_barang = d_sortir_barang_dengan_batas_harga(min_harga, max_harga, data)
+d_tampilkan(min_harga, max_harga, hasil_data, jumlah_barang)
+```
+
+### `L170-Dictionary Pisahkan Proses dan Tampilan.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000,
+    "Spidol Hitam": 7000,
+    "Spidol Warna 12": 25000,
+    "Crayon Pas": 45000,
+    "Buku Gambar A4": 8000,
+    "Buku Gambar A3": 15000,
+    "Rautan Putar": 35000,
+    "Rautan Kantong": 3000,
+    "Kotak Pensil Kain": 18000,
+    "Kotak Pensil Besi": 27000,
+    "Tipe-X Kertas": 9000,
+    "Tipe-X Cair": 6000,
+    "Binder Note A5": 32000,
+    "Binder Note B5": 40000,
+    "Isi Binder A5": 8000,
+    "Isi Binder B5": 10000,
+    "Gunting Kertas": 12000,
+    "Cutter Besar": 15000,
+    "Cutter Kecil": 7000,
+    "Isi Cutter": 5000,
+    "Staples Kecil": 11000,
+    "Isi Staples": 3000,
+    "Lem Kertas Cair": 4000,
+    "Lem Stik (Glue Stick)": 8000,
+    "Stabilo Boss": 14000,
+    "Sticky Notes Neon": 12000,
+    "Post-it Penanda": 7000,
+    "Jangka Matematika": 16000,
+    "Busur Derajat": 3000,
+    "Penggaris Segitiga": 8000,
+    "Papan Ujian Akrilik": 19000,
+    "Papan Ujian Kayu": 12000,
+    "Kalkulator Ilmiah": 165000,
+    "Kalkulator Toko": 55000,
+    "Double Tape": 6000,
+    "Solasi Bening": 4000,
+    "Map Plastik Kancing": 5000,
+    "Map Snelhechter": 7000,
+    "Dompet Dokumen": 22000,
+    "Kertas HVS A4 Rim": 53000,
+    "Kertas F4 Rim": 58000,
+    "Notebook Hardcover": 29000,
+    "Kamus Bahasa Inggris": 85000,
+    "Kamus Bahasa Indonesia": 75000,
+    "Tinta Printer Hitam": 95000,
+    "Kertas Origami": 6000,
+    "Klip Kertas Botol": 9000,
+    "Pin Styrofoam": 5000,
+    "Pembersih Papan Tulis": 13000,
+    "Id Card Holder": 4000,
+    "Stempel Otomatis": 38000
+}
+
+def d_input_int(text, nilai_minimum):
+    while True:
+        batas_harga = (input(text))
+        try:
+            batas_harga = int(batas_harga)
+            if batas_harga >= nilai_minimum:
+                return batas_harga
+            else:
+                print("[Error] Nilai/angka Maksimum tidak boleh kurang dari nilai Minimum ")
+        except ValueError:
+            print("[Error] Masukkan sebuah nilai/angka!")
+
+def d_sortir_barang_dengan_batas_harga(min_harga, max_harga, data):
+    hasil_data = {}
+    for key, value in data.items():
+        if min_harga <= value <= max_harga :
+            hasil_data[key] = value
+    return hasil_data
+
+def d_statistik(data):
+    jumlah_barang = 0
+    total_harga = 0
+    for value in data.values():
+        jumlah_barang += 1
+        total_harga += value
+    return jumlah_barang, total_harga
+
+def d_tampilkan(min_harga, max_harga, data, jumlah_barang, total_harga):
+    print(f"Barang dengan harga Rp.{min_harga} - Rp.{max_harga}")
+    print()
+    for key, value in data.items():
+        print(f"-> {key} : Rp.{value}")
+    print()
+    print(f"Jumlah barang : {jumlah_barang}")
+    print(f"Total harga : Rp.{total_harga}")
+
+min_harga = d_input_int("Masukkan harga minimum : ", 0)
+max_harga = d_input_int("Masukkan harga maksimum : ", min_harga)
+print()
+hasil_data = d_sortir_barang_dengan_batas_harga(min_harga, max_harga, data)
+jumlah_barang, total_harga = d_statistik(hasil_data)
+d_tampilkan(min_harga, max_harga, hasil_data, jumlah_barang, total_harga)
+```
+
+### `L171-Dictionary Cari Barang.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000,
+    "Spidol Hitam": 7000,
+    "Spidol Warna 12": 25000,
+    "Crayon Pas": 45000,
+    "Buku Gambar A4": 8000,
+    "Buku Gambar A3": 15000,
+    "Rautan Putar": 35000,
+    "Rautan Kantong": 3000,
+    "Kotak Pensil Kain": 18000,
+    "Kotak Pensil Besi": 27000,
+    "Tipe-X Kertas": 9000,
+    "Tipe-X Cair": 6000,
+    "Binder Note A5": 32000,
+    "Binder Note B5": 40000,
+    "Isi Binder A5": 8000,
+    "Isi Binder B5": 10000,
+    "Gunting Kertas": 12000,
+    "Cutter Besar": 15000,
+    "Cutter Kecil": 7000,
+    "Isi Cutter": 5000,
+    "Staples Kecil": 11000,
+    "Isi Staples": 3000,
+    "Lem Kertas Cair": 4000,
+    "Lem Stik (Glue Stick)": 8000,
+    "Stabilo Boss": 14000,
+    "Sticky Notes Neon": 12000,
+    "Post-it Penanda": 7000,
+    "Jangka Matematika": 16000,
+    "Busur Derajat": 3000,
+    "Penggaris Segitiga": 8000,
+    "Papan Ujian Akrilik": 19000,
+    "Papan Ujian Kayu": 12000,
+    "Kalkulator Ilmiah": 165000,
+    "Kalkulator Toko": 55000,
+    "Double Tape": 6000,
+    "Solasi Bening": 4000,
+    "Map Plastik Kancing": 5000,
+    "Map Snelhechter": 7000,
+    "Dompet Dokumen": 22000,
+    "Kertas HVS A4 Rim": 53000,
+    "Kertas F4 Rim": 58000,
+    "Notebook Hardcover": 29000,
+    "Kamus Bahasa Inggris": 85000,
+    "Kamus Bahasa Indonesia": 75000,
+    "Tinta Printer Hitam": 95000,
+    "Kertas Origami": 6000,
+    "Klip Kertas Botol": 9000,
+    "Pin Styrofoam": 5000,
+    "Pembersih Papan Tulis": 13000,
+    "Id Card Holder": 4000,
+    "Stempel Otomatis": 38000
+}
+
+def d_input():
+    cari = input("Masukkan nama barang : ").title()
+    return cari
+
+def d_cari(cari):
+    hasil = {}
+    for key, value in data.items():
+        if cari == key:
+            hasil[key] = value
+    return hasil
+
+def d_tampilkan(hasil):
+    if not hasil:
+        print()
+        print("Barang tidak ditemukan!")
+    else:
+        print()
+        print("Barang ditemukan!")
+        print()
+        for key, value in hasil.items():
+            print(f"Nama    : {key}")
+            print(f"Harga   : Rp.{value}")
+
+cari = d_input()
+hasil = d_cari(cari)
+d_tampilkan(hasil)
+```
+
+### `L172-Pencarian Sebagian Nama.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000,
+    "Spidol Hitam": 7000,
+    "Spidol Warna 12": 25000,
+    "Crayon Pas": 45000,
+    "Buku Gambar A4": 8000,
+    "Buku Gambar A3": 15000,
+    "Rautan Putar": 35000,
+    "Rautan Kantong": 3000,
+    "Kotak Pensil Kain": 18000,
+    "Kotak Pensil Besi": 27000,
+    "Tipe-X Kertas": 9000,
+    "Tipe-X Cair": 6000,
+    "Binder Note A5": 32000,
+    "Binder Note B5": 40000,
+    "Isi Binder A5": 8000,
+    "Isi Binder B5": 10000,
+    "Gunting Kertas": 12000,
+    "Cutter Besar": 15000,
+    "Cutter Kecil": 7000,
+    "Isi Cutter": 5000,
+    "Staples Kecil": 11000,
+    "Isi Staples": 3000,
+    "Lem Kertas Cair": 4000,
+    "Lem Stik (Glue Stick)": 8000,
+    "Stabilo Boss": 14000,
+    "Sticky Notes Neon": 12000,
+    "Post-it Penanda": 7000,
+    "Jangka Matematika": 16000,
+    "Busur Derajat": 3000,
+    "Penggaris Segitiga": 8000,
+    "Papan Ujian Akrilik": 19000,
+    "Papan Ujian Kayu": 12000,
+    "Kalkulator Ilmiah": 165000,
+    "Kalkulator Toko": 55000,
+    "Double Tape": 6000,
+    "Solasi Bening": 4000,
+    "Map Plastik Kancing": 5000,
+    "Map Snelhechter": 7000,
+    "Dompet Dokumen": 22000,
+    "Kertas HVS A4 Rim": 53000,
+    "Kertas F4 Rim": 58000,
+    "Notebook Hardcover": 29000,
+    "Kamus Bahasa Inggris": 85000,
+    "Kamus Bahasa Indonesia": 75000,
+    "Tinta Printer Hitam": 95000,
+    "Kertas Origami": 6000,
+    "Klip Kertas Botol": 9000,
+    "Pin Styrofoam": 5000,
+    "Pembersih Papan Tulis": 13000,
+    "Id Card Holder": 4000,
+    "Stempel Otomatis": 38000
+}
+
+def d_input():
+    cari = input("Masukkan nama barang : ").title()
+    return cari
+
+def d_cari(cari):
+    hasil = {}
+    key_array = []
+    for key, value in data.items():
+        key_array = key.split()
+        for i in range(len(key_array)):
+            if cari in key_array[i]:
+                hasil[key] = value
+    return hasil
+
+def d_tampilkan(hasil):
+    if not hasil:
+        print()
+        print("Barang tidak ditemukan!")
+    else:
+        print()
+        print("Barang ditemukan!")
+        print()
+        for key, value in hasil.items():
+            print(f"-> Nama    : {key}")
+            print(f"-> Harga   : Rp.{value}")
+            print()
+
+cari = d_input()
+hasil = d_cari(cari)
+d_tampilkan(hasil)
+```
+
+### `L173-Pencarian yang Lebih Robust.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000,
+    "Spidol Hitam": 7000,
+    "Spidol Warna 12": 25000,
+    "Crayon Pas": 45000,
+    "Buku Gambar A4": 8000,
+    "Buku Gambar A3": 15000,
+    "Rautan Putar": 35000,
+    "Rautan Kantong": 3000,
+    "Kotak Pensil Kain": 18000,
+    "Kotak Pensil Besi": 27000,
+    "Tipe-X Kertas": 9000,
+    "Tipe-X Cair": 6000,
+    "Binder Note A5": 32000,
+    "Binder Note B5": 40000,
+    "Isi Binder A5": 8000,
+    "Isi Binder B5": 10000,
+    "Gunting Kertas": 12000,
+    "Cutter Besar": 15000,
+    "Cutter Kecil": 7000,
+    "Isi Cutter": 5000,
+    "Staples Kecil": 11000,
+    "Isi Staples": 3000,
+    "Lem Kertas Cair": 4000,
+    "Lem Stik (Glue Stick)": 8000,
+    "Stabilo Boss": 14000,
+    "Sticky Notes Neon": 12000,
+    "Post-it Penanda": 7000,
+    "Jangka Matematika": 16000,
+    "Busur Derajat": 3000,
+    "Penggaris Segitiga": 8000,
+    "Papan Ujian Akrilik": 19000,
+    "Papan Ujian Kayu": 12000,
+    "Kalkulator Ilmiah": 165000,
+    "Kalkulator Toko": 55000,
+    "Double Tape": 6000,
+    "Solasi Bening": 4000,
+    "Map Plastik Kancing": 5000,
+    "Map Snelhechter": 7000,
+    "Dompet Dokumen": 22000,
+    "Kertas HVS A4 Rim": 53000,
+    "Kertas F4 Rim": 58000,
+    "Notebook Hardcover": 29000,
+    "Kamus Bahasa Inggris": 85000,
+    "Kamus Bahasa Indonesia": 75000,
+    "Tinta Printer Hitam": 95000,
+    "Kertas Origami": 6000,
+    "Klip Kertas Botol": 9000,
+    "Pin Styrofoam": 5000,
+    "Pembersih Papan Tulis": 13000,
+    "Id Card Holder": 4000,
+    "Stempel Otomatis": 38000
+}
+
+def d_input():
+    cari = input("Masukkan nama barang : ")
+    cari = cari.strip()
+    cari = cari.lower()
+    return cari
+
+def d_cari(cari, data):
+    hasil = {}
+    for key, value in data.items():
+        if cari in key:
+            hasil[key] = value
+    return hasil
+
+def d_tampilkan(hasil):
+    if not hasil:
+        print()
+        print("Barang tidak ditemukan!")
+    else:
+        print()
+        print("Barang ditemukan!")
+        print()
+        for key, value in hasil.items():
+            print(f"-> Nama    : {key}")
+            print(f"-> Harga   : Rp.{value}")
+            print()
+
+def d_convert_data(data):
+    hasil_convert = {}
+    for key, value in data.items():
+        key = key.lower()
+        key = key.strip()
+        hasil_convert[key] = value
+    return hasil_convert
+
+cari = d_input()
+data_convert = d_convert_data(data)
+hasil = d_cari(cari, data_convert)
+d_tampilkan(hasil)
+```
+
+### `L174-Pencarian + Jumlah Hasil.py`
+
+```python
+data = {
+    "Buku": 15000,
+    "Pensil": 3000,
+    "Penghapus": 2000,
+    "Pulpen": 5000,
+    "Tas": 120000,
+    "Penggaris": 4000,
+    "Spidol Hitam": 7000,
+    "Spidol Warna 12": 25000,
+    "Crayon Pas": 45000,
+    "Buku Gambar A4": 8000,
+    "Buku Gambar A3": 15000,
+    "Rautan Putar": 35000,
+    "Rautan Kantong": 3000,
+    "Kotak Pensil Kain": 18000,
+    "Kotak Pensil Besi": 27000,
+    "Tipe-X Kertas": 9000,
+    "Tipe-X Cair": 6000,
+    "Binder Note A5": 32000,
+    "Binder Note B5": 40000,
+    "Isi Binder A5": 8000,
+    "Isi Binder B5": 10000,
+    "Gunting Kertas": 12000,
+    "Cutter Besar": 15000,
+    "Cutter Kecil": 7000,
+    "Isi Cutter": 5000,
+    "Staples Kecil": 11000,
+    "Isi Staples": 3000,
+    "Lem Kertas Cair": 4000,
+    "Lem Stik (Glue Stick)": 8000,
+    "Stabilo Boss": 14000,
+    "Sticky Notes Neon": 12000,
+    "Post-it Penanda": 7000,
+    "Jangka Matematika": 16000,
+    "Busur Derajat": 3000,
+    "Penggaris Segitiga": 8000,
+    "Papan Ujian Akrilik": 19000,
+    "Papan Ujian Kayu": 12000,
+    "Kalkulator Ilmiah": 165000,
+    "Kalkulator Toko": 55000,
+    "Double Tape": 6000,
+    "Solasi Bening": 4000,
+    "Map Plastik Kancing": 5000,
+    "Map Snelhechter": 7000,
+    "Dompet Dokumen": 22000,
+    "Kertas HVS A4 Rim": 53000,
+    "Kertas F4 Rim": 58000,
+    "Notebook Hardcover": 29000,
+    "Kamus Bahasa Inggris": 85000,
+    "Kamus Bahasa Indonesia": 75000,
+    "Tinta Printer Hitam": 95000,
+    "Kertas Origami": 6000,
+    "Klip Kertas Botol": 9000,
+    "Pin Styrofoam": 5000,
+    "Pembersih Papan Tulis": 13000,
+    "Id Card Holder": 4000,
+    "Stempel Otomatis": 38000
+}
+
+def d_input():
+    cari = input("Masukkan nama barang : ")
+    cari = cari.strip()
+    cari = cari.lower()
+    return cari
+
+def d_cari(cari, data):
+    hasil = {}
+    for key, value in data.items():
+        if cari in key:
+            hasil[key] = value
+    return hasil
+
+def d_tampilkan(hasil):
+    if not hasil:
+        print()
+        print("Barang tidak ditemukan!")
+    else:
+        print()
+        print("Barang ditemukan!")
+        print()
+        total = 0
+        for key, value in hasil.items():
+            total += 1
+            print(f"-> Nama    : {key}")
+            print(f"-> Harga   : Rp.{value}")
+            print()
+        print(f"Jumlah hasil : {total}")
+
+def d_convert_data(data):
+    hasil_convert = {}
+    for key, value in data.items():
+        key = key.lower()
+        key = key.strip()
+        hasil_convert[key] = value
+    return hasil_convert
+
+cari = d_input()
+data_convert = d_convert_data(data)
+hasil = d_cari(cari, data_convert)
+d_tampilkan(hasil)
 ```
 
