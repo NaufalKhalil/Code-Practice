@@ -1,7 +1,7 @@
 using System;
 
-namespace Code_Practice{
-    class L011_Switch_dan_Operasi{
+namespace Code_practice{
+    class L013_Validasi_Pembagian{
         static void Main(string[] args){
 
             Console.Write("Masukkan angka pertama : ");
@@ -20,14 +20,19 @@ namespace Code_Practice{
                 case "*": Hasil = Angka_pertama * Angka_kedua; break;
                 case "/": Hasil = Angka_pertama / Angka_kedua; break;
                 default : Error = "[Error] Operator/Angka yang anda masukkan tidak valid!"; break;
-            }  
-
-            if (Error == "[Error] Operator/Angka yang anda masukkan tidak valid!"){
-                Console.WriteLine(Error);
-            } else{
-                Console.WriteLine(Hasil);
             }
-        
+
+            if (Operator == "/" && Angka_kedua == 0 ){
+                Console.WriteLine("[Error] Tidak dapat membagi dengan nol!");
+            }
+            else{
+                if (Error == "[Error] Operator/Angka yang anda masukkan tidak valid!"){
+                    Console.WriteLine(Error);
+                } else{
+                    Console.WriteLine(Hasil);
+                }
+            }
+
         }
     }
 }
