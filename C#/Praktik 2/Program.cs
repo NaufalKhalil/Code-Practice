@@ -23,8 +23,7 @@ class Program{
         string Nomor_HP = Console.ReadLine();
         
         Console.Write("Umur : ");
-        int Umur = int.Parse(Console.Read());
-
-
+        int Umur = int.Parse(Console.ReadLine());
+ 
     }
 }

@@ -1,2 +1,0 @@
-] Nilai tidak valid!");
-            }
