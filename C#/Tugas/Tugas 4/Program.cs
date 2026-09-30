@@ -1,17 +1,17 @@
 ﻿using System;
 
-class Tugas_4
-{
-    static void Main(string[] args)
-    {
-        double PokokSWDKLLJ = 0;
+class Tugas_4 {
+    static void Main(string[] args) {
+
+
         string Jenis_kendaraan = "";
         string Opsi_kendaraan = "";
         int Bulan_keterlambatan = 0;
-        double PokokPKB = 0;
-        double DendaPKB = 0;
-        double DendaSWDKLLJ = 0;
-        double TotalPembayaran = 0;
+        double Pokok_swdkllj = 0;
+        double Pokok_pkb = 0;
+        double Denda_pkb = 0;
+        double Denda_swdkllj = 0;
+        double Total_pembayaran = 0;
         string Garis = "-------------------------------------";
 
         Console.WriteLine("====== PROGRAM PAJAK KENDARAAN ======");
@@ -23,17 +23,17 @@ class Tugas_4
 
         if (Opsi_kendaraan == "1"){
             Jenis_kendaraan = "Roda 2";
-            PokokSWDKLLJ = 35000;
+            Pokok_swdkllj = 35000;
         }
         else if (Opsi_kendaraan == "2"){
             Jenis_kendaraan = "Roda 4";
-            PokokSWDKLLJ = 143000;
+            Pokok_swdkllj = 143000;
         }
 
         if (Opsi_kendaraan == "1" || Opsi_kendaraan == "2"){
             Console.Write("=> Masukkan Pokok PKB (Rp) : ");
-            PokokPKB = double.Parse(Console.ReadLine());
-            
+            Pokok_pkb = double.Parse(Console.ReadLine());
+
             Console.Write("=> Masukkan Jumlah Bulan Keterlambatan (0-24) : ");
             Bulan_keterlambatan = int.Parse(Console.ReadLine());
 
@@ -41,50 +41,46 @@ class Tugas_4
                 Console.WriteLine(Garis);
                 Console.WriteLine("[Error] Bulan keterlambatan harus di antara 0 hingga 24 bulan!");
             }
-            else {
-                
+            else{
                 if (Bulan_keterlambatan == 0){
-                    DendaPKB = 0;
-                    DendaSWDKLLJ = 0;
+                    Denda_pkb = 0;
+                    Denda_swdkllj = 0;
                 }
                 else if (Bulan_keterlambatan >= 1 && Bulan_keterlambatan <= 3){
-                    DendaPKB = 0.10 * PokokPKB; 
+                    Denda_pkb = 0.10 * Pokok_pkb;
                     if (Opsi_kendaraan == "1"){
-                        DendaSWDKLLJ = 25000;
+                        Denda_swdkllj = 25000;
                     }
-                    else {
-                        DendaSWDKLLJ = 50000;
+                    else{
+                        Denda_swdkllj = 50000;
                     }
                 }
                 else if (Bulan_keterlambatan > 3){
-                    int bulanKelebihan = Bulan_keterlambatan - 3;
-                    DendaPKB = (0.25 * PokokPKB) + (0.01 * bulanKelebihan * PokokPKB);
-
+                    Denda_pkb = (0.25 * Pokok_pkb) + (0.01 * Bulan_keterlambatan * Pokok_pkb);
                     if (Opsi_kendaraan == "1"){
-                        DendaSWDKLLJ = 50000;
+                        Denda_swdkllj = 50000;
                     }
-                    else {
-                        DendaSWDKLLJ = 100000;
+                    else{
+                        Denda_swdkllj = 100000;
                     }
                 }
 
-                TotalPembayaran = PokokPKB + PokokSWDKLLJ + DendaPKB + DendaSWDKLLJ;
+                Total_pembayaran = Pokok_pkb + Pokok_swdkllj + Denda_pkb + Denda_swdkllj;
 
                 Console.WriteLine(Garis);
-                Console.WriteLine("         STRUK HASIL HITUNG PAJAK    ");
+                Console.WriteLine("          STRUK HASIL HITUNG PAJAK   ");
                 Console.WriteLine(Garis);
-                Console.WriteLine($"Jenis Kendaraan     : {Jenis_kendaraan}");
-                Console.WriteLine($"Keterlambatan       : {Bulan_keterlambatan} Bulan");
-                Console.WriteLine($"Pokok PKB           : Rp {PokokPKB}");
-                Console.WriteLine($"Pokok SWDKLLJ       : Rp {PokokSWDKLLJ}");
-                Console.WriteLine($"Denda PKB           : Rp {DendaPKB}");
-                Console.WriteLine($"Denda SWDKLLJ       : Rp {DendaSWDKLLJ}");
+                Console.WriteLine("Jenis Kendaraan  : " + Jenis_kendaraan);
+                Console.WriteLine("Keterlambatan    : " + Bulan_keterlambatan + " Bulan");
+                Console.WriteLine("Pokok PKB        : Rp" + Pokok_pkb); 
+                Console.WriteLine("Pokok SWDKLLJ    : Rp" + Pokok_swdkllj);
+                Console.WriteLine("Denda PKB        : Rp" + Denda_pkb);
+                Console.WriteLine("Denda SWDKLLJ    : Rp" + Denda_swdkllj);
                 Console.WriteLine(Garis);
-                Console.WriteLine($"TOTAL PEMBAYARAN    : Rp {TotalPembayaran}");
+                Console.WriteLine("TOTAL PEMBAYARAN : Rp" + Total_pembayaran);
                 Console.WriteLine(Garis);
-                Console.WriteLine("Nama Operator        : Naufal Khalil Rakhasyah");
+                Console.WriteLine("Nama Operator    : Naufal Khalil Rakhasyah");
                 Console.WriteLine(Garis);
-                
             }
         }
         else {
@@ -92,3 +88,4 @@ class Tugas_4
         }
     }
 }
+

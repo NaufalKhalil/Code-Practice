@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="L016-While dengan Counter.cs" />
+    <Compile Include="L011-Switch.cs" />
   </ItemGroup>
 
 </Project>
