@@ -3,7 +3,6 @@
 class Tugas_4 {
     static void Main(string[] args) {
 
-
         string Jenis_kendaraan = "";
         string Opsi_kendaraan = "";
         int Bulan_keterlambatan = 0;

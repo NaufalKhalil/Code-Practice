@@ -3,24 +3,12 @@
 class Praktik {
         static void Main(string[] args){
         
-        string Room;
-        int Harga = 0;
+                int Nilai = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("=== SELAMAT DATANG DI HOTEL BINTANG 5 ===");
-        Console.WriteLine("1. VIP");
-        Console.WriteLine("1. LUX");
-        Console.WriteLine("1. STANDAR");
-        Console.WriteLine("");
-        Console.Write("=> Ketik Ruangan yang akan anda pesan : ");
-        Room = Console.ReadLine();
+                switch (Nilai){
+                        case 85 > 100: Console.WriteLine("b"); break;
+                        default : Console.WriteLine("D");break;
+                }
 
-        switch (Room){
-                case "VIP":Harga = 30000; break;
-                case "LUX": Harga = 5000; break;
-                default : Harga = 1500; break; 
-        }
-
-        Console.WriteLine($"Harga ruangan yang harus anda bayarkan : ${Harga}");
-
-    }    
+        }    
 }

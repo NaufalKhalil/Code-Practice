@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Project\\Coding\\Code Practice\\C#\\C#.csproj": {}
+    "D:\\Project\\Coding\\Code Practice\\C#\\C#.csproj": {}
   },
   "projects": {
-    "d:\\Project\\Coding\\Code Practice\\C#\\C#.csproj": {
+    "D:\\Project\\Coding\\Code Practice\\C#\\C#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Project\\Coding\\Code Practice\\C#\\C#.csproj",
+        "projectUniqueName": "D:\\Project\\Coding\\Code Practice\\C#\\C#.csproj",
         "projectName": "C#",
-        "projectPath": "d:\\Project\\Coding\\Code Practice\\C#\\C#.csproj",
+        "projectPath": "D:\\Project\\Coding\\Code Practice\\C#\\C#.csproj",
         "packagesPath": "C:\\Users\\Naufal Khalil\\.nuget\\packages\\",
-        "outputPath": "d:\\Project\\Coding\\Code Practice\\C#\\obj\\",
+        "outputPath": "D:\\Project\\Coding\\Code Practice\\C#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Naufal Khalil\\AppData\\Roaming\\NuGet\\NuGet.Config"
