@@ -1,0 +1,15 @@
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\bin\Debug\net8.0\Radix Converter.exe
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\bin\Debug\net8.0\Radix Converter.deps.json
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\bin\Debug\net8.0\Radix Converter.runtimeconfig.json
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\bin\Debug\net8.0\Radix Converter.dll
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\bin\Debug\net8.0\Radix Converter.pdb
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.AssemblyInfoInputs.cache
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.AssemblyInfo.cs
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.csproj.CoreCompileInputs.cache
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.sourcelink.json
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.dll
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\refint\Radix Converter.dll
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.pdb
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\Radix Converter.genruntimeconfig.cache
+D:\Project\Coding\Code Practice\C#\Big Project\Radix Converter\obj\Debug\net8.0\ref\Radix Converter.dll
