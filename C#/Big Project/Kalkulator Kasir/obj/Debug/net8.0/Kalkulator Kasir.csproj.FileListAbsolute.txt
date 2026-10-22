@@ -1,0 +1,15 @@
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.AssemblyInfoInputs.cache
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.AssemblyInfo.cs
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.csproj.CoreCompileInputs.cache
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.sourcelink.json
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\bin\Debug\net8.0\Kalkulator Kasir.exe
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\bin\Debug\net8.0\Kalkulator Kasir.deps.json
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\bin\Debug\net8.0\Kalkulator Kasir.runtimeconfig.json
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\bin\Debug\net8.0\Kalkulator Kasir.dll
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\bin\Debug\net8.0\Kalkulator Kasir.pdb
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.dll
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\refint\Kalkulator Kasir.dll
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.pdb
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\Kalkulator Kasir.genruntimeconfig.cache
+D:\Project\Coding\Code Practice\C#\Big Project\Kalkulator Kasir\obj\Debug\net8.0\ref\Kalkulator Kasir.dll

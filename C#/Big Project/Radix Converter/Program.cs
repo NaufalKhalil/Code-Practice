@@ -88,8 +88,7 @@ namespace Radix_Converter {
 
             switch (Jenis_data_awal) {
                 case "Biner":
-                    Input_mentah = Input_mentah
-                    break;
+                    if (Input_mentah )
                 case "Oktal":
                     break;
                 case "Desimal":
