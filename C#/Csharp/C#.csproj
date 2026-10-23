@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="L018-Validasi Input, While Loop dan Counter.cs" />
+    <Compile Include="L017-Kasir dengan Penghitung Barang.cs" />
   </ItemGroup>
 
 </Project>
