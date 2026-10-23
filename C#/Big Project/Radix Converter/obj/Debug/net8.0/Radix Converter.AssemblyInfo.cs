@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Radix Converter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+686d45e6ee43a46732efc0f423077a077935788b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b477d73bb3c702498f741ad3aff65cfa196ca3e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Radix Converter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Radix Converter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

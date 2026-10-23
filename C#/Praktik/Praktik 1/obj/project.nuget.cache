@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bKp/nvbTEiM=",
+  "dgSpecHash": "wSpbpheqdGY=",
   "success": true,
-  "projectFilePath": "D:\\Project\\Coding\\Code Practice\\C#\\Praktik 1\\Praktik 1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Project\\Coding\\Code Practice\\C#\\Praktik\\Praktik 1\\Praktik 1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.32\\microsoft.netcore.app.ref.8.0.32.nupkg.sha512",
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.32\\microsoft.windowsdesktop.app.ref.8.0.32.nupkg.sha512",
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.32\\microsoft.aspnetcore.app.ref.8.0.32.nupkg.sha512",
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.32\\microsoft.netcore.app.host.win-x64.8.0.32.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,10 +1,10 @@
 # Csharp
 
-- **Dibuat:** 2026-10-23 00:13:10
+- **Dibuat:** 2026-10-24 00:10:11
 - **Sumber:** `d:\Project\Coding\Code Practice\C#\Csharp`
-- **Total file:** 18 (0 sub-folder disertakan)
+- **Total file:** 16 (0 sub-folder disertakan)
 
-- **Bahasa dominan:** C# (17 dari 18 file)
+- **Bahasa dominan:** C# (14 dari 16 file)
 
 ## Konteks & Peraturan untuk AI — Baca Ini Dulu
 
@@ -46,6 +46,7 @@ Setelah membaca file ini, sambut pengguna dan tanyakan: "Mau lanjut dari mana? M
 
 ```
 Csharp/
+├── build_cs_template.py
 ├── L001-Variabel dan Output Dasar.cs
 ├── L002-Input dari User.cs
 ├── L003-Operasi Aritmatika.cs
@@ -60,9 +61,6 @@ Csharp/
 ├── L012-Switch dan Operasi.cs
 ├── L013-Validasi Pembagian.cs
 ├── L014-While Loop.cs
-├── L015-While Loop dengan kondisi.cs
-├── L016-While dengan Counter.cs
-├── L017-Do While.cs
 └── run_c_sharp.py
 ```
 
@@ -82,9 +80,7 @@ Csharp/
 - [L012-Switch dan Operasi.cs](#l012-switch-dan-operasics)
 - [L013-Validasi Pembagian.cs](#l013-validasi-pembagiancs)
 - [L014-While Loop.cs](#l014-while-loopcs)
-- [L015-While Loop dengan kondisi.cs](#l015-while-loop-dengan-kondisics)
-- [L016-While dengan Counter.cs](#l016-while-dengan-countercs)
-- [L017-Do While.cs](#l017-do-whilecs)
+- [build_cs_template.py](#build_cs_templatepy)
 - [run_c_sharp.py](#run_c_sharppy)
 
 ## File
@@ -527,89 +523,202 @@ namespace Code_Practice{
 }
 ```
 
-### `L015-While Loop dengan kondisi.cs`
+### `build_cs_template.py`
 
-```csharp
-using System;
+```python
+"""
+buat_cs.py
+==========
+Membuat file latihan C# baru dengan nomor otomatis + kerangka kode yang
+biasa dipakai.
 
-namespace Code_Practice{
-    class L015_While_Loop_dengan_kondisi{
-        static void Main(string[] args){
+Cara pakai:
+  1. Letakkan script ini di folder latihan C# kamu (satu folder dengan
+     file L001-..., L002-..., dst).
+  2. Jalankan:  python buat_cs.py
+  3. Ketik nama file (tanpa nomor & tanpa .cs), contoh:  For Loop
+     -> terbuat  L018-For Loop.cs  (nomor = nomor terbesar yang ada + 1)
+  4. Kosongkan input lalu Enter untuk selesai.
 
-            int Angka = 0;
+Nama class otomatis diambil dari nama file, contoh:
+  L018-For Loop.cs  ->  class L018_For_Loop
+"""
 
-            while (Angka < 1 || Angka > 5)
-            {
-                Console.Write("Masukan Angka [1 - 5] : ");
-                Angka = int.Parse(Console.ReadLine());
+import os
+import re
 
-                if (Angka < 1 || Angka > 5)
-                {
-                    Console.WriteLine("[Error] Angka tidak valid!");
-                }
-            }
+NAMESPACE = "Code_Practice"   # ganti di sini kalau namespace-nya berubah
+AWALAN = "L"                  # awalan nomor file (L001, L002, ...)
+DIGIT = 3                     # jumlah digit nomor (001, 002, ...)
 
-            Console.WriteLine("Angka valid!");
+TEMPLATE = """using System;
+
+namespace {namespace}{{
+    class {kelas}{{
+        static void Main(string[] args){{
+
             
-        }
-    }
-}
+
+        }}
+    }}
+}}
+"""
+
+
+def nomor_berikutnya(folder):
+    """Cari nomor terbesar dari file Lxxx-*.cs di folder, lalu +1."""
+    pola = re.compile(rf"^{AWALAN}(\d+)-", re.IGNORECASE)
+    terbesar = 0
+    for nama in os.listdir(folder):
+        m = pola.match(nama)
+        if m:
+            terbesar = max(terbesar, int(m.group(1)))
+    return terbesar + 1
+
+
+def bersihkan_nama_file(nama):
+    """Buang karakter yang tidak boleh ada di nama file Windows."""
+    nama = re.sub(r'[\\/:*?"<>|]', "", nama)
+    nama = re.sub(r"\s+", " ", nama).strip(" .")
+    if nama.lower().endswith(".cs"):
+        nama = nama[:-3].strip()
+    return nama
+
+
+def buat_nama_kelas(nama_file_tanpa_ext):
+    """'L018-For Loop' -> 'L018_For_Loop' (hanya huruf, angka, underscore)."""
+    kelas = re.sub(r"[^0-9A-Za-z]+", "_", nama_file_tanpa_ext).strip("_")
+    return kelas
+
+
+def main():
+    folder = os.path.dirname(os.path.abspath(__file__))
+    print("=" * 60)
+    print("  BUAT FILE LATIHAN C#")
+    print("=" * 60)
+
+    while True:
+        nomor = nomor_berikutnya(folder)
+        label = f"{AWALAN}{nomor:0{DIGIT}d}"
+
+        try:
+            masukan = input(f"\nNama file setelah {label}- (kosong = selesai): ")
+        except (KeyboardInterrupt, EOFError):
+            print("\n\nProgram dihentikan.")
+            break
+
+        nama = bersihkan_nama_file(masukan)
+        if not masukan.strip():
+            print("\nSelesai. Selamat belajar! 👋")
+            break
+        if not nama:
+            print("⚠️   Nama tidak valid, coba lagi.")
+            continue
+
+        nama_tanpa_ext = f"{label}-{nama}"
+        path = os.path.join(folder, nama_tanpa_ext + ".cs")
+
+        if os.path.exists(path):
+            print(f"⚠️   File '{nama_tanpa_ext}.cs' sudah ada, tidak ditimpa.")
+            continue
+
+        kelas = buat_nama_kelas(nama_tanpa_ext)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(TEMPLATE.format(namespace=NAMESPACE, kelas=kelas))
+
+        print(f"✅  Dibuat : {nama_tanpa_ext}.cs")
+        print(f"    class  : {kelas}")
+
+
+if __name__ == "__main__":
+    main()
 ```
 
-### `L016-While dengan Counter.cs`
+### `run_c_sharp.py`
 
-```csharp
-using System;
+```python
+import os
 
-namespace Code_Practice{
-    class L016_While_dengan_Counter{
-        static void Main(string[] args){
+# Mendapatkan path folder tempat script Python ini berada secara otomatis
+FOLDER_PROYEK = os.path.dirname(os.path.abspath(__file__))
 
-            int Angka = 0;
-            int Percobaan = 0;
+def dapatkan_daftar_file_cs():
+    # Mencari file .cs langsung di folder proyek C#
+    files = [f for f in os.listdir(FOLDER_PROYEK) if f.endswith('.cs') and f.startswith('L')]
+    files.sort()
+    return files
 
-            while(Angka < 1 || Angka > 5){
-                Percobaan += 1;
-                Console.Write("Masukkan angka [1 - 5] : ");
-                Angka = int.Parse(Console.ReadLine());
+def update_csproj(nama_file):
+    csproj_file = os.path.join(FOLDER_PROYEK, 'C#.csproj')
+    
+    if not os.path.exists(csproj_file):
+        print(f"[Error] File {csproj_file} tidak ditemukan!")
+        return False
+
+    isi_baru = f"""<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="{nama_file}" />
+  </ItemGroup>
+
+</Project>
+"""
+    with open(csproj_file, 'w', encoding='utf-8') as f:
+        f.write(isi_baru)
+    return True
+
+def main():
+    files = dapatkan_daftar_file_cs()
+    
+    if not files:
+        print(f"Tidak ada file latihan C# (.cs) yang ditemukan di: {FOLDER_PROYEK}")
+        return
+
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("===== MENU PEMILIH FILE C# =====")
+        for i, file in enumerate(files, 1):
+            print(f"{i}. {file}")
+        print("0. Keluar")
+        print("--------------------------------")
+        
+        try:
+            pilihan = int(input("Pilih nomor file yang ingin dijalankan: "))
+            if pilihan == 0:
+                print("Keluar dari pembantu Python.")
+                break
+            elif 1 <= pilihan <= len(files):
+                file_terpilih = files[pilihan - 1]
+                print(f"\n[Proses] Mengatur proyek untuk: {file_terpilih}")
                 
-                if (Angka < 1 || Angka > 5){
-                    Console.WriteLine("[Error] Anda harus memasukkan angka [1 - 5]!");
-                }
-            }
+                if update_csproj(file_terpilih):
+                    print("[Proses] Menjalankan dotnet run...\n")
+                    print("-" * 40)
+                    print()
+                    print()
 
-            Console.WriteLine("Angka valid!");
-            Console.WriteLine($"Jumlah Percobaan : {Percobaan}");
+                    # Berpindah folder ke lokasi proyek C# sebelum menjalankan dotnet run
+                    perintah = f'cd /d "{FOLDER_PROYEK}" && dotnet run' if os.name == 'nt' else f'cd "{FOLDER_PROYEK}" && dotnet run'
+                    os.system(perintah)
 
-        }
-    }
-}
-```
+                    print()
+                    print()
+                    print("-" * 40)
+                    input("\nTekan Enter untuk kembali ke menu...")
+            else:
+                input("Nomor tidak valid! Tekan Enter untuk coba lagi...")
+        except ValueError:
+            input("Masukkan angka yang valid! Tekan Enter untuk coba lagi...")
 
-### `L017-Do While.cs`
-
-```csharp
-using System;
-
-namespace Code_Practice{
-    class L0{
-        static void Main(string[] args){
-
-           Console.Write("Apakah Anda member? (true/false): ");
-            string input = Console.ReadLine();
-
-            // Mencoba mengubah string menjadi bool
-            if (bool.TryParse(input, out bool statusMember))ss
-            {
-                Console.WriteLine($"Berhasil! Status member Anda adalah: {statusMember}");
-            }
-            else
-            {
-                Console.WriteLine("Input tidak valid! Harap ketik 'true' atau 'false'.");
-                
-            }
-        }
-    }
-}
+if __name__ == "__main__":
+    main()
 ```
 

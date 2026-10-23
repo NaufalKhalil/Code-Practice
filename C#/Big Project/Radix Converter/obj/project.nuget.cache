@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QZjZpm8H3lc=",
+  "dgSpecHash": "iuwgwTHEUD8=",
   "success": true,
   "projectFilePath": "D:\\Project\\Coding\\Code Practice\\C#\\Big Project\\Radix Converter\\Radix Converter.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.32\\microsoft.netcore.app.ref.8.0.32.nupkg.sha512",
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.32\\microsoft.windowsdesktop.app.ref.8.0.32.nupkg.sha512",
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.32\\microsoft.aspnetcore.app.ref.8.0.32.nupkg.sha512",
+    "C:\\Users\\Naufal Khalil\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.32\\microsoft.netcore.app.host.win-x64.8.0.32.nupkg.sha512"
+  ],
   "logs": []
 }

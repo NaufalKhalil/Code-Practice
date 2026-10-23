@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kalkulator Kasir")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+698be58bb2f1680b3a01a312d4b72f69da3d677e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b477d73bb3c702498f741ad3aff65cfa196ca3e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kalkulator Kasir")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kalkulator Kasir")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
