@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="L017-Kasir dengan Penghitung Barang.cs" />
+    <Compile Include="L018-Menu Kasir Sederhana.cs" />
   </ItemGroup>
 
 </Project>

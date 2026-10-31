@@ -6,15 +6,29 @@ namespace Kalkulator_Kasir{
         public static void Main(string[] args){
             C_Tampilan_menu.D_Menu_utama();
             (int Harga_barang_1, int Jumlah_barang_1) = C_Input_user.D_Barang_1();
-            (int Harga_barang_2, int Jumlah_barang_2) = C_Input_user.D_Barang_2();
-            for (int i = 1; i <= 27; i++){
-                Console.Write("=");
-            }
-            Console.WriteLine();
-            (int Total_harga_barang_1, int Total_harga_barang_2, int Total_harga_barang_kotor) = C_Hitung_total.D_Total_harga_barang_kotor( Harga_barang_1, Harga_barang_2, Jumlah_barang_1, Jumlah_barang_2);
-            C_Tampilan_menu.D_Struk( Harga_barang_1, Harga_barang_2, Jumlah_barang_1, Jumlah_barang_2, Total_harga_barang_1, Total_harga_barang_2, Total_harga_barang_kotor);
-            C_Hitung_total.D_Total_harga_barang_bersih(Total_harga_barang_kotor);
+            if (Harga_barang_1 > 0 && Jumlah_barang_1 > 0)
+            {
+                (int Harga_barang_2, int Jumlah_barang_2) = C_Input_user.D_Barang_2();
 
+                if (Harga_barang_2 > 0 && Jumlah_barang_2 > 0)
+                {   
+                    for (int i = 1; i <= 27; i++){
+                        Console.Write("=");
+                    }
+                    Console.WriteLine();
+                    (int Total_harga_barang_1, int Total_harga_barang_2, int Total_harga_barang_kotor) = C_Hitung_total.D_Total_harga_barang_kotor( Harga_barang_1, Harga_barang_2, Jumlah_barang_1, Jumlah_barang_2);
+                    C_Tampilan_menu.D_Struk( Harga_barang_1, Harga_barang_2, Jumlah_barang_1, Jumlah_barang_2, Total_harga_barang_1, Total_harga_barang_2, Total_harga_barang_kotor);
+                    C_Hitung_total.D_Total_harga_barang_bersih(Total_harga_barang_kotor);
+                }
+                else
+                {
+                    Console.WriteLine("[Error] Harga barang/Jumlah barang wajib di atas nilai 0");   
+                }
+            }
+            else
+            {
+                Console.WriteLine("[Error] Harga barang/Jumlah barang wajib di atas nilai 0");   
+            }
         } 
     }
 
